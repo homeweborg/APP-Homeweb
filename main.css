@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('PTS55F-webfont.eot');
+    src: url('PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS55F-webfont.woff') format('woff'),
+         url('PTS55F-webfont.ttf') format('truetype'),
+         url('PTS55F-webfont.svg#pt_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+	background: url('image/fond.png') ;
+	background-position: center ;
+	background-repeat: no-repeat ; 
+	background-attachment: fixed ; 
+	background-size: cover ;
+	color: #3C504D;
+	font-family: pt_sansregular;
+	margin: 0px;
+}
+
+#logo
+{
+	margin-left: 10px;
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+
+nav li
+{
+    margin-right: 25px;
+    position: center;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+form
+{
+	background-color: rgba(255,255,255,0.9);
+	width: 250px;
+	margin: auto;
+	margin-top: 200px;
+	padding: 10px 10px 10px 10px;
+}
+
+form h1
+{
+	text-align: center;
+}
+
+nav a
+{
+	font-size: 20px;
+	text-decoration: none;
+	color: #3C504D;
+}
+
+input
+{
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 4px;
+	background-color: grey;
+	border-color: grey;
+	color: white;	
+	border-style: solid;
+}
+
+form p
+{
+	margin: 1px;
+}
+
+#bouttons
+{
+	display: flex;
+	justify-content: flex-end;
+	padding: 15px;
+}
+
+#bouttons input
+{
+	margin-right:5px;
+}
+
+
+
+
+#objects, #objects ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#objects {
+/* on centre le menu dans la page */
+	margin-top:0px;
+    text-align: center;
+    background-color: white;
+}
+#objects li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+    background-color: white;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: x-large;
+}
+#objects ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+    margin: inherit;
+    font-size: 15px;
+}
+#objects a {
+    text-decoration: none;
+    display: block;
+	color:grey;
+}
+#objects ul {
+    position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+#objects li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
+}
