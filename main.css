@@ -131,7 +131,7 @@ form p
 }
 #objects ul {
     position: absolute;
-/* on cache les sous menus complètement sur la gauche  */
+/* on cache les sous menus complètement sur la gaucheccc  */
     left: -999em;
     text-align: left;
     z-index: 1000;
