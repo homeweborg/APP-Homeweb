@@ -137,6 +137,6 @@ form p
     z-index: 1000;
 }
 #objects li:hover ul {
-/* Au survol des li du menu on replace les sous menus */
+/* Au survol des li du menu on replace les sous menus  */
     left: auto;
 }
