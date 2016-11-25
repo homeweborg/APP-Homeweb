@@ -111,7 +111,7 @@ form p
     background-color: white;
 }
 #objects li {
-/* on place les liens du menu horizontalement */
+/* on place les liens du menu horizontalement  */
     display: inline-block;
     background-color: white;
     margin-left: 80px;
