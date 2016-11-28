@@ -22,19 +22,19 @@ body
 }
 
 #logo
-{
+{ /*Décaler le logo du bord de l'écran */
 	margin-left: 10px;
 }
 
 nav ul
-{
+{ /*Appliquer le CSS à la partie ul */
     list-style-type: none;
     display: flex;
 }
 
 
 nav li
-{
+{ /*Appliquer le CSS à la partie li */
     margin-right: 25px;
     position: center;
 }
@@ -95,9 +95,6 @@ form p
 {
 	margin-right:5px;
 }
-
-
-
 
 #objects, #objects ul {
     padding: 0;
