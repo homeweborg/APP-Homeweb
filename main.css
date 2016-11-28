@@ -19,6 +19,7 @@ body
 	color: #3C504D;
 	font-family: pt_sansregular;
 	margin: 0px;
+    height: 100%;
 }
 
 #logo
@@ -44,7 +45,10 @@ header
     display: flex;
     justify-content: space-between;
     background-color: white;
+    box-shadow: 0px 3px 5px black;
 }
+
+
 
 form
 {
@@ -96,7 +100,13 @@ form p
 	margin-right:5px;
 }
 
-#objects, #objects ul {
+
+
+
+
+
+
+#objects, #objects ul, #capteurs, #capteurs ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -128,7 +138,7 @@ form p
 }
 #objects ul {
     position: absolute;
-/* on cache les sous menus complètement sur la gaucheccc  */
+/* on cache les sous menus complètement sur la gauche  */
     left: -999em;
     text-align: left;
     z-index: 1000;
@@ -136,4 +146,29 @@ form p
 #objects li:hover ul {
 /* Au survol des li du menu on replace les sous menus  */
     left: auto;
+}
+
+
+
+
+
+
+
+
+#capteurs {
+    background-color: rgba(255,255,255,0.9);
+    width: 250px;
+    height: 100vh;
+    border: 1px solid black;
+    overflow: auto;
+}
+#capteurs li{
+    font-size: x-large;
+}
+#capteurs ul li ul li{
+    font-size: 15px;
+}
+#capteurs a{
+    text-decoration:none;
+    color:grey;
 }
