@@ -1,7 +1,7 @@
 <?php 
     session_start();
     require("Modele/connexion.php");
-    require("Vues/accueil.php");
+    require("Vues/accueil.html");
    
     if(!isset($_SESSION["userID"])){ // L'utilisateur n'est pas connecté
         include("Controleur/connexion.php"); // On utilise un controleur secondaire pour éviter d'avoir un fichier index.php trop gros
@@ -20,9 +20,10 @@
                     setcookie(session_name(), '', time()-42000, '/');
                 }
                 session_destroy();
-                include("Vues/accueil.php");
+                include("Vues/accueil.html");
             }
         } else { // affichage par défaut
-                include("Vues/etat.php");
+                include("Vues/etat.html");
         }
     }
+?>
