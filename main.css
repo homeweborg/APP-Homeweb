@@ -56,7 +56,6 @@ header
 }
 
 
-
 form
 {
 	background-color: rgba(255,255,255,0.9);
@@ -169,13 +168,25 @@ form p
     border: 1px solid black;
     overflow: auto;
 }
-#capteurs li{
+#capteurs ul li{
     font-size: x-large;
+    margin-left: 10px;
+    margin-right:10px;
 }
 #capteurs ul li ul li{
     font-size: 15px;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+#capteurs ul li ul{
+    border:1px;
+    border-top-style:solid;
+    border-bottom-style:solid;
+    border-color:grey;
+    
 }
 #capteurs a{
     text-decoration:none;
     color:grey;
+    
 }
