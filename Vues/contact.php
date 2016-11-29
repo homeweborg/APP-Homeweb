@@ -3,7 +3,7 @@
 	<head>
 		<title>HomeWeb</title>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="Styles/main.css" />
 	</head>
 	<body>
 		<div id="page">
