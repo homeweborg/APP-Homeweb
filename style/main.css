@@ -167,6 +167,7 @@ form p
     height: 100vh;
     border: 1px solid black;
     overflow: auto;
+    float:left;
 }
 #capteurs ul li{
     font-size: x-large;
@@ -190,3 +191,11 @@ form p
     color:grey;
     
 }
+
+#boite{
+    background-color:white;
+    margin-left:300px;
+    margin-top:50px;
+    width:300px;
+}
+
