@@ -36,8 +36,8 @@ nav ul
 
 nav li
 { /*Appliquer le CSS à la partie li */
-    margin-right: 25px;
-    position: center;
+    padding-left:10px;
+    padding-right:10px;
 }
 
 header
@@ -46,6 +46,13 @@ header
     justify-content: space-between;
     background-color: white;
     box-shadow: 0px 3px 5px black;
+}
+
+
+#actuel
+{
+    text-decoration: underline;
+    
 }
 
 
