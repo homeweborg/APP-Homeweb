@@ -1,5 +1,5 @@
 <?php
-    $dbname = "APP-MVC";
+    $dbname = "homeweb";
     $host='localhost';
     $user='root';
     $pass='root';
