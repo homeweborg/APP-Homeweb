@@ -16,7 +16,7 @@ body
 	background-repeat: no-repeat ; 
 	background-attachment: fixed ; 
 	background-size: cover ;
-	color: #3C504D;
+	color: #575757;
 	font-family: pt_sansregular;
 	margin: 0px;
     height: 100%;
@@ -63,7 +63,7 @@ form
 	width: 250px;
 	margin: auto;
 	margin-top: 200px;
-	padding: 10px 10px 10px 10px;
+	padding: 9px 10px 5px 15px;
 }
 
 form h1
@@ -75,7 +75,7 @@ nav a
 {
 	font-size: 20px;
 	text-decoration: none;
-	color: #3C504D;
+	color: #575757;
 }
 
 input
@@ -83,7 +83,7 @@ input
 	text-align: center;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-right: 4px;
+	padding-right: 9px;
 	background-color: grey;
 	border-color: grey;
 	color: white;	
@@ -99,7 +99,7 @@ form p
 {
 	display: flex;
 	justify-content: flex-end;
-	padding: 15px;
+	padding: 20px 0px 9px 15px;
 }
 
 #bouttons input
