@@ -56,16 +56,25 @@ header
 }
 
 
-form
+#formlogin
 {
 	background-color: rgba(255,255,255,0.9);
-	width: 250px;
+	width: 200px;
 	margin: auto;
 	margin-top: 200px;
 	padding: 9px 10px 5px 15px;
 }
 
-form h1
+#formsignup
+{
+	background-color: rgba(255,255,255,0.9);
+	width: 500px;
+	margin: auto;
+	margin-top: 50px;
+	padding: 9px 10px 5px 15px;
+}
+
+#formlogin h1, #formsignup h1
 {
 	text-align: center;
 }
@@ -77,12 +86,25 @@ nav a
 	color: #575757;
 }
 
-input
+#idinput input
 {
 	text-align: center;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-right: 9px;
+	background-color: grey;
+	border-color: grey;
+	color: white;	
+	border-style: solid;
+}
+
+#signupinput input
+{
+	text-align: center;
+    width: 240px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 0px;
 	background-color: grey;
 	border-color: grey;
 	color: white;	
