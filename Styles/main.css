@@ -92,8 +92,8 @@ nav a
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-right: 9px;
-	background-color: grey;
-	border-color: grey;
+	background-color: #575757;
+	border-color: #575757;
 	color: white;	
 	border-style: solid;
 }
@@ -105,8 +105,8 @@ nav a
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-right: 0px;
-	background-color: grey;
-	border-color: grey;
+	background-color: #575757;
+	border-color: #575757;
 	color: white;	
 	border-style: solid;
 }
@@ -162,7 +162,7 @@ form p
 #objects a {
     text-decoration: none;
     display: block;
-	color:grey;
+	color:#575757;
 }
 #objects ul {
     position: absolute;
@@ -205,12 +205,12 @@ form p
     border:1px;
     border-top-style:solid;
     border-bottom-style:solid;
-    border-color:grey;
+    border-color:#575757;
     
 }
 #capteurs a{
     text-decoration:none;
-    color:grey;
+    color:#575757;
     
 }
 
@@ -222,6 +222,7 @@ form p
     margin-left: 300px;
     width:300px;
     padding: 170px 100px 170px 150px;
+    
     
 }
 
