@@ -27,29 +27,46 @@
 				<form name="login" action="index_submit" method="get" accept-charset="utf-8">
 					<h1> Bienvenue sur HomeWeb </h1>
                     <div id="signupinput">                
-                        <p>Nom de famille</p>
+                        <p>Nom de famille <span class="champoblig">*</span></p>
                            <input type="text" name="Nom" required>
-                        <p>Prénom</p>
+                        
+                        <p>Prénom <span class="champoblig">*</span></p>
                            <input type="text" name="Prénom" required>
-                        <p>Adresse Postale</p>
+                        
+                        <p>Adresse Postale <span class="champoblig">*</span></p>
                            <input type="text" name="Adresse" required>
-                        <p>Adresse mail</p>
+                        
+                        <p>Adresse mail <span class="champoblig">*</span></p>
                            <input type="email" name="Mail" required>
-                        <p>Votre Anniversaire</p>
+                        
+                        <p>Votre Anniversaire <span class="champoblig">*</span></p>
                            <input type="date" name="Anniversaire" required>
-                        <p>Numéro de téléphone</p>
+                        
+                        <p>Numéro de téléphone <span class="champoblig">*</span></p>
                            <input type="text" name="telephone" required>
-                        <p>Choisissez un mot de passe </p>
+                        
+                        <p>Choisissez un mot de passe <span class="champoblig">*</span> </p>
+                        
                            <input type="password" name="mdp" required>
-                        <p>Confirmer votre mot de passe </p>
+                        
+                        <p>Confirmer votre mot de passe <span class="champoblig">*</span></p>
                            <input type="password" name="mdpc" required>
-                        <div id="bouttons">
+                        
+                        <bouton id="bouttons">
                             <input type="submit" value="Sign up">
-                        </div>
+                        </bouton>
                         
                     </div>
 				</form>
-                </div> 
+                </div>
+                
+                <h2 class="infos_confidentialite">
+                    
+                    Les champs marqués d'une étoile orange sont obligatoires, ces informations sont indispenssables au bon fonctionnement de la plateforme HomeWeb. Ces informations sont personnelles, elles ne seront en aucun cas divulgées publiquement.
+                      
+                </h2>
+                
+                
 			</section>
 		</div>
 		<!-- Footer -->

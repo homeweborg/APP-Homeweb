@@ -71,8 +71,25 @@ header
 	width: 500px;
 	margin: auto;
 	margin-top: 50px;
+    margin-bottom: 50px;
 	padding: 9px 10px 5px 15px;
 }
+.champoblig
+{
+    color: orange;
+    
+    /* colore l'étoile en orange pour informer que le champs est obligatoire */
+}
+
+.infos_confidentialite
+{
+    font-size : 15px;
+    color : white;
+    text-align: center;
+    
+    /* Concerne le paragraphe concernant la confidentialité des données du client */
+}
+
 
 #formlogin h1, #formsignup h1
 {
@@ -109,6 +126,12 @@ nav a
 	border-color: #575757;
 	color: white;	
 	border-style: solid;
+}
+
+.bouttons : hover {
+
+    background-color: grey;
+	border-color: grey;
 }
 
 form p
