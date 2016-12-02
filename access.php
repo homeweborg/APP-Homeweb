@@ -1,9 +1,4 @@
 <?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "maBase";
-
 	//cree une connection avec la base:
 	$conn = mysqli_connect($servername, $username,$dbname)
 
