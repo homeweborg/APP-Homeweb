@@ -352,6 +352,22 @@ form p
 
 .barre_temp
 {
+    
+    /* Concerne la barre de scroll de la page température*/
     margin-bottom: 0%;
-    width: 350px;
+    width: 100%;
+}
+
+#boite ul li input switch
+{
+    /* Concerne les boutons switchables*/
+    padding: 400px;
+}
+
+#boite ul img
+{
+    /* Concerne l'image du thermometre */
+    float: right;
+    margin: 0px 0px 0px 0px;
+    
 }
