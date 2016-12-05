@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<title>HomeWeb</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="styles/main.css" />
+		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="Styles/main.css" />
 	</head>
 	<body>
 		<div id="page">
@@ -14,10 +14,10 @@
                 </div>
                 <nav>
                     <ul>
-                        <div id="actuel"><li><a href="accueil.html">Accueil</a></li></div>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="moncompte.html">Mon compte</a></li>
-                        <li><a href="etat.html">Etat</a></li>
+                        <div id="actuel"><li><a href="accueil.php">Accueil</a></li></div>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="moncompte.php">Mon compte</a></li>
+                        <li><a href="etat.php">Etat</a></li>
                     </ul>
                 </nav>
             </header>
