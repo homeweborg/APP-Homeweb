@@ -372,7 +372,7 @@ form p
     /* Concerne les boutons switchables coché(s) */
    
     cursor: pointer;
-    padding: 0px 154px 50px 0px;
+    padding: 0px 76px 40px 0px;
     background: url(../image/boutonON.png) no-repeat;
 }
 
@@ -381,14 +381,14 @@ form p
     /* Concerne les boutons switchables non coché(s) */
    
     cursor: pointer;
-    padding: 0px 154px 50px 0px;
+    padding: 0px 76px 40px 0px;
     background: url(../image/boutonOFF.png) no-repeat;
 }
 
 
 #boite ul li input + label:hover
 {
-    /* Concerne les boutons switchables coché(s) survolé*/
+    /* Concerne les boutons switchables non coché(s) survolé*/
    
     background: url(../image/boutonOFF_Select.png) no-repeat;
 }
