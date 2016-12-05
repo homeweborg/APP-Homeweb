@@ -9,6 +9,11 @@
     font-style: normal;
 }
 
+html, #page{
+    height: 100%;
+    width: 100%;
+}
+
 body
 {
 	background: url('../image/fond.png') ;
@@ -18,7 +23,7 @@ body
 	background-size: cover ;
 	color: #575757;
 	font-family: pt_sansregular;
-	margin: 0%;
+	margin: 0px;
     height: 100%;
 }
 
@@ -48,6 +53,7 @@ header
     justify-content: space-between;
     background-color: white;
     box-shadow: 0px 3px 5px black;
+    height: 9%;
 }
 
 
@@ -252,10 +258,13 @@ form p
 
 #capteurs {
     background-color: rgba(255,255,255,0.9);
-    width: 250px;
-    height: 100vh;
+    width: 20%;
+    height: 91%;
     overflow: auto;
-    float:left;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 300px;
+    min-width: 200px;
 }
 #capteurs ul li{
     font-size: x-large;
@@ -314,9 +323,10 @@ form p
     margin-top: 5%;
     margin-bottom: 5%;
     margin-right: 5%;
-    margin-left: 300px;
-    width: 30% 50%;
-    padding: 20px 20px 20px 20px;
+    margin-left: 5%;
+    width: 63%;
+    padding: 3% 3% 3% 3%;
+    display:inline-block;
 }
 
 #boite ul li
