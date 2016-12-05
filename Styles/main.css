@@ -331,7 +331,8 @@ form p
 {
     /* Concerne les traits de séparations dans la boîte 
     centrale*/
-    
+    display:flex;
+    justify-content: space-between;
     border: 1px;
     border-bottom-style:solid;
     border-color: rgb(199,199,199);
