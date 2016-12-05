@@ -323,7 +323,7 @@ form p
     margin-top: 5%;
     margin-right: 5%;
     margin-left: 5%;
-    width: 63%;
+    width: 65%;
     padding: 3% 3% 3% 3%;
     display:inline-block;
     position: fixed;
@@ -395,7 +395,7 @@ input:checked + .slider:hover
     background: url(../image/boutonON_Select.png) no-repeat;
 }
 
-input {
+#boite ul label input{
   position: absolute;
   left: -9999em;
 
