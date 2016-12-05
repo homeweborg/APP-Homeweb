@@ -376,7 +376,24 @@ form p
     background: url(../image/boutonON.png) no-repeat;
 }
 
+#boite ul li input + label
+{
+    /* Concerne les boutons switchables non coché(s) */
+   
+    cursor: pointer;
+    padding: 0px 154px 50px 0px;
+    background: url(../image/boutonOFF.png) no-repeat;
+}
+
+
 #boite ul li input + label:hover
+{
+    /* Concerne les boutons switchables coché(s) survolé*/
+   
+    background: url(../image/boutonOFF_Select.png) no-repeat;
+}
+
+#boite ul li input:checked + label:hover
 {
     /* Concerne les boutons switchables coché(s) survolé*/
    
