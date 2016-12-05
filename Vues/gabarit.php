@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="styles/main.css" />
-	</head>
-	<body>
-		<div id="page">
+		<link rel="stylesheet" type="text/css" href="Styles/main.css" />
+	   <title>HomeWeb</title>
+    </head>
+    
+    <div id="global">
 		<!-- Header -->
             <header>
                 <div id="logo">
@@ -14,13 +14,14 @@
                 </div>            
                 <nav>
                     <ul>
-                        <div id="actuel"><li><a href="Vues/accueil.php">Accueil</a></li></div>
+                        <li><a href="Vues/accueil.php">Accueil</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="moncompte.php">Mon compte</a></li>
                         <li><a href="etat.php">Etat</a></li>
                     </ul>
                 </nav>
             </header>
+                
 		<!-- Body -->
 			<section class="loginform cf">
                 <div id=formlogin>
