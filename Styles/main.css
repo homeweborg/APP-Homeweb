@@ -371,34 +371,34 @@ form p
     width: 100%;
 }
 
-#boite ul li input:checked + label
-{
-    /* Concerne les boutons switchables coché(s) */
-   
-    cursor: pointer;
-    padding: 0px 76px 40px 0px;
-    background: url(../image/boutonON.png) no-repeat;
-}
-
-.switch
+.slider
 {
     cursor:pointer;
     background: url(../image/boutonOFF.png) no-repeat;
-    padding: 0px 60px 10px 0px;
+    padding: 0px 77px 40px 0px;
     border-radius: 20px;
 }
 
-.switch:hover
+.slider:hover
 {
     transition: 0.3s;
     background: url(../image/boutonOFF_Select.png) no-repeat;
 }
 
-#boite ul li label input:checked
+input:checked + .slider
 {
     background: url(../image/boutonON.png) no-repeat;
-    background-color: black;
 }
+
+input:checked + .slider:hover
+{
+    background: url(../image/boutonON_Select.png) no-repeat;
+}
+
+input {
+  position: absolute;
+  left: -9999em;
+
 
 #boite ul img
 {
