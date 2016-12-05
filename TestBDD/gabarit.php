@@ -14,7 +14,7 @@
                 </div>            
                 <nav>
                     <ul>
-                        <li><a href="Vues/accueil.php">Accueil</a></li>
+                        <li><a href="accueil.php">Accueil</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="moncompte.php">Mon compte</a></li>
                         <li><a href="etat.php">Etat</a></li>
@@ -25,7 +25,7 @@
 		<!-- Body -->
 			<section class="loginform cf">
                 <div id=formlogin>
-				<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+				<form name="login" action="contact.php" method="get" accept-charset="utf-8">
 					<h1> IDENTIFICATION </h1>
                     
                     <div id="idinput">
