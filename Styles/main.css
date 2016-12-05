@@ -358,10 +358,20 @@ form p
     width: 100%;
 }
 
-#boite ul li input switch
+#boite ul li input:checked + label
 {
-    /* Concerne les boutons switchables*/
-    padding: 400px;
+    /* Concerne les boutons switchables coché(s) */
+   
+    cursor: pointer;
+    padding: 0px 154px 50px 0px;
+    background: url(../image/boutonON.png) no-repeat;
+}
+
+#boite ul li input + label:hover
+{
+    /* Concerne les boutons switchables coché(s) survolé*/
+   
+    background: url(../image/boutonON_Select.png) no-repeat;
 }
 
 #boite ul img
