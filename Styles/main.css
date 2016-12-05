@@ -9,6 +9,7 @@
     font-style: normal;
 }
 
+
 html, #page{
     height: 100%;
     width: 100%;
@@ -325,6 +326,9 @@ form p
     width: 63%;
     padding: 3% 3% 3% 3%;
     display:inline-block;
+    position: fixed;
+    vertical-align:top;
+    
 }
 
 #boite ul li
