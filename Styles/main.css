@@ -380,28 +380,24 @@ form p
     background: url(../image/boutonON.png) no-repeat;
 }
 
-#boite ul li input + label
+.switch
 {
-    /* Concerne les boutons switchables non coché(s) */
-   
-    cursor: pointer;
-    padding: 0px 76px 40px 0px;
+    cursor:pointer;
     background: url(../image/boutonOFF.png) no-repeat;
+    padding: 0px 60px 10px 0px;
+    border-radius: 20px;
 }
 
-
-#boite ul li input + label:hover
+.switch:hover
 {
-    /* Concerne les boutons switchables non coché(s) survolé*/
-   
+    transition: 0.3s;
     background: url(../image/boutonOFF_Select.png) no-repeat;
 }
 
-#boite ul li input:checked + label:hover
+#boite ul li label input:checked
 {
-    /* Concerne les boutons switchables coché(s) survolé*/
-   
-    background: url(../image/boutonON_Select.png) no-repeat;
+    background: url(../image/boutonON.png) no-repeat;
+    background-color: black;
 }
 
 #boite ul img
