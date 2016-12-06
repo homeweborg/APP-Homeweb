@@ -24,7 +24,7 @@
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
                 <div id=formlogin>
-                    <form name="login" action="index_submit" method="get" accept-charset="utf-8">
+                    <form name="login" action="Vues/etat.php" method="get" accept-charset="utf-8">
 					   <h1> IDENTIFICATION </h1>
                         <div id="idinput">
                             <p> Nom d'utilisateur</p>
