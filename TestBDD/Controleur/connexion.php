@@ -18,7 +18,7 @@
                     include("Vues/erreur.php");
                 } else { // mot de passe correct, on affiche la page d'accueil
                     $_SESSION["userID"] = $ligne['id'];
-                    include("Vues/etat.php");
+                    include("gabarit.php");
                 }
             }
         } else { // L'utilisateur n'a pas rempli tous les champs du formulaire
@@ -26,6 +26,6 @@
             include("Vues/erreur.php");
         }
     } else { // La page de connexion par défaut
-        include("Vues/accueil.php");
+        include("gabarit.php");
     }
 ?>
