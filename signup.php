@@ -3,7 +3,7 @@
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="Vues/Styles/main.css" />
 	</head>
 	<body>
 		<div id="page">
