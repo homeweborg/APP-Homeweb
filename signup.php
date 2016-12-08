@@ -10,7 +10,7 @@
 		<!-- Header -->
             <header>
                 <div id="logo">
-                    <a href="Vues/image/logo.png"><img src="Vues/image/logomini.png" alt="Logo HomeWeb" />
+                    <a href="image/logo.png"><img src="image/logomini.png" alt="Logo HomeWeb" />
                 </div>
                 <nav>
                     <ul>
