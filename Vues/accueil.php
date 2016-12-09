@@ -10,7 +10,7 @@
 		<!-- Header -->
             <header> <!-- En tete -->
                 <div id="logo">
-                    <a href="image/logo.png"><img src="image/logomini.png" alt="Logo HomeWeb" />
+                    <a href="image/logo.png"><img src="image/logomini.png" alt="Logo HomeWeb" /></a>
                 </div>
                 <nav>
                     <ul>
@@ -18,8 +18,10 @@
                         <li><a href="Vues/contact.php">Contact</a></li>
                         <li><a href="Vues/moncompte.php">Mon compte</a></li>
                         <li><a href="Vues/etat.php">Etat</a></li>
+                        <div id=logodeco><a href="Vues/accueil.php"><img src="image/onoff.png"></a></div>
                     </ul>
                 </nav>
+
             </header>
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
