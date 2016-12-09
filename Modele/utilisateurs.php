@@ -8,7 +8,7 @@
     }
 
     // fonction qui cherche le mot de passe d'un utilisateur avec un identifiant dans la base de données
-    function utilisateurs($db){
+    function id($db){
         $reponse = $db->query('SELECT identifiant FROM Utilisateurs');
         return $reponse;
     }
