@@ -14,7 +14,7 @@
                 </div>
                 <nav>
                     <ul>
-                        <div id="actuel"><li><a href="Vues/accueil.php">Accueil</a></li></div>
+                        <div><li><a href="Vues/accueil.php">Accueil</a></li></div>
                         <li><a href="Vues/contact.php">Contact</a></li>
                         <li><a href="Vues/moncompte.php">Mon compte</a></li>
                         <li><a href="Vues/etat.php">Etat</a></li>
@@ -29,16 +29,16 @@
                         <div id="signupinput">
                             <p> <b>Nom de la pièce à ajouter</b></p>
                             
-                            <input type="text" name="nom_piece" required>
+                            <input type="text" name="nom_piece" required placeholder="Ex : Salle à manger">
                             
                             <p><br><b>Capteur(s) présent(s) dans la pièce</b></p>
                             <ul>
                                 <li>Température  
                             <input type="checkbox"><br>
-                                Ref : <input type="text"> 
+                                Reférence du capteur <span class="champoblig">* </span><input type="text" placeholder="Ex : 123456789"> 
                                 </li> 
                                 <br><li>Lumière
-                            <input type="checkbox"><br>Ref : <input type="text"></li>
+                            <input type="checkbox"><br>Reférence du capteur <span class="champoblig">* </span><input type="text" placeholder="Ex : 123456789"></li>
                                 
                             </ul>
                             

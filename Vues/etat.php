@@ -48,7 +48,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="bouton_type" href="ajout_piece.php">+ AJOUTER une pièce</a>
+                        <a class="bouton_type" href="ajout_piece.php">+  AJOUTER une pièce</a>
                         <a class="bouton_type" href="#">- SUPPRIMER une pièce</a>
                     </li>
                 </ul>
