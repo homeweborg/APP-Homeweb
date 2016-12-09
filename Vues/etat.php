@@ -46,6 +46,10 @@
                             <li><a href="#">Electricité</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a class="bouton_type" href="#">+ AJOUTER une pièce</a>
+                        <a class="bouton_type" href="#">- SUPPRIMER une pièce</a>
+                    </li>
                 </ul>
 	       	</div>
             <div id=boite>
