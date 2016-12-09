@@ -14,11 +14,11 @@
                 </div>
                 <nav>
                     <ul>
-                        <div id="actuel"><li><a href="Vues/accueil.php">Accueil</a></li></div>
-                        <li><a href="Vues/contact.php">Contact</a></li>
-                        <li><a href="Vues/moncompte.php">Mon compte</a></li>
-                        <li><a href="Vues/etat.php">Etat</a></li>
-                        <div id=logodeco><a href="Vues/accueil.php"><img src="image/onoff.png"></a></div>
+                        <div id="actuel"><li><a href="accueil.php">Accueil</a></li></div>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="moncompte.php">Mon compte</a></li>
+                        <li><a href="etat.php">Etat</a></li>
+                        <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
                     </ul>
                 </nav>
 
@@ -26,7 +26,7 @@
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
                 <div id=formlogin>
-                    <form name="login" action="Vues/etat.php" method="get" accept-charset="utf-8">
+                    <form name="login" action="etat.php" method="get" accept-charset="utf-8">
 					   <h1> IDENTIFICATION </h1>
                         <div id="idinput">
                             <p> Nom d'utilisateur</p>
@@ -36,7 +36,7 @@
                         </div>
                         <div>
                             <input class="boutons_id" type="submit" value="Login">
-                            <input class="boutons_id" type="submit" value="Sign Up" onClick="window.location.href='signup.html'">
+                            <input class="boutons_id" type="submit" value="Sign Up" onClick="window.location.href='signup.php'">
                         </div>                             
                     </form>
                 </div>

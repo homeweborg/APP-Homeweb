@@ -431,3 +431,9 @@ input:checked + .slider:hover
     margin: 0px 0px 0px 0px;
     
 }
+
+#logodeco{
+    height:25px;
+    margin-left: 10px;
+    margin-right:10px;
+}
