@@ -415,7 +415,6 @@ input:checked + .slider:hover
     margin-top: 10px;
     padding-left: 12px;
     color:white;
-    text-align: center;
 }
 
 #capteurs .bouton_type:hover
@@ -432,6 +431,23 @@ input:checked + .slider:hover
     
 }
 
+#signupinput .boutons_piece
+{
+    /* Concerne le bouton submit de ajouter piece*/
+    
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 0%;
+    margin-left: 260px;
+}
+
+#signupinput .boutons_piece:hover
+{
+    cursor: pointer;
+    border-color: grey;
+    background-color: grey;
+}
 #logodeco{
     height:25px;
     margin-left: 10px;
