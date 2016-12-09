@@ -18,6 +18,7 @@
                         <li><a href="Vues/contact.php">Contact</a></li>
                         <li><a href="Vues/moncompte.php">Mon compte</a></li>
                         <div id="actuel"><li><a href="Vues/etat.php">Etat</a></li></div>
+                        <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
                     </ul>
                 </nav>
             </header>
