@@ -395,10 +395,34 @@ input:checked + .slider:hover
     background: url(../image/boutonON_Select.png) no-repeat;
 }
 
-#boite ul label input{
+#boite ul label input
+{
   position: absolute;
   left: -9999em;
+}
+#capteurs .bouton_type
+{
+    
+    /* Concerne les boutons ajouter et supprimer une pièce */
+    
+    cursor: pointer;
+    border-style: solid;
+    background-color: #575757;
+    border-color: #575757;
+    padding: 5px;
+    font-size: 15px;
+    display: flex;
+    margin-top: 10px;
+    padding-left: 12px;
+    color:white;
+    text-align: center;
+}
 
+#capteurs .bouton_type:hover
+{
+    background-color: grey;
+    border-color: grey;
+}
 
 #boite ul img
 {
@@ -406,4 +430,10 @@ input:checked + .slider:hover
     float: right;
     margin: 0px 0px 0px 0px;
     
+}
+
+#logodeco{
+    height:25px;
+    margin-left: 10px;
+    margin-right:10px;
 }

@@ -14,10 +14,10 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="Vues/accueil.php">Accueil</a></li>
-                        <div id="actuel"><li><a href="Vues/contact.php">Contact</a></li></div>
-                        <li><a href="Vues/moncompte.php">Mon compte</a></li>
-                        <li><a href="Vues/etat.php">Etat</a></li>
+                        <li><a href="accueil.php">Accueil</a></li>
+                        <div id="actuel"><li><a href="contact.php">Contact</a></li></div>
+                        <li><a href="moncompte.php">Mon compte</a></li>
+                        <li><a href="etat.php">Etat</a></li>
                     </ul>
                 </nav>
             </header>

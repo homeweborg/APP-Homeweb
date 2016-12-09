@@ -14,10 +14,10 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="Vues/accueil.php">Accueil</a></li>
-                        <li><a href="Vues/contact.php">Contact</a></li>
-                        <li><a href="Vues/moncompte.php">Mon compte</a></li>
-                        <div id="actuel"><li><a href="Vues/etat.php">Etat</a></li></div>
+                        <li><a href="accueil.php">Accueil</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="moncompte.php">Mon compte</a></li>
+                        <div id="actuel"><li><a href="etat.php">Etat</a></li></div>
                     </ul>
                 </nav>
             </header>
@@ -45,6 +45,10 @@
                             <li><a href="#">Gaz</a></li>
                             <li><a href="#">Electricité</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a class="bouton_type" href="#">+ AJOUTER une pièce</a>
+                        <a class="bouton_type" href="#">- SUPPRIMER une pièce</a>
                     </li>
                 </ul>
 	       	</div>

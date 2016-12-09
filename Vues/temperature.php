@@ -67,7 +67,7 @@
                         
                     </div>
                     
-                    <a class="boutons_retour" href="etat.html" >Retour</a>
+                    <a class="boutons_retour" href="etat.php" >Retour</a>
                     
                     <a class="boutons_retour" href=#>Signaler</a>
                     
