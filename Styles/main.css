@@ -398,7 +398,7 @@ input:checked + .slider:hover
 #boite ul label input{
   position: absolute;
   left: -9999em;
-
+}
 
 #boite ul img
 {
@@ -406,4 +406,15 @@ input:checked + .slider:hover
     float: right;
     margin: 0px 0px 0px 0px;
     
+}
+
+#signupinput .description
+{
+    /* Concerne le champs de déscription du problème rencontré pour un capteur défaillant */
+    
+    width : 99%;
+    padding-bottom: 15%;
+    margin-top: 5px;
+    margin-bottom: 10px; 
+
 }

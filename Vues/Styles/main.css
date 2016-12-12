@@ -464,3 +464,11 @@ input:checked + .slider:hover
     margin-bottom: 10px; 
 
 }
+
+#formlogin .Erreur_id
+{
+    /* Concerne le message d'erreur suite à la mauvaise identification dans accueil*/
+    
+    color: firebrick;
+    font-size: 10px;
+}
