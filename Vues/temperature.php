@@ -47,6 +47,10 @@
                         <li><a href="#">Electricité</a></li>
                     </ul>
                 </li>
+                <li>
+                        <a class="bouton_type" href="ajout_piece.php">+  AJOUTER une pièce</a>
+                        <a class="bouton_type" href="#">- SUPPRIMER une pièce</a>
+                    </li>
             </ul>
 	       	</div>
                 <div id=boite>
@@ -61,10 +65,16 @@
                     </ul>
                     
                     <div>
+                
+                        <input class="barre_temp" type="range" id="mabarre" min="0" max="40" onchange="FunctionTemp(this.value);"/>
+                        <p>Valeur demandée :  <span id="valeurTemp"></span> °C</p>
                         
-                        <input class="barre_temp" type="range" min="0" max="40"/>
-                        
-                        <p>Valeur demandée : </p>
+                        <script>
+function FunctionTemp() {
+    var x = document.getElementById("mabarre").value;
+    document.getElementById("valeurTemp").innerHTML = x;
+}
+                        </script>
                         
                     </div>
                     

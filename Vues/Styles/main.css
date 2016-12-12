@@ -427,7 +427,10 @@ input:checked + .slider:hover
 {
     /* Concerne l'image du thermometre */
     float: right;
-    margin: 0px 0px 0px 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-left: 40px;
+    padding-bottom: 100px;
     
 }
 
