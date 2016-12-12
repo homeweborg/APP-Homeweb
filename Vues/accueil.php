@@ -19,6 +19,7 @@
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="moncompte.php">Mon compte</a></li>
                         <li><a href="etat.php">Etat</a></li>
+                        <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
                     </ul>
                 </nav>
             </header>
@@ -35,7 +36,7 @@
                         </div>
                         <div>
                             <input class="boutons_id" type="submit" value="login">
-                            <input class="boutons_id" type="submit" value="signup" >
+                            <input class="boutons_id" type="submit" value="signup" onClick="window.location.href='signup.php'">
                         </div>                             
                     </form>
                 </div>

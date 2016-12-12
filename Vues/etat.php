@@ -24,7 +24,7 @@
             </header>
             <div id=capteurs>
                 <ul>
-                    <li><a href="#">Température</a>
+                    <li><a href="temperature.php">Température</a>
                         <ul>
                             <li><a href="#">Salon</a></li>
                             <li><a href="#">Salle de bain</a></li>

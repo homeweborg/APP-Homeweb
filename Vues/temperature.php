@@ -14,10 +14,10 @@
                 </div>            
                 <nav>
                     <ul>
-                        <li><a href="Vues/accueil.php">Accueil</a></li>
-                        <li><a href="Vues/contact.php">Contact</a></li>
-                        <li><a href="Vues/moncompte.php">Mon compte</a></li>
-                        <div id="actuel"><li><a href="Vues/etat.php">Etat</a></li></div>
+                        <li><a href="accueil.php">Accueil</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                        <li><a href="moncompte.php">Mon compte</a></li>
+                        <div id="actuel"><li><a href="etat.php">Etat</a></li></div>
                         <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
                     </ul>
                 </nav>
@@ -70,7 +70,7 @@
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>
                     
-                    <a class="boutons_retour" href=#>Signaler</a>
+                    <a class="boutons_retour" href="signaler.php">Signaler</a>
                     
                 </div>
                 
