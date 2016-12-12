@@ -453,3 +453,14 @@ input:checked + .slider:hover
     margin-left: 10px;
     margin-right:10px;
 }
+
+#signupinput .description
+{
+    /* Concerne le champs de déscription du problème rencontré pour un capteur défaillant */
+    
+    width : 99%;
+    padding-bottom: 15%;
+    margin-top: 5px;
+    margin-bottom: 10px; 
+
+}
