@@ -25,19 +25,19 @@
 		<!-- Body -->
 			<section class="loginform cf">
                 <div id= formsignup>
-				    <form name="login" action="index_submit" method="get" accept-charset="utf-8">
+				    <form name="login" action="confirmation.php" method="post" accept-charset="utf-8">
                         <h1> Bienvenue sur HomeWeb </h1>
                         <div id="signupinput">
                             <p>Nom de famille <span class="champoblig">*</span></p>
-                            <input type="text" name="Nom" required placeholder="Ex : Rimbaud">
+                            <input type="text" name="nom" required placeholder="Ex : Rimbaud">
                             <p>Prénom <span class="champoblig">*</span></p>
-                            <input type="text" name="Prénom" required placeholder="Ex : Arthur">
+                            <input type="text" name="prenom" required placeholder="Ex : Arthur">
                             <p>Adresse Postale <span class="champoblig">*</span></p>
-                            <input type="text" name="Adresse" required placeholder="Ex : 12 rue Napoléon, 08105, Charleville">
+                            <input type="text" name="adresse" required placeholder="Ex : 12 rue Napoléon, 08105, Charleville">
                             <p>Adresse mail <span class="champoblig">*</span></p>
-                            <input type="email" name="Mail" required placeholder="Ex : arthur.rimbaud@exemple.fr">
+                            <input type="email" name="mail" required placeholder="Ex : arthur.rimbaud@exemple.fr">
                             <p>Votre Anniversaire <span class="champoblig">*</span></p>
-                            <input type="date" name="Anniversaire" required placeholder="10/11/1891">
+                            <input type="date" name="anniversaire" required placeholder="10/11/1891">
                             <p>Numéro de téléphone <span class="champoblig">*</span></p>
                             <input type="tel" name="telephone" required placeholder="Ex : 0612345678">
                             <p>Choisissez un mot de passe <span class="champoblig">*</span> </p>
