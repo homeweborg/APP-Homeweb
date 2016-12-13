@@ -16,4 +16,9 @@ if (isset($_POST['connexion'])){ //si on clique sur le bouton login
     include("Vues/etat.php");
     }
 }
+
+else{ // si l'utilisateur ne fait rien
+        include("accueil.php"); 
+}
+  
 ?>
