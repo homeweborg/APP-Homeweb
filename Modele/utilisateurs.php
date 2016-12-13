@@ -1,5 +1,5 @@
 <?php
-    require("connexion.php");
+    require("connexionBDD.php");
 
     // fonction qui cherche le mot de passe d'un utilisateur avec un identifiant dans la base de données
     function mdp($db,$identifiant){

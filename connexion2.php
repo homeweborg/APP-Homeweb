@@ -5,11 +5,11 @@ $login_valide = "moi";
 $pwd_valide = "lemien";
 
 //on vérifie les informations du formulaire
-if(&login_valide == $_POST['username'] && $pwd_valide == $_POST['password']) {
+if($login_valide == $_POST['username'] && $pwd_valide == $_POST['password']) {
         
     //si les infos sont bonnes, on redirige vers la page et on démarre la session
     session_start ();
-    $_SESSION['username'] = $_POST['login'];
+    $_SESSION['username'] = $_POST['username'];
     $_SESSION['password'] = $_POST['password'];
 
     include("etat.php");
