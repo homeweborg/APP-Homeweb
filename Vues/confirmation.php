@@ -31,6 +31,8 @@
                     <br> Anniversaire : <?php echo $_POST['anniversaire'];?>
                     <br> Téléphone : <?php echo $_POST['telephone'];?>
                     <br> Confirmez-vous ces données ?
+                    <form name='conflogin' action='../Controleur/inscription.php' method="post" accept-charset="utf-8">
+                        <input id="boutons_signup" type="submit" value="Oui"/></form>
                 </p>
             </div>
 		</div>
