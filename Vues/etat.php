@@ -32,7 +32,7 @@
                             <li><a href="#">Chambre des enfants</a></li>    
                         </ul>
                     </li>
-                    <li><a href="#">Lumière</a>
+                    <li><a href="lumiere.php">Lumière</a>
                         <ul>
                             <li><a href="#">Salon</a></li>
                             <li><a href="#">Salle de bain</a></li>

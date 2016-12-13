@@ -24,7 +24,7 @@
             </header>
             <div id=capteurs>
             <ul>
-                <li><a href="#">Température</a>
+                <li><a href="temperature.php">Température</a>
                     <ul>
                         <li><a href="#">Salon</a></li>
                         <li><a href="#">Salle de bain</a></li>
@@ -32,7 +32,7 @@
                         <li><a href="#">Chambre des enfants</a></li>       
                     </ul>
                 </li>
-                <li><a href="lumiere.php">Lumière</a>
+                <li><a href="#">Lumière</a>
                     <ul>
                         <li><a href="#">Salon</a></li>
                         <li><a href="#">Salle de bain</a></li>
@@ -56,27 +56,19 @@
                 <div id=boite>
                     <ul>
                         
-                        <img class ="image_temp" src="image/temperature.png"/>
+                        <img class ="image_temp" src="image/light.png"/>
                         
-                        <li>Capteur de température N° </li>
+                        <li>Capteur de luminosité N° </li>
                         <li>Dernier contrôle technique :</li>
                         <li>État : </li>
-                        <li>Température ambiante : </li>
+                        <li>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <div class="slider"></div>
+                            </label>
+                        
+                        </li>
                     </ul>
-                    
-                    <div>
-                
-                        <input class="barre_temp" type="range" id="mabarre" min="0" max="40" onchange="FunctionTemp(this.value);"/>
-                        <p>Valeur demandée :  <span id="valeurTemp"></span> °C</p>
-                        
-                        <script>
-function FunctionTemp() {
-    var x = document.getElementById("mabarre").value;
-    document.getElementById("valeurTemp").innerHTML = x;
-}
-                        </script>
-                        
-                    </div>
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>
                     
