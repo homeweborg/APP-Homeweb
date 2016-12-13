@@ -22,6 +22,7 @@
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="moncompte.php">Mon compte</a></li>
                         <li><a href="etat.php">Etat</a></li>
+                        <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
                     </ul>
                 </nav>
             </header>
@@ -29,7 +30,7 @@
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
                 <div id=formlogin>
-                    <form name="login" amethod="post" action="connexion2.php")  accept-charset="utf-8">
+                    <form name="login" method="post" action="connexion2.php" accept-charset="utf-8">
 					   <h1> IDENTIFICATION </h1>
                         <div id="idinput">
                             <p> Nom d'utilisateur</p>
@@ -37,21 +38,15 @@
                             <p> Mot de passe</p>
                             <input type="password" name="password" required>
                         </div>
-                        
                         <div>
-                            <input class="boutons_id" type="submit" value="Login">
-                            <input class="boutons_id" type="submit" value="Signup" >
-                        </div>   
+                            <input class="boutons_id" type="submit" value="login">
+                            <input class="boutons_id" type="submit" value="signup" onClick="window.location.href='Controleur/inscription.php'">
+                        </div>                             
                     </form>
                 </div>
 			</section>
                 
 		</div>
-            
-		<!-- Footer -->
-			<footer>
-			</footer>
-            
 	</body>
         
 </html>

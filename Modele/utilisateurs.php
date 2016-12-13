@@ -2,13 +2,13 @@
     require("connexionBDD.php");
 
     // fonction qui cherche le mot de passe d'un utilisateur avec un identifiant dans la base de données
-    function mdp($db,$identifiant){
-        $reponse = $db->query('SELECT id, mdp FROM Utilisateurs WHERE identifiant="'.$identifiant.'"');
+    function pass($db,$username){
+        $reponse = $db->query('SELECT , password FROM utilisateurs WHERE username="'.$username.'"');
         return $reponse;
     }
 
     // fonction qui cherche le mot de passe d'un utilisateur avec un identifiant dans la base de données
-    function id($db){
+    function user($db){
         $reponse = $db->query('SELECT identifiant FROM Utilisateurs');
         return $reponse;
     }
