@@ -25,7 +25,7 @@
 		<!-- Body -->
 			<section class="loginform cf">
                 <div id= formsignup>
-				    <form name="login" action="confirmation.php" method="post" accept-charset="utf-8">
+				    <form name="login" action="../Controleur/inscription.php" method="post" accept-charset="utf-8">
                         <h1> Bienvenue sur HomeWeb </h1>
                         <div id="signupinput">
                             <p>Nom de famille <span class="champoblig">*</span></p>
@@ -45,7 +45,7 @@
                             <p>Confirmer votre mot de passe <span class="champoblig">*</span></p>
                             <input type="password" name="mdpc" required placeholder="Ex : Motdepasse123">
                         </div>
-                        <input id="boutons_signup" type="submit" value="SIGN UP"/>
+                        <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
 				    </form>
                 </div>
                 <h2 class="infos_confidentialite">Les champs marqués d'une étoile <span class="champoblig">*</span>orange sont obligatoires, ces informations sont indispenssables au bon fonctionnement de la plateforme HomeWeb.<br><br>Ces informations sont personnelles, elles ne seront en aucun cas divulgées publiquement. Merci de votre confiance.</h2>

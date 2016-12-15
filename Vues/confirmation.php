@@ -32,7 +32,7 @@
                     <br> Téléphone : <?php echo $_POST['telephone'];?>
                     <br> Confirmez-vous ces données ?
                     <form name='conflogin' action='../Controleur/inscription.php' method="post" accept-charset="utf-8">
-                        <input id="boutons_signup" type="submit" value="Oui"/></form>
+                        <input id="boutons_signup" action="../Controleur/inscription.php" type="submit" value="Oui"/></form>
                 </p>
             </div>
 		</div>
