@@ -14,7 +14,7 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="accueil.php">Accueil</a></li>
+                        <li><a href="../accueil.php">Accueil</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="moncompte.php">Mon compte</a></li>
                         <div id="actuel"><li><a href="etat.php">Etat</a></li></div>

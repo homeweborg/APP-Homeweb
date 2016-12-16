@@ -5,7 +5,7 @@
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="Vues/Styles/main.css" />
 	</head>
     
 	<body>
@@ -19,10 +19,10 @@
                 <nav>
                     <ul>
                         <div id="actuel"><li><a href="accueil.php">Accueil</a></li></div>
-                        <li><a href="contact.php">Contact</a></li>
-                        <li><a href="moncompte.php">Mon compte</a></li>
-                        <li><a href="etat.php">Etat</a></li>
-                        <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
+                        <li><a href="Vues/contact.php">Contact</a></li>
+                        <li><a href="Vues/moncompte.php">Mon compte</a></li>
+                        <li><a href="Vues/etat.php">Etat</a></li>
+                        <div id=logodeco><a href="accueil.php"><img src="Vues/image/onoff.png"></a></div>
                     </ul>
                 </nav>
             </header>
