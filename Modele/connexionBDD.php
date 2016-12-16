@@ -1,3 +1,4 @@
+
 <?php
     $dbname = "homeweb";
     $host='localhost';
@@ -5,7 +6,11 @@
     $pass='root';
 
 try {
-    $db = new tryPDO("mysql:host=$host;dbname=$dbname;charset=utf8", "$user", "$pass");
+
+    $db = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    // set the PDO error mode to exception
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  
     }
 catch (Exception $e)
 {
