@@ -492,3 +492,19 @@ input:checked + .slider:hover
     vertical-align:top;
     
 }
+
+#boite .boutons_modif
+{
+    
+    /* Concerne les boutons de modifications des données utilisateurs */
+    
+    cursor: pointer;
+    border-style: solid;
+    background-color: #575757;
+    padding: 10px;
+    border-color: #575757;
+    font-size: 15px;
+    display: flex;
+    margin-top: 10px;
+    color:white;
+}

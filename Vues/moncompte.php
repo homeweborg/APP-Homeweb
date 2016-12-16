@@ -52,6 +52,22 @@
                     </li>
        	        </ul>
             </div>
+                
+            <div id="boite">
+                
+                <p>
+                    Votre Profil :
+                    <br> 
+                    <br> <b>Nom :</b> 
+                    <br> <b>Prénom :</b> 
+                    <br> <b>Adresse :</b> 
+                    <br> <b>Mail :</b> 
+                    <br> <b>Anniversaire :</b>
+                    <br> <b>Téléphone :</b>
+                    
+                    <br><input class="boutons_modif" type="submit" value="Modifier" onClick="window.location.href='signup.php'">
+                </p>
+            </div>
         </div>
 	</body>
 </html>
