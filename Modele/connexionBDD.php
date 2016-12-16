@@ -5,6 +5,7 @@
     $user='root';
     $pass='root';
 
+
 try {
 
     $db = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
@@ -16,4 +17,8 @@ catch (Exception $e)
 {
         die('Erreur : ' . $e->getMessage());
 }  
+=======
+$bdd = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
+$bdd->query("SET NAMES UTF8");
+
 ?>

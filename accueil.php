@@ -16,12 +16,13 @@
                 <div id="logo">
                     <a href="image/logo.png"><img src="image/logomini.png" alt="Logo HomeWeb" />
                 </div>
+                    
                 <nav>
                     <ul>
                         <div id="actuel"><li><a href="accueil.php">Accueil</a></li></div>
-                        <li><a href="contact.php">Contact</a></li>
-                        <li><a href="moncompte.php">Mon compte</a></li>
-                        <li><a href="etat.php">Etat</a></li>
+                        <li><a href="Vues/contact.php">Contact</a></li>
+                        <li><a href="Vues/moncompte.php">Mon compte</a></li>
+                        <li><a href="Vues/etat.php">Etat</a></li>
                         <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
                     </ul>
                 </nav>
@@ -30,7 +31,7 @@
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
                 <div id=formlogin>
-                    <form name="login" method="post" action="connexion2.php" accept-charset="utf-8">
+                    <form name="login" method="post" action="Controleur/connexion_sans_BDD.php" accept-charset="utf-8">
 					   <h1> IDENTIFICATION </h1>
                         <div id="idinput">
                             <p> Nom d'utilisateur</p>
