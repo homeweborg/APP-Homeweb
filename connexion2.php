@@ -1,10 +1,11 @@
 <?php
     // Controleur pour gérer le formulaire de connexion des utilisateurs
 
+if (isset($_POST['login'])){ //si on clique sur le bouton login (les champs sont forcément remplis avec ce fomulaire)
     
     include("Modele/utilisateurs.php"); //on appelle le fichier avec les fonctions définies pour pouvoir les appeler
     
-    $reponse = pass($bdd,$_POST['username']); 
+    $reponse = pass($db,$_POST['username']); 
     
     if($reponse->rowcount()==0) { //si l'identifiant n'a pas ete trouvé dans la BDD
         echo '<body onLoad="alert(\'Identifiant non attribué\')">'; //on le signale sur la page
@@ -32,7 +33,13 @@
 
             include("Vues/etat.php"); //on redirige vers la page du compte
         }
+        
     }
+    
+}
 
+else{ // si l'utilisateur ne fait rien
+        include("accueil.php"); 
+}
     
 ?>

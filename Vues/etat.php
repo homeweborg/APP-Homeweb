@@ -3,7 +3,7 @@
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="Styles/main.css" />
 	</head>
 	<body>
         <div id="page">
@@ -14,11 +14,11 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="../accueil.php">Accueil</a></li>
+                        <li><a href="accueil.php">Accueil</a></li>
                         <li><a href="contact.php">Contact</a></li>
                         <li><a href="moncompte.php">Mon compte</a></li>
                         <div id="actuel"><li><a href="etat.php">Etat</a></li></div>
-                        <div id=logodeco><a href="../accueil.php"><img src="image/onoff.png"></a></div>
+                        <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
                     </ul>
                 </nav>
             </header>

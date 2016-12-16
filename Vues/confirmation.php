@@ -14,11 +14,11 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="../accueil.php">Accueil</a></li>
+                        <li><a href="accueil.php">Accueil</a></li>
                         <div id="actuel"><li><a href="contact.php">Contact</a></li></div>
                         <li><a href="moncompte.php">Mon compte</a></li>
                         <li><a href="etat.php">Etat</a></li>
-                        <div id=logodeco><a href="../accueil.php"><img src="image/onoff.png"></a></div>
+                        <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
                     </ul>
                 </nav>
             </header>
