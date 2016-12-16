@@ -7,8 +7,8 @@
     /* Envoie les données du formulaire dans la base de données */
 require("../Modele/connexionBDD.php");
 echo 'TEST 2!';
-    echo $_POST['bouton_submit'];
-if (isset($_POST['bouton_submit']))
+    
+if (isset($_POST['bouton_conf']))
  {
      
     $nom = $_POST['nom'];

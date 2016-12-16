@@ -42,9 +42,9 @@
                 </li>
                 <li><a href="#">Consommation</a>
                     <ul>
-                        <li><a href="#">Eau</a></li>
-                        <li><a href="#">Gaz</a></li>
-                        <li><a href="#">Electricité</a></li>
+                        <li><a href="eau.php">Eau</a></li>
+                        <li><a href="gaz.php">Gaz</a></li>
+                        <li><a href="elec.php">Electricité</a></li>
                     </ul>
                 </li>
                 <li>
@@ -58,10 +58,10 @@
                         
                         <img class ="image_temp" src="image/temperature.png"/>
                         
-                        <li>Capteur de température N° </li>
-                        <li>Dernier contrôle technique :</li>
-                        <li>État : </li>
-                        <li>Température ambiante : </li>
+                        <li>Capteur de température N° <span>12</span></li>
+                        <li>Dernier contrôle technique : <span>02/01/2017</span></li>
+                        <li>État : <span>Marche</span></li>
+                        <li>Température ambiante : <span>20 °C</span></li>
                     </ul>
                     
                     <div>

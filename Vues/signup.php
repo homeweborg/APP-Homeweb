@@ -25,7 +25,7 @@
 		<!-- Body -->
 			<section class="loginform cf">
                 <div id= formsignup>
-				    <form name="login" action="../Controleur/inscription.php" method="post" accept-charset="utf-8">
+				    <form name="login" action="../Vues/confirmation.php" method="post" accept-charset="utf-8">
                         <h1> Bienvenue sur HomeWeb </h1>
                         <div id="signupinput">
                             <p>Nom de famille <span class="champoblig">*</span></p>

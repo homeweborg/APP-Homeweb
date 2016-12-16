@@ -40,7 +40,7 @@
                         </div>
                         <div>
                             <input class="boutons_id" type="submit" value="login">
-                            <input class="boutons_id" type="submit" value="signup" onClick="window.location.href='Controleur/inscription.php'">
+                            <input class="boutons_id" type="submit" value="signup" onClick="window.location.href='Vues/signup.php'">
                         </div>                             
                     </form>
                 </div>

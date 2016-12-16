@@ -28,7 +28,7 @@
                     <form name="login" action="etat.php" method="get" accept-charset="utf-8">
 					   <h1> Signaler un problème </h1>
                         <div id="signupinput">
-                            <p> <b>Référence du capteur défaillant</b><span class="champoblig"> * </span></p>
+                            <p> <b>Référence du capteur défaillant </b><I style="font-size : 12px">(Si le problème concerne un capteur)</I></p>
                             
                             <input type="text" name="capteurD" required placeholder="Ex : 123456789">
                             

@@ -42,9 +42,9 @@
                     </li>
                     <li><a href="#">Consommation</a>
                         <ul>
-                            <li><a href="#">Eau</a></li>
-                            <li><a href="#">Gaz</a></li>
-                            <li><a href="#">Electricité</a></li>
+                            <li><a href="eau.php">Eau</a></li>
+                            <li><a href="gaz.php">Gaz</a></li>
+                            <li><a href="elec.php">Electricité</a></li>
                         </ul>
                     </li>
                     <li>
@@ -55,19 +55,19 @@
 	       	</div>
             <div id=boite>
                 <ul>
-                    <li>Température moyenne</li>
-                    <li>Etat général des capteurs</li>                
+                    <li>Température moyenne <span>20 °C</span></li>
+                    <li>Etat général des capteurs <span>OK</span></li>                
                     <li>Eau 
                     
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <div class="slider"></div>
                     </label>
                     
                     </li>
                     <li>Electricité                   
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <div class="slider"></div>
                     </label>
                         
@@ -75,12 +75,12 @@
                     <li>Gaz 
                         
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <div class="slider"></div>
                     </label>
                         
                     </li>
-                    <li>Nombre de lumières allumée(s)</li>
+                    <li>Nombre de lumières allumée(s) <span>0</span></li>
                     
                     <li>Porte
                         

@@ -56,18 +56,19 @@
                 <div id=boite>
                     <ul>
                         
-                        <img class ="image_temp" src="image/light.png"/>
+                        <img class ="image_temp" src="image/gaz.png"/>
                         
-                        <li>Capteur de luminosité N° <span>23</span></li>
-                        <li>Dernier contrôle technique : <span>02/01/2017</span></li>
-                        <li>État : <span>Éteint</span></li>
+                        <li>Consommation depuis le début du mois :<span>10 m3</span></li>
+                        <li>Estimation du coût : <span>95 €</span></li>
+                        <li>État : <span>Marche</span></li>
                         <li>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" checked>
                                 <div class="slider"></div>
                             </label>
                         
                         </li>
+                        <li><I style="font-size : 14px;">L' estimation correspond à une moyenne des prix, renseignez-vous auprès de votre fournisseur pour plus de renseignements</I></li>
                     </ul>
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>
