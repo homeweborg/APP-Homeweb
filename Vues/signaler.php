@@ -37,7 +37,7 @@
                             
                             <textarea type="text" class="description" name="descriptioncapteurD"></textarea>
                             
-                            <input class="boutons_piece" type="submit" value="Signaler le capteur" onClick="window.location.href='#'">
+                            <input class="boutons_piece" type="submit" value="Signaler" onClick="window.location.href='#'">
                             
                         </div>
                     </form>

@@ -26,18 +26,18 @@
             <ul>
                 <li><a href="#">Température</a>
                     <ul>
-                        <li><a href="#">Salon</a></li>
-                        <li><a href="#">Salle de bain</a></li>
-                        <li><a href="#">Chambre parentale</a></li>
-                        <li><a href="#">Chambre des enfants</a></li>       
+                        <li><a href="temperature.php">Salon</a></li>
+                        <li><a href="temperature.php">Salle de bain</a></li>
+                        <li><a href="temperature.php">Chambre parentale</a></li>
+                        <li><a href="temperature.php">Chambre des enfants</a></li>       
                     </ul>
                 </li>
-                <li><a href="lumiere.php">Lumière</a>
+                <li><a href="#">Lumière</a>
                     <ul>
-                        <li><a href="#">Salon</a></li>
-                        <li><a href="#">Salle de bain</a></li>
-                        <li><a href="#">Chambre parentale</a></li>
-                        <li><a href="#">Chambre des enfants</a></li>
+                        <li><a href="lumiere.php">Salon</a></li>
+                        <li><a href="lumiere.php">Salle de bain</a></li>
+                        <li><a href="lumiere.php">Chambre parentale</a></li>
+                        <li><a href="lumiere.php">Chambre des enfants</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Consommation</a>

@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<?php require("../Controleur/fonctions.php"); ?>
 <html>
 	<head>
 		<title>HomeWeb</title>
@@ -24,20 +25,20 @@
             </header>
             <div id=capteurs>
                 <ul>
-                    <li><a href="temperature.php">Température</a>
+                    <li><a href="#">Température</a>
                         <ul>
-                            <li><a href="#">Salon</a></li>
-                            <li><a href="#">Salle de bain</a></li>
-                            <li><a href="#">Chambre parentale</a></li>
-                            <li><a href="#">Chambre des enfants</a></li>    
+                            <li><a href="temperature.php">Salon</a></li>
+                            <li><a href="temperature.php">Salle de bain</a></li>
+                            <li><a href="temperature.php">Chambre parentale</a></li>
+                            <li><a href="temperature.php">Chambre des enfants</a></li>    
                         </ul>
                     </li>
-                    <li><a href="lumiere.php">Lumière</a>
+                    <li><a href="#">Lumière</a>
                         <ul>
-                            <li><a href="#">Salon</a></li>
-                            <li><a href="#">Salle de bain</a></li>
-                            <li><a href="#">Chambre parentale</a></li>
-                            <li><a href="#">Chambre des enfants</a></li>
+                            <li><a href="lumiere.php">Salon</a></li>
+                            <li><a href="lumiere.php">Salle de bain</a></li>
+                            <li><a href="lumiere.php">Chambre parentale</a></li>
+                            <li><a href="lumiere.php">Chambre des enfants</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Consommation</a>
@@ -60,7 +61,7 @@
                     <li>Eau 
                     
                     <label class="switch">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" <?php if (Etat_eau(1) == 1) { ?> checked <?php } ?> >
                         <div class="slider"></div>
                     </label>
                     
