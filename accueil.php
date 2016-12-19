@@ -30,7 +30,7 @@
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
                 <div id=formlogin>
-                    <form name="login" method="post" action="connexion2.php" accept-charset="utf-8">
+                    <form name="login" method="post" action="Controleur/connexion2.php" accept-charset="utf-8">
 					   <h1> IDENTIFICATION </h1>
                         <div id="idinput">
                             <p> Nom d'utilisateur</p>
@@ -39,8 +39,8 @@
                             <input type="password" name="password" required>
                         </div>
                         <div>
-                            <input class="boutons_id" type="submit" value="login">
-                            <input class="boutons_id" type="submit" value="signup" onClick="window.location.href='Vues/signup.php'">
+                            <input class="boutons_id" type="submit" value="Login">
+                            <input class="boutons_id" type="submit" value="Signup" onClick="window.location.href='Vues/signup.php'">
                         </div>                             
                     </form>
                 </div>
