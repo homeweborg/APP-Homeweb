@@ -54,7 +54,7 @@ header
     justify-content: space-between;
     background-color: white;
     box-shadow: 0px 3px 5px black;
-    height: 9%;
+    height: 10%;
 }
 
 
@@ -68,18 +68,18 @@ header
 #formlogin
 {
 	background-color: rgba(255,255,255,0.9);
-	width: 200px;
+	width: 250px;
 	margin: auto;
-	margin-top: 200px;
+	margin-top: 180px;
 	padding: 9px 10px 5px 15px;
 }
 
 #formsignup
 {
 	background-color: rgba(255,255,255,0.9);
-	width: 500px;
+	width: 550px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 12px;
     margin-bottom: 50px;
 	padding: 9px 10px 5px 15px;
 }
@@ -96,11 +96,12 @@ header
     
     font-size : 15px;
     color : #575757;
-    text-align: left;
+    text-align: justify;
     height : 27%;
     width : 220px;
     position : absolute;
-    left : 52%;
+    top : 35%;
+    left : 53%;
     bottom : 250px;
     
 }
@@ -132,7 +133,6 @@ nav a
 
 .boutons_id 
 {
-    
     /* Concerne les boutons "login" et "sign up" dans la page d'accueil */
     
     cursor: pointer;
@@ -144,7 +144,7 @@ nav a
     text-align: center;
     padding: 5px;
     position : relative;
-    left : 85px;
+    left : 120px;
     top: 15px;
     margin-bottom: 15px;
     font-size: 12px;
@@ -249,13 +249,6 @@ form p
     left: auto;
 }
 
-
-
-
-
-
-
-
 #capteurs {
     background-color: rgba(255,255,255,0.9);
     width: 20%;
@@ -266,11 +259,13 @@ form p
     max-width: 300px;
     min-width: 200px;
 }
+
 #capteurs ul li{
     font-size: x-large;
     margin-left: 10px;
     margin-right:10px;
 }
+
 #capteurs ul li ul li{
     font-size: 15px;
     padding-top:3px;
