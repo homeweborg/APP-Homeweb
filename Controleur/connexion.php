@@ -6,13 +6,13 @@
 
     //on assigne l'identifiant entré à la variable $id
     $id= $_POST['username'];
+    
+    echo 'Test2';
 
     //on récupère les identifiants des clients dans la base de données
     $reponse = $db->query('SELECT id FROM utilisateurs');
     $reponseid = $reponse->fetch(); 
     return $reponseid ; 
-
-    echo'Test1';
     
     if($id -> rowcount()==0) { //si l'identifiant n'a pas ete trouvé dans la BDD
         echo '<body onLoad="alert(\'Identifiant non attribué\')">'; //on le signale sur la page

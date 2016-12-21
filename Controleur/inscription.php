@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <p>
-    sqsqsq
    <?php
     echo 'TEST 1!';
     /* Envoie les données du formulaire dans la base de données */
