@@ -33,7 +33,7 @@ function Etat_eau($id)
 Le but final de cette fonction est que les boutons correspondants 
 au capteur d'eau, indique l'etat du capteur tel qu'il est 
 dans la base de données : ON ou OFF. Pour cela on fera une instruction
-telle que : if Etat_eau('valeur_de_id') == 1 --> checked 
+telle que : <input type="checkbox" <?php if (Etat_eau(1) == 1) { ?> checked <?php } ?> > 
 
 Les fonctions Etat_gaz, Etat_elec etc ... marcherons exactement sur
 le même principe.

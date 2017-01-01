@@ -61,7 +61,7 @@
                     <li>Eau 
                     
                     <label class="switch">
-                        <input type="checkbox" <?php if (Etat_eau(1) == 1) { ?> checked <?php } ?> >
+                        <input type="checkbox">
                         <div class="slider"></div>
                     </label>
                     

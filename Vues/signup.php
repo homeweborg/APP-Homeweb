@@ -44,11 +44,13 @@
                             <input type="password" name="mdp" required placeholder="Ex : Motdepasse123">
                             <p>Confirmer votre mot de passe <span class="champoblig">*</span></p>
                             <input type="password" name="mdpc" required placeholder="Ex : Motdepasse123">
+                            <p>Numéro d'identification Homeweb <span class="champoblig">*</span></p>
+                            <input type="password" name="ID" required placeholder="Ex : 123456789">
                         </div>
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
 				    </form>
                 </div>
-                <h2 class="infos_confidentialite">Les champs marqués d'une étoile <span class="champoblig">*</span>orange sont obligatoires, ces informations sont indispenssables au bon fonctionnement de la plateforme HomeWeb.<br><br>Ces informations sont personnelles, elles ne seront en aucun cas divulgées publiquement. Merci de votre confiance.</h2>
+                <h2 class="infos_confidentialite">Les champs marqués d'une étoile <span class="champoblig">*</span>orange sont obligatoires, ces informations sont indispenssables au bon fonctionnement de la plateforme HomeWeb.<br><br>Ces informations sont personnelles, elles ne seront en aucun cas divulgées publiquement. Merci de votre confiance.<br><br>Les comptes Homeweb sont uniquement réservés au clients de notre plateforme. Le numéro d'identification vous a été fournie par Homeweb et permet d'attester que vous êtes vraiment client.</h2>
 			</section>
 		</div>
 		<!-- Footer -->
