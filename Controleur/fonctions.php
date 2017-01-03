@@ -1,7 +1,6 @@
 <?php
 /* FICHIER REGROUPANT TOUTES LES FONCTIONS PHP ANNEXES */
-
-
+require("../Modele/connexionBDD.php");
 
 function Etat_eau($id,$db)
 {
@@ -177,4 +176,41 @@ function Estim_Eau($id,$db)
     
 }
 
+function cascade_temp($id,$db)
+{
+    /* Cette fonction affiche une a une les pièce que possède un utilisateur (cascade)
+     dotée(s) d'un capteur de temperature */
+    
+    $nom_piece = "";
+    
+    $reponse = $db->prepare('SELECT Nom FROM Pieces WHERE id_Utilisateur = ? AND presence_temp = 1');
+    $reponse->execute(array($id));
+    
+    echo "<ul>";
+    while ($donnees = $reponse->fetch())
+    {
+        $nom_piece = $donnees['Nom'];
+        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a></li>") ;
+    }
+    echo "</ul>";
+}
+
+function cascade_lum($id,$db)
+{
+    /* Cette fonction affiche une a une les pièce que possède un utilisateur (cascade)
+     dotée(s) d'un capteur de lumière */
+    
+    $nom_piece = "";
+    
+    $reponse = $db->prepare('SELECT Nom FROM Pieces WHERE id_Utilisateur = ? AND presence_lum = 1');
+    $reponse->execute(array($id));
+    
+    echo "<ul>";
+    while ($donnees = $reponse->fetch())
+    {
+        $nom_piece = $donnees['Nom'];
+        echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a></li>") ;
+    }
+    echo "</ul>";
+}
 ?>
