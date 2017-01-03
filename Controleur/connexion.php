@@ -14,23 +14,23 @@ $reponseid = $reponse->fetch();
 
 //SI L'IDENTIFIANT N'EST PAS TROUVE DANS LA BDD
 if ($reponse -> rowcount()==0) { 
-    //on le signale sur la page
-    echo '<body onLoad="alert(\'Identifiant non attribué\')">';
     //et on redirige vers la page d'accueil
-    header('Location: ../accueil.php'); 
+    header('Refresh:0 ; URL= ../accueil.php'); 
+    //on le signale sur la page 
+    echo "<script>window.alert('Identifiant incorrect')</script>" ;
     }
 
 //si l'identifiant a été trouvé
 else { 
-    $reponse = $db -> query('SELECT mdp FROM utilisateurs WHERE id="'.$id.'"');
-    $reponsemdp = $reponse->fetch();
+    $reponse2 = $db -> query('SELECT mdp FROM utilisateurs WHERE id="'.$id.'"');
+    $reponsemdp = $reponse2->fetch();
         
     //si le mdp ne correspond pas à l'id dans la BDD
-    if (md5($mdp)!=$reponsemdp){ 
+    if ((md5($mdp)) != $reponsemdp[0]){ 
+        //et on redirige vers la page d'accueil
+        header('Refresh:0 ; URL= ../accueil.php'); 
         //on le signale sur la page
-        echo '<body onLoad="alert(\'Mot de Passe incorrect\')">'; 
-        //on redirige vers la page d'accueil
-        header('Location: ;;/accueil.php'); 
+        echo "<script>window.alert('Mot de Passe incorrect')</script>" ;
     }
         
     //si le mdp correspond 
@@ -42,12 +42,11 @@ else {
         
         // on démarre la session
         session_start (); 
-        $_SESSION['username'] = $id;
-        $_SESSION['password'] = $bdd;
-        //on le signale sur la page
-        echo '<body onLoad="alert(\'Vous êtes maintenant connectés\')">'; 
-        //on redirige vers la page du compte
-        header('Location: ../Vues/etat.php'); 
+        
+        //et on redirige vers la page d'accueil
+        header('Refresh:0 ; URL= ../Vues/etat.php'); 
+        //on le signale sur la page 
+        echo "<script>window.alert('Vous êtes maintenant connecté <b>".$id."</b>')</script>" ; 
     }
         
 }
