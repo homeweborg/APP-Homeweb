@@ -1,4 +1,8 @@
 <!DOCTYPE HTML>
+<?php require("../Controleur/fonctions.php");
+//Se connecte à la base de données
+require("../Modele/connexionBDD.php");
+?>
 <html>
 	<head>
 		<title>HomeWeb</title>
@@ -63,7 +67,7 @@
                         <li>État : <span>Marche</span></li>
                         <li>
                             <label class="switch">
-                                <input type="checkbox" checked>
+                                <input type="checkbox" <?php if (Etat_elec(1,$db) == 1) { ?> checked <?php } ?>>
                                 <div class="slider"></div>
                             </label>
                         
