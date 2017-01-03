@@ -1,13 +1,10 @@
 <?php
 /* FICHIER REGROUPANT TOUTES LES FONCTIONS PHP ANNEXES */
 
-//Se connecte à la base de données
-require("../Modele/connexionBDD.php");
 
-function Etat_eau($id)
+
+function Etat_eau($id,$db)
 {
-    
-    // NON FONCTIONNELLE
     
     /* Cette fonction renvoi l'état du capteur d'eau (ON/OFF) 
     dans la base de données. Le capteur d'eau de l'utilisateur
@@ -17,6 +14,7 @@ function Etat_eau($id)
     $etat = 2;
 
     // On cherche dans la base de données la valeur de 'etat' grace à id
+    
     $reponse = $db->prepare('SELECT etat FROM eau WHERE id= ?');
     $reponse->execute(array($id));
 
@@ -38,6 +36,54 @@ telle que : <input type="checkbox" <?php if (Etat_eau(1) == 1) { ?> checked <?ph
 Les fonctions Etat_gaz, Etat_elec etc ... marcherons exactement sur
 le même principe.
     */
+    
+}
+
+function Etat_elec($id,$db)
+{
+    $etat = 2;
+    
+    $reponse = $db->prepare('SELECT etat FROM elec WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+	   $etat = $donnees['etat'];
+    }
+    
+    return $etat;
+    
+}
+
+function Etat_gaz($id,$db)
+{
+    $etat = 2;
+    
+    $reponse = $db->prepare('SELECT etat FROM gaz WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+	   $etat = $donnees['etat'];
+    }
+    
+    return $etat;
+    
+}
+
+function Etat_porte($id,$db)
+{
+    $etat = 2;
+    
+    $reponse = $db->prepare('SELECT etat FROM porte WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+	   $etat = $donnees['etat'];
+    }
+    
+    return $etat;
     
 }
 

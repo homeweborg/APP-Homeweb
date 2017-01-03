@@ -1,5 +1,8 @@
 <!DOCTYPE HTML>
-<?php require("../Controleur/fonctions.php"); ?>
+<?php require("../Controleur/fonctions.php");
+//Se connecte à la base de données
+require("../Modele/connexionBDD.php");
+?>
 <html>
 	<head>
 		<title>HomeWeb</title>
@@ -61,14 +64,14 @@
                     <li>Eau 
                     
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" <?php if (Etat_eau(1,$db) == 1) { ?> checked <?php } ?> >
                         <div class="slider"></div>
                     </label>
                     
                     </li>
                     <li>Electricité                   
                     <label class="switch">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" <?php if (Etat_elec(1,$db) == 1) { ?> checked <?php } ?>>
                         <div class="slider"></div>
                     </label>
                         
@@ -76,7 +79,7 @@
                     <li>Gaz 
                         
                     <label class="switch">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" <?php if (Etat_gaz(1,$db) == 1) { ?> checked <?php } ?>>
                         <div class="slider"></div>
                     </label>
                         
@@ -86,7 +89,7 @@
                     <li>Porte
                         
                     <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" <?php if (Etat_porte(1,$db) == 1) { ?> checked <?php } ?>>
                         <div class="slider"></div>
                     </label>
                         
