@@ -62,8 +62,8 @@ require("../Modele/connexionBDD.php");
                         
                         <img class ="image_temp" src="image/eau.png"/>
                         
-                        <li>Consommation depuis le début du mois :<span>14 m3</span></li>
-                        <li>Estimation du coût : <span>42 €</span></li>
+                        <li>Consommation depuis le début du mois :<span><?php echo (Conso_Eau(1,$db)) ?> m3</span></li>
+                        <li>Estimation du coût : <span><?php echo (Estim_Eau(1,$db)) ?> €</span></li>
                         <li>État : <span>Marche</span></li>
                         <li>
                             <label class="switch">

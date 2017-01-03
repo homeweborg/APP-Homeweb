@@ -87,4 +87,94 @@ function Etat_porte($id,$db)
     
 }
 
+function Conso_Elec($id,$db)
+{
+    // Fonction renvoyant la consommation d'électricité présente dans la base de données
+    
+    $conso = -1;
+    
+    $reponse = $db->prepare('SELECT consomation FROM elec WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+	   $conso = $donnees['consomation'];
+    }
+    
+    return $conso;  
+    
+}
+
+function Conso_Gaz($id,$db)
+{
+    // Fonction renvoyant la consommation de gaz présente dans la base de données
+    
+    $conso = -1;
+    
+    $reponse = $db->prepare('SELECT consomation FROM gaz WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+	   $conso = $donnees['consomation'];
+    }
+    
+    return $conso;  
+    
+}
+
+function Conso_Eau($id,$db)
+{
+    // Fonction renvoyant la consommation d'eau présente dans la base de données
+    
+    $conso = -1;
+    
+    $reponse = $db->prepare('SELECT consomation FROM eau WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+	   $conso = $donnees['consomation'];
+    }
+    
+    return $conso;  
+    
+}
+
+function Estim_Elec($id,$db)
+{
+    // Estime le prix de la consommation délectricité
+    $estim = -1;
+    
+    // On multiplie la conso par le prix moyen d'un kWh
+    // Ceil arrondit au nombre entier supérieur
+    $estim = ceil((Conso_Elec($id,$db))*(0.5691));
+    
+    return $estim;
+    
+}
+
+function Estim_Gaz($id,$db)
+{
+    // Estime le prix de la consommation gaz
+    
+    $estim = -1;
+    
+    $estim = ceil((Conso_Gaz($id,$db))*(9.5));
+    
+    return $estim;
+    
+}
+
+function Estim_Eau($id,$db)
+{
+    // Estime le prix de la consommation eau
+    $estim = -1;
+    
+    $estim = ceil((Conso_Eau($id,$db))*(3.1));
+    
+    return $estim;
+    
+}
+
 ?>

@@ -62,8 +62,8 @@ require("../Modele/connexionBDD.php");
                         
                         <img class ="image_temp" src="image/elec.png"/>
                         
-                        <li>Consommation depuis le début du mois :<span>375 kWh</span></li>
-                        <li>Estimation du coût : <span>214 €</span></li>
+                        <li>Consommation depuis le début du mois :<span><?php echo (Conso_Elec(1,$db)) ?> kWh</span></li>
+                        <li>Estimation du coût : <span><?php echo (Estim_Elec(1,$db)) ?> €</span></li>
                         <li>État : <span>Marche</span></li>
                         <li>
                             <label class="switch">

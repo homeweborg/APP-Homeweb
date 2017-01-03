@@ -62,8 +62,8 @@ require("../Modele/connexionBDD.php");
                         
                         <img class ="image_temp" src="image/gaz.png"/>
                         
-                        <li>Consommation depuis le début du mois :<span>10 m3</span></li>
-                        <li>Estimation du coût : <span>95 €</span></li>
+                        <li>Consommation depuis le début du mois :<span><?php echo (Conso_Gaz(1,$db)) ?> m3</span></li>
+                        <li>Estimation du coût : <span><?php echo (Estim_Gaz(1,$db)) ?> €</span></li>
                         <li>État : <span>Marche</span></li>
                         <li>
                             <label class="switch">
