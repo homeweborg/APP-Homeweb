@@ -9,18 +9,9 @@
 		<div id="page">
 		<!-- Header -->
             <header> <!-- En tete -->
-                <div id="logo">
-                    <a href="image/logo.png"><img src="image/logomini.png" alt="Logo HomeWeb" />
-                </div>
-                <nav>
-                    <ul>
-                        <div><li><a href="../accueil.php">Accueil</a></li></div>
-                        <li><a href="contact.php">Contact</a></li>
-                        <li><a href="moncompte.php">Mon compte</a></li>
-                        <li><a href="etat.php">Etat</a></li>
-                        <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
-                    </ul>
-                </nav>
+                <?php 
+                include ("../entete.php");
+                ?>
             </header>
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->

@@ -9,18 +9,9 @@
 		<div id="page">
 		<!-- Header -->
             <header>
-                <div id="logo">
-                    <a href="image/logo.png"><img src="image/logomini.png" alt="Logo HomeWeb" />
-                </div>
-                <nav>
-                    <ul>
-                        <div id="actuel"><li><a href="../accueil.php">Accueil</a></li></div>
-                        <li><a href="contact.php">Contact</a></li>
-                        <li><a href="moncompte.php">Mon compte</a></li>
-                        <li><a href="etat.php">Etat</a></li>
-                        <div id=logodeco><a href="accueil.php"><img src="image/onoff.png"></a></div>
-                    </ul>
-                </nav>
+                <?php 
+                include ("../entete.php");
+                ?>
             </header>
 		<!-- Body -->
 			<section class="loginform cf">
@@ -45,7 +36,7 @@
                             <p>Confirmer votre mot de passe <span class="champoblig">*</span></p>
                             <input type="password" name="mdpc" required placeholder="Ex : Motdepasse123">
                             <p>Numéro d'identification Homeweb <span class="champoblig">*</span></p>
-                            <input type="password" name="ID" required placeholder="Ex : 123456789">
+                            <input type="tel" name="ID" required placeholder="Ex : 123456789">
                         </div>
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
 				    </form>

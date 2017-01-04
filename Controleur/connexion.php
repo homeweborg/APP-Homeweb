@@ -35,6 +35,12 @@ else {
         
     //si le mdp correspond 
     else { 
+        //on récupère le prénom et le nom de l'utilisateur
+        $reponse3 = $db -> query('SELECT prenom FROM utilisateurs WHERE id="'.$id.'"');
+        $prenom = $reponse3->fetch();
+        $reponse4 = $db -> query('SELECT nom FROM utilisateurs WHERE id="'.$id.'"');
+        $nom = $reponse4->fetch();
+        
         // on sécurise l'identifiant    
         $username = htmlentities($_POST['username'], ENT_QUOTES, "ISO-8859-1"); 
         // on sécurise le mot de passe
@@ -46,7 +52,7 @@ else {
         //et on redirige vers la page d'accueil
         header('Refresh:0 ; URL= ../Vues/etat.php'); 
         //on le signale sur la page 
-        echo "<script>window.alert('Vous êtes maintenant connecté <b>".$id."</b>')</script>" ; 
+        echo "<script>window.alert('Vous êtes maintenant connecté "<strong>.$prenom[0].</strong>"  "<strong>.$nom[0].</strong>"')</script>" ; 
     }
         
 }

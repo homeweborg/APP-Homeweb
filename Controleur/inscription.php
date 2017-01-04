@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> // CONTROLEUR POUR GERER LE FORMULAIRE D'INSCRIPTION
 <html>
 <p>
    <?php

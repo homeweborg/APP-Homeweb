@@ -1,12 +1,9 @@
 <?php 
 
-//On détruit les variables de notre session
-session_unset ();
-
 //On détruit notre session ();
 session_destroy ();
 
-//On redirige le visiteur vers la page d'accueil
-include ("../accueil.php");
+//et on redirige vers la page d'accueil
+header('Refresh:0 ; URL= ../accueil.php');
 
 ?>

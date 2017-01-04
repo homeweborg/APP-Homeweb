@@ -93,12 +93,12 @@ header
     
     font-size : 15px;
     color : #575757;
-    text-align: justify;
+    text-align: left;
     height : 27%;
     width : 220px;
     position : absolute;
-    top : 35%;
-    left : 53%;
+    top : 30%;
+    left : 50%;
     bottom : 250px;
     
 }
