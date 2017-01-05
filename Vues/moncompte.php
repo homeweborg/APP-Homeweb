@@ -46,15 +46,15 @@
                 
             <div id="boite">
                 
-                <p>
+                <p><?php session_start();?>
                     Votre Profil :
                     <br> 
-                    <br> <b>Nom :</b> 
-                    <br> <b>Prénom :</b> 
-                    <br> <b>Adresse :</b> 
-                    <br> <b>Mail :</b> 
-                    <br> <b>Anniversaire :</b>
-                    <br> <b>Téléphone :</b>
+                    <br> <b>Nom :</b> <?php echo $_SESSION['nom'];?>
+                    <br> <b>Prénom :</b> <?php echo $_SESSION['prenom'];?>
+                    <br> <b>Adresse :</b> <?php echo $_SESSION['adresse'];?>
+                    <br> <b>Mail :</b> <?php echo $_SESSION['mail'];?>
+                    <br> <b>Anniversaire :</b> <?php echo $_SESSION['anniversaire'];?>
+                    <br> <b>Téléphone :</b> <?php echo $_SESSION['telephone'];?>
                     
                     <br><input class="boutons_modif" type="submit" value="Modifier" onClick="window.location.href='signup.php'">
                 </p>
