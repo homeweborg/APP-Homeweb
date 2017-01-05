@@ -35,7 +35,7 @@ $req-> execute(array(
     header('Refresh:0 ; URL= ../Vues/etat.php');
     //include('../Vues/etat.php');
     
-    //on le signale sur la page 
+    //on le signale sur la page  // AA VERIIIFIIIIIERRRR
     echo "<script>window.alert('Inscription réussie ')</script>" ;
 }
 

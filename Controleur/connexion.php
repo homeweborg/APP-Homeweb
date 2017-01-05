@@ -54,7 +54,7 @@ else {
         $reponseid= $reponse5->fetch();
         
         //on assigne les variables de session
-        $_SESSION['login'] = $reponseid[0];
+        $_SESSION['id'] = $reponseid[0];
 		$_SESSION['pwd'] = $reponsemdp[0];
         
         //et on redirige vers la page d'accueil

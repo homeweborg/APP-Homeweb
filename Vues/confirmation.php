@@ -1,4 +1,8 @@
 <!DOCTYPE HTML>
+<?php
+//on vérifie si un utilisateur est connecté
+require("../Controleur/verifconnexion.php");
+?>
 <html>
 	<head>
 		<title>HomeWeb</title>
