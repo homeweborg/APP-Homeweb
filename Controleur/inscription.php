@@ -32,7 +32,11 @@ $req-> execute(array(
     'mdp' => md5($mdp),
     'Numero_Homeweb' => $Numero_Homeweb));
 
-    include('../Vues/etat.php');
+    header('Refresh:0 ; URL= ../Vues/etat.php');
+    //include('../Vues/etat.php');
+    
+    //on le signale sur la page 
+    echo "<script>window.alert('Inscription réussie ')</script>" ;
 }
 
 }

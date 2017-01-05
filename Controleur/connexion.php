@@ -47,12 +47,21 @@ else {
         $password = htmlentities($_POST['password'], ENT_QUOTES, "ISO-8859-1"); 
         
         // on démarre la session
-        //session_start (); 
+        session_start (); 
+        
+        //on recupere l'id de l'utilisateur pour sécuriser le site lorsqu'il est connecté
+        $reponse5 = $db -> query('SELECT id FROM utilisateurs WHERE Numero_Homeweb="'.$numero.'"');
+        $reponseid= $reponse5->fetch();
+        
+        //on assigne les variables de session
+        $_SESSION['login'] = $reponseid[0];
+		$_SESSION['pwd'] = $reponsemdp[0];
         
         //et on redirige vers la page d'accueil
-        header('Refresh:0 ; URL= ../Vues/etat.php'); 
+        header('Refresh:0 ; URL= ../Vues/etat.php');
+        
         //on le signale sur la page 
-        echo "<script>window.alert('Vous êtes maintenant connecté ".$prenom[0]."  ".$nom[0]."')</script>" ; 
+        echo "<script>window.alert('Vous êtes maintenant connecté ".$prenom[0]." ".$nom[0]."')</script>" ; 
     }
         
 }
