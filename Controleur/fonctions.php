@@ -213,4 +213,26 @@ function cascade_lum($id,$db)
     }
     echo "</ul>";
 }
+
+function temp_moyenne($id,$db)
+{
+    /* Cette fonction calcul la temperature moyenne de la maison */
+    
+    
+    $temp_m = 0;
+    $n = 0;
+    
+    $reponse = $db->prepare('SELECT temperature FROM Pieces WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+        $temp_m = $temp_m + $donnees['temperature'];
+        $n = $n + 1;
+    }
+    
+    $temp_m = $temp_m / $n;
+    
+    return $temp_m;
+}
 ?>

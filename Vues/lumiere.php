@@ -1,4 +1,8 @@
 <!DOCTYPE HTML>
+<?php require("../Controleur/fonctions.php");
+//Se connecte à la base de données
+require("../Modele/connexionBDD.php");
+?>
 <html>
 	<head>
 		<title>HomeWeb</title>
@@ -16,21 +20,12 @@
             <div id=capteurs>
             <ul>
                 <li><a href="#">Température</a>
-                    <ul>
-                        <li><a href="temperature.php">Salon</a></li>
-                        <li><a href="temperature.php">Salle de bain</a></li>
-                        <li><a href="temperature.php">Chambre parentale</a></li>
-                        <li><a href="temperature.php">Chambre des enfants</a></li>       
-                    </ul>
-                </li>
-                <li><a href="#">Lumière</a>
-                    <ul>
-                        <li><a href="lumiere.php">Salon</a></li>
-                        <li><a href="lumiere.php">Salle de bain</a></li>
-                        <li><a href="lumiere.php">Chambre parentale</a></li>
-                        <li><a href="lumiere.php">Chambre des enfants</a></li>
-                    </ul>
-                </li>
+                        <?php cascade_temp(1,$db) ?>
+                    </li>
+                    
+                    <li><a href="#">Lumière</a>
+                        <?php cascade_lum(1,$db) ?>
+                    </li>
                 <li><a href="#">Consommation</a>
                     <ul>
                         <li><a href="eau.php">Eau</a></li>
