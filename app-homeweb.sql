@@ -155,10 +155,6 @@ CREATE TABLE `Utilisateurs` (
 -- Contenu de la table `Utilisateurs`
 --
 
-INSERT INTO `Utilisateurs` (`id`, `nom`, `prenom`, `adresse`, `mail`, `anniversaire`, `tel`, `mdp`, `Numero_Homeweb`) VALUES
-(1, 'a', 'a', 'a', 'a@a', '2016-12-08', 1, '426c2f688f30daeeaa9bcfe5f29f5569', 2017),
-(2, 'Faure', 'Noe', '6 place de la république', 'noefaure@orange.fr', '2001-08-24', 1, '1', 0);
-
 -- --------------------------------------------------------
 
 --
