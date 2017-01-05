@@ -36,9 +36,9 @@ else {
     //si le mdp correspond 
     else { 
         //on récupère le prénom et le nom de l'utilisateur
-        $reponse3 = $db -> query('SELECT prenom FROM utilisateurs WHERE Numero_Homeweb="'.$num.'"');
+        $reponse3 = $db -> query('SELECT prenom FROM utilisateurs WHERE Numero_Homeweb="'.$numero.'"');
         $prenom = $reponse3->fetch();
-        $reponse4 = $db -> query('SELECT nom FROM utilisateurs WHERE Numero_Homeweb="'.$num.'"');
+        $reponse4 = $db -> query('SELECT nom FROM utilisateurs WHERE Numero_Homeweb="'.$numero.'"');
         $nom = $reponse4->fetch();
         
         // on sécurise l'identifiant    
@@ -47,7 +47,7 @@ else {
         $password = htmlentities($_POST['password'], ENT_QUOTES, "ISO-8859-1"); 
         
         // on démarre la session
-        session_start (); 
+        //session_start (); 
         
         //et on redirige vers la page d'accueil
         header('Refresh:0 ; URL= ../Vues/etat.php'); 

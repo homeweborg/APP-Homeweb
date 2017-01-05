@@ -29,7 +29,7 @@ $req-> execute(array(
     'mail' => $mail,
     'anniversaire' => $anniversaire,
     'tel' => $tel,
-    'mdp' => $mdp,
+    'mdp' => md5($mdp),
     'Numero_Homeweb' => $Numero_Homeweb));
 
     include('../Vues/etat.php');
