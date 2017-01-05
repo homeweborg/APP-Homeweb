@@ -5,16 +5,16 @@
 require("../Modele/connexionBDD.php"); 
 
 //on assigne l'identifiant entré à la variable $id et le mdp entré à la variable $mdp
-$id= $_POST['username'];
+$numero= $_POST['username'];
 $mdp= $_POST['password'];
 
 //on récupère l'identifiant des clients dans la base de données
-$reponse = $db->query('SELECT id FROM utilisateurs WHERE id="'.$id.'"');
-$reponseid = $reponse->fetch();
+$reponse = $db->query('SELECT Numero_Homeweb FROM utilisateurs WHERE Numero_Homeweb="'.$numero.'"');
+$reponsenum = $reponse->fetch();
 
 //SI L'IDENTIFIANT N'EST PAS TROUVE DANS LA BDD
 if ($reponse -> rowcount()==0) { 
-    //et on redirige vers la page d'accueil
+    //on redirige vers la page d'accueil
     header('Refresh:0 ; URL= ../accueil.php'); 
     //on le signale sur la page 
     echo "<script>window.alert('Identifiant incorrect')</script>" ;
@@ -22,7 +22,7 @@ if ($reponse -> rowcount()==0) {
 
 //si l'identifiant a été trouvé
 else { 
-    $reponse2 = $db -> query('SELECT mdp FROM utilisateurs WHERE id="'.$id.'"');
+    $reponse2 = $db -> query('SELECT mdp FROM utilisateurs WHERE Numero_Homeweb="'.$numero.'"');
     $reponsemdp = $reponse2->fetch();
         
     //si le mdp ne correspond pas à l'id dans la BDD
@@ -36,9 +36,9 @@ else {
     //si le mdp correspond 
     else { 
         //on récupère le prénom et le nom de l'utilisateur
-        $reponse3 = $db -> query('SELECT prenom FROM utilisateurs WHERE id="'.$id.'"');
+        $reponse3 = $db -> query('SELECT prenom FROM utilisateurs WHERE Numero_Homeweb="'.$num.'"');
         $prenom = $reponse3->fetch();
-        $reponse4 = $db -> query('SELECT nom FROM utilisateurs WHERE id="'.$id.'"');
+        $reponse4 = $db -> query('SELECT nom FROM utilisateurs WHERE Numero_Homeweb="'.$num.'"');
         $nom = $reponse4->fetch();
         
         // on sécurise l'identifiant    
@@ -52,7 +52,7 @@ else {
         //et on redirige vers la page d'accueil
         header('Refresh:0 ; URL= ../Vues/etat.php'); 
         //on le signale sur la page 
-        echo "<script>window.alert('Vous êtes maintenant connecté "<strong>.$prenom[0].</strong>"  "<strong>.$nom[0].</strong>"')</script>" ; 
+        echo "<script>window.alert('Vous êtes maintenant connecté ".$prenom[0]."  ".$nom[0]."')</script>" ; 
     }
         
 }

@@ -33,7 +33,7 @@
                     <form name="login" method="post" action="Controleur/connexion.php" accept-charset="utf-8">
 					   <h1> IDENTIFICATION </h1>
                         <div id="idinput">
-                            <p> Nom d'utilisateur</p>
+                            <p> Numéro Homeweb</p>
                             <input type="username" name="username" required>
                             <p> Mot de passe</p>
                             <input type="password" name="password" required>

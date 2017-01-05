@@ -1,6 +1,6 @@
 
 <?php
-    $dbname = "homeweb";
+    $dbname = "app-homeweb";
     $host='localhost';
     $user='root';
     $pass='root';

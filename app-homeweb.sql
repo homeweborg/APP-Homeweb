@@ -14,6 +14,9 @@ SET time_zone = "+00:00";
 -- Base de données :  `homeweb`
 --
 
+CREATE DATABASE `app-homeweb` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `app-homeweb`;
+
 -- --------------------------------------------------------
 
 --
@@ -145,16 +148,16 @@ CREATE TABLE `Utilisateurs` (
   `anniversaire` date NOT NULL,
   `tel` int(20) NOT NULL,
   `mdp` varchar(255) NOT NULL,
-  `Numero Homeweb` int(11) NOT NULL
+  `Numero_Homeweb` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `Utilisateurs`
 --
 
-INSERT INTO `Utilisateurs` (`id`, `nom`, `prenom`, `adresse`, `mail`, `anniversaire`, `tel`, `mdp`, `Numero Homeweb`) VALUES
-(1, 'a', 'a', 'a', 'a@a', '2016-12-08', 1, '1', 0),
-(2, 'Faure', 'Noé', '6 place de la république', 'noefaure@orange.fr', '2001-08-24', 1, '1', 0);
+INSERT INTO `Utilisateurs` (`id`, `nom`, `prenom`, `adresse`, `mail`, `anniversaire`, `tel`, `mdp`, `Numero_Homeweb`) VALUES
+(1, 'a', 'a', 'a', 'a@a', '2016-12-08', 1, '426c2f688f30daeeaa9bcfe5f29f5569', 2017),
+(2, 'Faure', 'Noe', '6 place de la république', 'noefaure@orange.fr', '2001-08-24', 1, '1', 0);
 
 -- --------------------------------------------------------
 
