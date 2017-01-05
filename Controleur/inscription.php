@@ -1,15 +1,12 @@
-<!DOCTYPE html> // CONTROLEUR POUR GERER LE FORMULAIRE D'INSCRIPTION
-<html>
-<p>
-   <?php
-    echo 'TEST 1!';
+<?php
+    
+    // CONTROLEUR POUR GERER LE FORMULAIRE D'INSCRIPTION
+    
     /* Envoie les données du formulaire dans la base de données */
 require("../Modele/connexionBDD.php");
-echo 'TEST 2!';
     
-if (isset($_POST['bouton_conf']))
+if (isset($_POST['bouton_submit']))
  {
-     
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $adresse = $_POST['adresse'];
@@ -17,17 +14,27 @@ if (isset($_POST['bouton_conf']))
     $anniversaire = $_POST['anniversaire'];
     $tel = $_POST['telephone'];
     $mdp = $_POST['mdp'];
-    
-$insertmbr = $db -> prepare('INSERT INTO Utilisateurs(nom, prenom, adresse, mail, anniversaire, tel, mdp) VALUES ( ?, ?, ?, ?, ?, ?, ?)');
-    
-$insertmbr-> execute(array($nom, $prenom, $adresse, $mail, $anniversaire, $tel, $mdp));
+    $mdpc = $_POST['mdpc'];
+    $Numero_Homeweb = $_POST['Numero_Homeweb'];
      
- }
+if ($mdp == $mdpc)
+{
     
-echo 'TEST 3!';
+$req = $db -> prepare('INSERT INTO Utilisateurs(nom, prenom, adresse, mail, anniversaire, tel, mdp, Numero_Homeweb) VALUES ( :nom, :prenom, :adresse, :mail, :anniversaire, :tel, :mdp, :Numero_Homeweb)');
     
-    ?>
-</p>
+$req-> execute(array(
+    'nom' => $nom,
+    'prenom' => $prenom,
+    'adresse' => $adresse,
+    'mail' => $mail,
+    'anniversaire' => $anniversaire,
+    'tel' => $tel,
+    'mdp' => $mdp,
+    'Numero_Homeweb' => $Numero_Homeweb));
 
-    
-</html>
+    include('../Vues/etat.php');
+}
+
+}
+
+?>

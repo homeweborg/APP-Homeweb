@@ -42,7 +42,7 @@ require("../Modele/connexionBDD.php");
 	       	</div>
             <div id=boite>
                 <ul>
-                    <li>Température moyenne <span>20 °C</span></li>
+                    <li>Température moyenne <span><?php echo temp_moyenne(1,$db) ?> °C</span></li>
                     <li>Etat général des capteurs <span>OK</span></li>                
                     <li>Eau 
                     
@@ -67,7 +67,7 @@ require("../Modele/connexionBDD.php");
                     </label>
                         
                     </li>
-                    <li>Nombre de lumières allumée(s) <span>0</span></li>
+                    <li>Nombre de lumières allumée(s) <span><?php echo nombre_lum_on(1,$db) ?></span></li>
                     
                     <li>Porte
                         

@@ -222,7 +222,7 @@ function temp_moyenne($id,$db)
     $temp_m = 0;
     $n = 0;
     
-    $reponse = $db->prepare('SELECT temperature FROM Pieces WHERE id= ?');
+    $reponse = $db->prepare('SELECT temperature FROM Pieces WHERE id_Utilisateur= ? AND presence_temp = 1');
     $reponse->execute(array($id));
 
     while ($donnees = $reponse->fetch())
@@ -234,5 +234,23 @@ function temp_moyenne($id,$db)
     $temp_m = $temp_m / $n;
     
     return $temp_m;
+}
+
+function nombre_lum_on($id,$db)
+{
+    /* Cette fonction calcul le nombre de lumière allumée(s) */
+    
+    $n_lum = 0;
+    
+    $reponse = $db->prepare('SELECT lumiere FROM Pieces WHERE id_Utilisateur= ? AND presence_lum = 1');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+        $etat = $donnees['lumiere'];
+        $n_lum = $n_lum + $etat;
+    }
+    
+    return $n_lum;
 }
 ?>

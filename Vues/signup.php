@@ -16,7 +16,7 @@
 		<!-- Body -->
 			<section class="loginform cf">
                 <div id= formsignup>
-				    <form name="login" action="../Vues/confirmation.php" method="post" accept-charset="utf-8">
+				    <form name="login" action="../Controleur/inscription.php" method="post" accept-charset="utf-8">
                         <h1> Bienvenue sur HomeWeb </h1>
                         <div id="signupinput">
                             <p>Nom de famille <span class="champoblig">*</span></p>
@@ -36,7 +36,7 @@
                             <p>Confirmer votre mot de passe <span class="champoblig">*</span></p>
                             <input type="password" name="mdpc" required placeholder="Ex : Motdepasse123">
                             <p>Numéro d'identification Homeweb <span class="champoblig">*</span></p>
-                            <input type="tel" name="ID" required placeholder="Ex : 123456789">
+                            <input type="tel" name="Numero_Homeweb" required placeholder="Ex : 123456789">
                         </div>
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
 				    </form>
