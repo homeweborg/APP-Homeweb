@@ -5,8 +5,7 @@ echo '  <div id="logo">
         </div>
         <nav>
             <ul>
-                <li><a href="../accueil.php">Accueil</a></li>
-                <li><a href="../Vues/etat.php">Etat</a></li>
+                <li><a href="../Vues/etat.php">Etat de la maison</a></li>
                 <li><a href="../Vues/moncompte.php">Mon compte</a></li>
                 <li><a href="../Vues/contact.php">Contact</a></li>
                 <div id=logodeco><a href="../Controleur/logout.php"><img src="../Vues/image/onoff.png"></a></div>

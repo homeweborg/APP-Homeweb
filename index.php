@@ -18,11 +18,10 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="accueil.php">Accueil</a></li>
-                        <li><a href="Vues/etat.php">Etat</a></li>
+                        <li><a href="Vues/etat.php">Etat de la maison</a></li>
                         <li><a href="Vues/moncompte.php">Mon compte</a></li>
                         <li><a href="Vues/contact.php">Contact</a></li>
-                        <div id=logodeco><a href="accueil.php"><img src="Vues/image/onoff.png"></a></div>
+                        <div id=logodeco><a href="index.php"><img src="Vues/image/onoff.png"></a></div>
                     </ul>
                 </nav>
             </header>
@@ -39,7 +38,7 @@
                             <input type="password" name="password" required>
                         </div>
                         <div>
-                            <input class="boutons_id" type="submit" value="Login">
+                            <input class="boutons_id" type="submit" value="Adresse mail">
                             <input class="boutons_id" type="submit" value="Signup" onClick="window.location.href='Vues/signup.php'">
                         </div>                             
                     </form>
