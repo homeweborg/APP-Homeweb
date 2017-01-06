@@ -253,4 +253,26 @@ function nombre_lum_on($id,$db)
     
     return $n_lum;
 }
+
+function cascade_suppr($id,$db)
+{
+    /* Cette fonction affiche une a une les pièce que possède un utilisateur (cascade)
+     dotée(s) d'un capteur de lumière */
+    
+    $nom_piece = "";
+    
+    $reponse = $db->prepare('SELECT Nom FROM Pieces WHERE id_Utilisateur = ? AND presence_lum = 1');
+    $reponse->execute(array($id));
+    
+    echo "<ul>
+            <li><b>PIÈCES</b> <span><b>SUPPRIMER</b></span></li>
+            <form method=\"POST\" action=\"#\"> ";
+    while ($donnees = $reponse->fetch())
+    {
+        $nom_piece = $donnees['Nom'];
+        echo ("<li>" . $nom_piece . "<input type=\"checkbox\"></li>") ;
+    }
+    echo "  </form>
+                </ul>";
+}
 ?>
