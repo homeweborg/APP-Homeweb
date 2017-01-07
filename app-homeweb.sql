@@ -141,32 +141,28 @@ INSERT INTO `porte` (`id`, `etat`) VALUES
 
 CREATE TABLE `Utilisateurs` (
   `id` int(11) NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `adresse` text NOT NULL,
   `mail` varchar(255) NOT NULL,
-  `anniversaire` date NOT NULL,
-  `tel` int(20) NOT NULL,
-  `mdp` varchar(255) NOT NULL,
-  `Numero_Homeweb` int(11) NOT NULL
+  `mdp` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `Utilisateurs`
 --
 
--- --------------------------------------------------------
-
 --
--- Structure de la table `webmaster`
+-- Structure de la table `administrateur`
 --
 
-CREATE TABLE `webmaster` (
-  `Nom` text NOT NULL,
-  `Prénom` text NOT NULL,
-  `Identifiant` int(10) NOT NULL,
-  `Mot de passe` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `administrateur` (
+  `id` int(11) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `mdp` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `Utilisateurs`
+--
+
 
 --
 -- Index pour les tables exportées
@@ -216,11 +212,11 @@ ALTER TABLE `Utilisateurs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `webmaster`
+-- Index pour la table `administrateur`
 --
-ALTER TABLE `webmaster`
-  ADD PRIMARY KEY (`Identifiant`),
-  ADD UNIQUE KEY `Identifiant` (`Identifiant`);
+ALTER TABLE `administrateur`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
@@ -255,4 +251,9 @@ ALTER TABLE `porte`
 -- AUTO_INCREMENT pour la table `Utilisateurs`
 --
 ALTER TABLE `Utilisateurs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  --
+-- AUTO_INCREMENT pour la table `administrateur`
+--
+ALTER TABLE `administrateur`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;

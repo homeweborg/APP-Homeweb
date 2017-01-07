@@ -32,13 +32,13 @@
                     <form name="login" method="post" action="Controleur/connexion.php" accept-charset="utf-8">
 					   <h1> IDENTIFICATION </h1>
                         <div id="idinput">
-                            <p> Numéro Homeweb</p>
+                            <p>Adresse mail</p>
                             <input type="username" name="username" required>
-                            <p> Mot de passe</p>
+                            <p>Mot de passe</p>
                             <input type="password" name="password" required>
                         </div>
                         <div>
-                            <input class="boutons_id" type="submit" value="Adresse mail">
+                            <input class="boutons_id" type="submit" value="Login">
                             <input class="boutons_id" type="submit" value="Signup" onClick="window.location.href='Vues/signup.php'">
                         </div>                             
                     </form>

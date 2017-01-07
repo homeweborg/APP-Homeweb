@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
+
 <?php require("../Controleur/fonctions.php");
-//Se connecte à la base de données
+/*Se connecte à la base de données*/
 require("../Modele/connexionBDD.php"); //VRAIMENT UTILE????
 //on vérifie si un utilisateur est connecté
 require("../Controleur/verifconnexion.php");

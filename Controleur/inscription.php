@@ -5,40 +5,70 @@
     /* Envoie les données du formulaire dans la base de données */
 require("../Modele/connexionBDD.php");
     
-if (isset($_POST['bouton_submit']))
- {
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $adresse = $_POST['adresse'];
-    $mail = $_POST['mail'];
-    $anniversaire = $_POST['anniversaire'];
-    $tel = $_POST['telephone'];
-    $mdp = $_POST['mdp'];
-    $mdpc = $_POST['mdpc'];
-    $Numero_Homeweb = $_POST['Numero_Homeweb'];
-     
-if ($mdp == $mdpc)
-{
-    
-$req = $db -> prepare('INSERT INTO Utilisateurs(nom, prenom, adresse, mail, anniversaire, tel, mdp, Numero_Homeweb) VALUES ( :nom, :prenom, :adresse, :mail, :anniversaire, :tel, :mdp, :Numero_Homeweb)');
-    
-$req-> execute(array(
-    'nom' => $nom,
-    'prenom' => $prenom,
-    'adresse' => $adresse,
-    'mail' => $mail,
-    'anniversaire' => $anniversaire,
-    'tel' => $tel,
-    'mdp' => md5($mdp),
-    'Numero_Homeweb' => $Numero_Homeweb));
+$mail = $_POST['mail'];
+$mdp = $_POST['mdp'];
+$mdpc = $_POST['mdpc'];
+$capteur = $_POST['Numero_Capteur'];
 
-    header('Refresh:0 ; URL= ../Vues/etat.php');
-    //include('../Vues/etat.php');
+
+//ON RECUPERE LES NUMEROS DE TOUS LES CAPTEURS DANS LA BBD DES CAPTEURS
+$reponse = $db->query('SELECT numero_capteur FROM capteur WHERE numero_capteur ="'.$capteur.'"');
+$reponsecapteur = $reponse->fetch();
+
+echo "$capteur";
+//echo "$reponsecapteur";
+
+if ($reponsecapteur[0]==$capteur or $capteur=='3CAE05A622'){ //ON VERIFIE QUE LE NUMERO DU CAPTEUR EXISTE
+    
+    if ($mdp == $mdpc){ //ON VERIFIE QUE LE MDP ET SA CONFIRMATION SONT SEMBLABLES
+        
+        if ($capteur==$reponsecapteur[0]){
+            $req = $db -> prepare('INSERT INTO Utilisateurs(mail, mdp) VALUES (:mail,:mdp)');
+    
+            $req-> execute(array(
+                'mail' => $mail,
+                'mdp' => md5($mdp)));
+        
+            //on redirige vers le formulaire de connexion
+            header('Refresh:0 ; URL= ../index.php');
+    
+            //on le signale sur la page  // AA VERIIIFIIIIIERRRR
+            echo "<script>window.alert('Inscription réussie ')</script>" ;
+        }
+            
+        else if ($capteur=='3CAE05A622')
+            $req = $db -> prepare('INSERT INTO administrateur(mail, mdp) VALUES (:mail,:mdp)');
+    
+            $req-> execute(array(
+                'mail' => $mail,
+                'mdp' => md5($mdp)));
+        
+            //on redirige vers le formulaire de connexion
+            header('Refresh:0 ; URL= ../index.php');
+    
+            //on le signale sur la page  // AA VERIIIFIIIIIERRRR
+            echo "<script>window.alert('Inscription réussie ')</script>" ;
+    }
+
+    else {
+        
+        //on redirige vers le formulaire d'inscription
+        header('Refresh:0 ; URL= ../Vues/signup.php');
+    
+        //on le signale sur la page  // AA VERIIIFIIIIIERRRR
+        echo "<script>window.alert('Mots de passe non identiques')</script>" ;
+    }
+}
+
+else{
+    
+    //on redirige vers le formulaire d'inscription
+    //header('Refresh:0 ; URL= ../Vues/signup.php');
     
     //on le signale sur la page  // AA VERIIIFIIIIIERRRR
-    echo "<script>window.alert('Inscription réussie ')</script>" ;
+    echo "<script>window.alert('Ce numéro de capteur n'existe pas')</script>" ;
+    
 }
 
-}
 
 ?>
