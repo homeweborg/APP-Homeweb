@@ -181,16 +181,42 @@ function cascade_temp($id,$db)
     /* Cette fonction affiche une a une les pièce que possède un utilisateur (cascade)
      dotée(s) d'un capteur de temperature */
     
+    /* Cette fonction va chercher l'etat du capteur dans la bdd : éteind (couleur : noire, valeur = 0)
+    , suit la consigne (couleur : orange, valeur = 2), marche (couleur : vert, valeur = 1), en panne
+    (couleur : rouge, valeur = 3) puis affiche la pastille correspondante à droite de la pièce. */
+    
     $nom_piece = "";
     
-    $reponse = $db->prepare('SELECT Nom FROM Pieces WHERE id_Utilisateur = ? AND presence_temp = 1');
+    $reponse = $db->prepare('SELECT Nom, etat_temp FROM Pieces WHERE id_Utilisateur = ? AND presence_temp = 1');
     $reponse->execute(array($id));
     
     echo "<ul>";
     while ($donnees = $reponse->fetch())
     {
+        
         $nom_piece = $donnees['Nom'];
-        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a></li>") ;
+        $etat = $donnees['etat_temp'];
+        
+        if ($etat == 0)
+        {
+        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_noire.png\"></span></li>");
+        }
+            
+        if ($etat == 1)
+        {
+        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_verte.png\"></span></li>");
+        }
+        
+        if ($etat == 2)
+        {
+        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_orange.png\"></span></li>");
+        }
+        
+        if ($etat == 3)
+        {
+        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_rouge.png\"></span></li>");
+        }
+        
     }
     echo "</ul>";
 }
@@ -210,6 +236,7 @@ function cascade_lum($id,$db)
     {
         $nom_piece = $donnees['Nom'];
         echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a></li>") ;
+        
     }
     echo "</ul>";
 }

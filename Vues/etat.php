@@ -4,7 +4,7 @@
 /*Se connecte à la base de données*/
 require("../Modele/connexionBDD.php"); //VRAIMENT UTILE????
 //on vérifie si un utilisateur est connecté
-require("../Controleur/verifconnexion.php");
+//require("../Controleur/verifconnexion.php");
 ?>
 <html>
 	<head>
@@ -23,7 +23,7 @@ require("../Controleur/verifconnexion.php");
             <div id=capteurs>
                 <ul>
                     <li><a href="#">Température</a>
-                        <?php cascade_temp(1,$db) ?>
+                        <?php cascade_temp(1,$db) ?> 
                     </li>
                     
                     <li><a href="#">Lumière</a>
