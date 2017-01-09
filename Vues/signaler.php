@@ -38,6 +38,7 @@ require("../Controleur/verifconnexion.php");
                     </form>
                 </div>
 			</section>
+            <?php include ("../footer.php");?> 
 		</div>
 	</body>
 </html>

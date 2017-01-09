@@ -10,22 +10,20 @@
     
 	<body>
 		<div id="page">
-            
 		<!-- Header -->
             <header> <!-- En tete -->
                 <div id="logo">
             <a href="image/logo.png"><img src="image/logomini.png" alt="Logo HomeWeb" />
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="Vues/etat.php">Etat de la maison</a></li>
-                        <li><a href="Vues/moncompte.php">Mon compte</a></li>
-                        <li><a href="Vues/contact.php">Contact</a></li>
-                        <div id=logodeco><a href="index.php"><img src="Vues/image/onoff.png"></a></div>
-                    </ul>
-                </nav>
-            </header>
-                
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Vues/etat.php">Etat de la maison</a></li>
+                <li><a href="Vues/moncompte.php">Mon compte</a></li>
+                <li><a href="Vues/contact.php">Contact</a></li>
+                <div id=logodeco><a href="Controleur/logout.php"><img src="Vues/image/onoff.png"></a></div>
+            </ul>
+        </nav>
+            </header>       
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
                 <div id=formlogin>
@@ -44,7 +42,7 @@
                     </form>
                 </div>
 			</section>
-                
+        <?php include ("footer.php");?>    
 		</div>
 	</body>
         

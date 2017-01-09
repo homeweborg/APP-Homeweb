@@ -54,6 +54,7 @@ require("../Modele/connexionBDD.php");
                     <br><input class="boutons_modif" type="submit" value="Modifier" onClick="window.location.href='signup.php'">
                 </p>
             </div>
+            <?php include ("../footer.php");?> 
         </div>
 	</body>
 </html>

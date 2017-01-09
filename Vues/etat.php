@@ -82,6 +82,7 @@ require("../Modele/connexionBDD.php"); //VRAIMENT UTILE????
                         </li>
                 </ul>
             </div>
+            <?php include ("../footer.php");?> 
         </div>
 	</body>
 </html>

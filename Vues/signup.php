@@ -10,9 +10,7 @@
 		<div id="page">
 		<!-- Header -->
             <header>
-                <?php 
-                include ("../entete.php");
-                ?>
+                <?php include ("../entete.php");?>
             </header>
 		<!-- Body -->
 			<section class="loginform cf">
@@ -34,9 +32,9 @@
                 <h2 class="infos_confidentialite">Tous les champs sont obligatoires. <br><br>Le Numéro du capteur Domisep acheté peut être trouvé sur le capteur.<br><br></h2>
                 </div>
 			</section>
+           
 		</div>
-		<!-- Footer -->
-			<footer>
-			</footer>
 	</body>
+             <?php include ("../footer.php");?>
+
 </html>

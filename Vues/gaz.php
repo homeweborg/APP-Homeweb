@@ -64,6 +64,8 @@ require("../Controleur/verifconnexion.php");
                     <a class="boutons_retour" href="signaler.php">Signaler</a>
                     
                 </div>
+            <?php include ("../footer.php");?> 
+        </div>
                 
         </body>
 </html>

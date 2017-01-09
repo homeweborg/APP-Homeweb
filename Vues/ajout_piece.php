@@ -13,9 +13,7 @@ require("../Controleur/verifconnexion.php");
 		<div id="page">
 		<!-- Header -->
             <header> <!-- En tete -->
-                <?php 
-                include ("../entete.php");
-                ?>
+                <?php include ("../entete.php");?>
             </header>
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
@@ -44,6 +42,7 @@ require("../Controleur/verifconnexion.php");
                     </form>
                 </div>
 			</section>
+        <?php include ("../footer.php");?> 
 		</div>
 	</body>
 </html>

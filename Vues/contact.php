@@ -10,9 +10,7 @@
 		<div id="page">
         <!-- Header -->
             <header>
-                <?php 
-                include ("../entete.php");
-                ?>
+                <?php include ("../entete.php");?>
             </header>
             <div id=formsignup>
                     <form name="login" action="etat.php" method="get" accept-charset="utf-8">
@@ -31,6 +29,7 @@
                         </div>
                     </form>
                 </div>
+        <?php include ("../footer.php");?>
 		</div>
 	</body>
 </html>

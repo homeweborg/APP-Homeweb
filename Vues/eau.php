@@ -15,9 +15,7 @@ require("../Controleur/verifconnexion.php");
 		<div id="page">
         <!-- Header (commentaire test) -->
             <header>
-                <?php 
-                include ("../entete.php");
-                ?>
+                <?php include ("../entete.php");?>
             </header>
             <div id=capteurs>
             <ul>
@@ -64,6 +62,7 @@ require("../Controleur/verifconnexion.php");
                     <a class="boutons_retour" href="signaler.php">Signaler</a>
                     
                 </div>
-                
+                <?php include ("../footer.php");?>
+            </div>
         </body>
 </html>
