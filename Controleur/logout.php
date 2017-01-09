@@ -3,6 +3,7 @@
 session_start();
 
 //On reinitialise les variables de session si elles existent
+unset ($_SESSION['id']);
 unset ($_SESSION['mail']);
 unset ($_SESSION['pwd']);
 

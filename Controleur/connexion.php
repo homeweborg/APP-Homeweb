@@ -9,7 +9,7 @@ $mail= $_POST['username'];
 $pwd= $_POST['password'];
 
 //on récupère les adresses mail des clients dans la base de données
-$reponse = $db->query('SELECT mail FROM utilisateurs WHERE mail="'.$mail.'"');
+$reponse = $db->query('SELECT mail FROM Utilisateurs WHERE mail="'.$mail.'"');
 $reponsemail = $reponse->fetch();
 
 //on récupère également les adresses mail des administrateurs dans la base de données
@@ -17,11 +17,11 @@ $reponse6 = $db->query('SELECT mail FROM administrateur WHERE mail="'.$mail.'"')
 $reponsemailadmin = $reponse6->fetch();
 
 //SI L'ADRESSE MAIL N'EST PAS TROUVEE DANS LA BDD
-if ($reponse -> rowcount()==0 or $reponse6 -> rowcount()==0) { 
+if ($reponse -> rowcount()==0 and $reponse6 -> rowcount()==0) { 
     //on redirige vers la page d'accueil
     header('Refresh:0 ; URL= ../index.php'); 
     //on le signale sur la page 
-    echo "<script>window.alert('Adresse mail incorrecte incorrect')</script>" ;
+    echo "<script>window.alert('Adresse mail incorrecte')</script>" ;
     }
 
 //si l'adresse mail a été trouvée dans la BDD client
@@ -49,8 +49,8 @@ else if ($reponse -> rowcount()!=0){
         
         //on assigne les variables de session
         $_SESSION['id'] = $reponseid[0];
-        $_SESSION['mail'] = $reponsepwd[0];
-		$_SESSION['pwd'] = $reponsemdp[0];
+        $_SESSION['mail'] = $reponsemail[0];
+		$_SESSION['pwd'] = $reponsepwd[0];
         
         //et on redirige vers la page d'accueil
         header('Refresh:0 ; URL= ../Vues/etat.php');

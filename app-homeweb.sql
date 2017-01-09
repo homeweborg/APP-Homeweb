@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Jan 09, 2017 at 01:45 PM
+-- Generation Time: Jan 09, 2017 at 04:10 PM
 -- Server version: 5.5.49-log
 -- PHP Version: 7.0.9
 
@@ -25,6 +25,8 @@ USE `app-homeweb`;
 
 -- --------------------------------------------------------
 
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `administrateur`
 --
@@ -41,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `administrateur` (
 --
 
 INSERT INTO `administrateur` (`id`, `mail`, `mdp`, `numero_admin`) VALUES
-(1, '', '', '244THG');
+(1, 'adeleuze@isep.fr', 'b68b7c777f8a984e275582af6a660128', '244THG');
 
 -- --------------------------------------------------------
 
@@ -147,20 +149,21 @@ CREATE TABLE IF NOT EXISTS `pieces` (
   `presence_temp` int(11) NOT NULL,
   `presence_lum` int(11) NOT NULL,
   `temperature` int(11) NOT NULL,
-  `lumiere` int(11) NOT NULL
+  `lumiere` int(11) NOT NULL,
+  `etat_temp` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `pieces`
 --
 
-INSERT INTO `pieces` (`id`, `id_Utilisateur`, `Nom`, `presence_temp`, `presence_lum`, `temperature`, `lumiere`) VALUES
-(1, 1, 'Salon', 1, 1, 21, 0),
-(2, 1, 'Salle de bain', 1, 1, 22, 0),
-(3, 1, 'Chambre parentale', 1, 1, 23, 0),
-(4, 1, 'Chambre des enfants', 1, 1, 24, 0),
-(5, 1, 'Cuisine', 1, 1, 25, 0),
-(6, 1, 'Garage', 0, 0, -1, -1);
+INSERT INTO `pieces` (`id`, `id_Utilisateur`, `Nom`, `presence_temp`, `presence_lum`, `temperature`, `lumiere`, `etat_temp`) VALUES
+(1, 1, 'Salon', 1, 1, 21, 0, 0),
+(2, 1, 'Salle de bain', 1, 1, 22, 0, 2),
+(3, 1, 'Chambre parentale', 1, 1, 23, 0, 0),
+(4, 1, 'Chambre des enfants', 1, 1, 24, 0, 1),
+(5, 1, 'Cuisine', 1, 1, 25, 0, 3),
+(6, 1, 'Garage', 0, 0, -1, -1, 3);
 
 -- --------------------------------------------------------
 
@@ -190,7 +193,14 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `id` int(11) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `mdp` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `utilisateurs`
+--
+
+INSERT INTO `utilisateurs` (`id`, `mail`, `mdp`) VALUES
+(10, 'nfaure@isep.fr', 'b68b7c777f8a984e275582af6a660128');
 
 --
 -- Indexes for dumped tables
@@ -295,7 +305,7 @@ ALTER TABLE `porte`
 -- AUTO_INCREMENT for table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
