@@ -76,7 +76,7 @@ footer nav{
 footer nav ul{
     list-style-type:none;
     display:flex;
-    width:55%;
+    width:65%;
     padding:0;
     margin:auto;
     margin-top:0.5%;
@@ -346,6 +346,7 @@ form p
     display:inline-block;
     position: fixed;
     vertical-align:top;
+    height:65%;
     
 }
 
@@ -433,6 +434,7 @@ input:checked + .slider:hover
     margin-top: 10px;
     padding-left: 12px;
     color:white;
+    margin-bottom:10px;
 }
 
 #capteurs .bouton_type:hover
