@@ -290,6 +290,9 @@ form p
     font-size: 15px;
     padding-top:3px;
     padding-bottom:3px;
+    display:flex;
+    justify-content:space-between;
+    
 }
 
 #capteurs ul li ul li:hover
