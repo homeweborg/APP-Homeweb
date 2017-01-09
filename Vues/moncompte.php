@@ -48,8 +48,8 @@ require("../Modele/connexionBDD.php");
                 <p>
                     Votre Profil :
                     <br> 
-                    <br> <b>Prénom :</b> <?php echo $_SESSION['mail'];?>
-                    <br> <b>Adresse :</b> <?php echo $_SESSION['pwd'];?>
+                    <br> <b>Adresse mail</b> <?php echo $_SESSION['mail'];?>
+                    <br> <b>Mot de passe</b> <?php echo $_SESSION['pwd'];?>
                     
                     <br><input class="boutons_modif" type="submit" value="Modifier" onClick="window.location.href='signup.php'">
                 </p>

@@ -27,7 +27,7 @@
                             <p>Confirmer votre mot de passe :</p>
                             <input type="password" name="mdpc" required placeholder="Ex : Motdepasse123">
                             <p>Numéro du capteur acheté :</p>
-                            <input type="string" name="Numero_Capteur" required placeholder="Ex : A7TB0Y6TE86F">
+                            <input type="string" name="numero_capteur" required placeholder="Ex : A7TB0Y6TE86F">
                         </div>
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
 				    </form>
