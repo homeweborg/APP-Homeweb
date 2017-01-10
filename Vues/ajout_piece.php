@@ -13,12 +13,12 @@
 		<div id="page">
 		<!-- Header -->
             <header> <!-- En tete -->
-                <?php include ("../entete.php");?>
+                <?php include ("../entete.php"); ?>
             </header>
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
                 <div id=formsignup>
-                    <form name="login" action="ajout.php" method="get" accept-charset="utf-8">
+                    <form name="login" action="../Controleur/ajout.php" method="post" accept-charset="utf-8">
 					   <h1> Ajouter une pièce </h1>
                         <div id="signupinput">
                             <p> <b>Nom de la pièce à ajouter</b></p>
@@ -28,15 +28,15 @@
                             <p><br><b>Capteur(s) présent(s) dans la pièce</b></p>
                             <ul>
                                 <li>Température  
-                            <input type="checkbox" name="presence_temp"><br>
-                                Reférence du capteur <span class="champoblig">* </span><input type="text" name="rerf_temp" placeholder="Ex : 123456789" > 
+                            <input type="checkbox" name="box" value="temp"><br>
+                                Reférence du capteur <span class="champoblig">* </span><input type="text" name="ref_temp" placeholder="Ex : 123456789" > 
                                 </li> 
                                 <br><li>Lumière
-                            <input type="checkbox" name="presence_lum"><br>Reférence du capteur <span class="champoblig">* </span><input type="text" placeholder="Ex : 123456789" name="rerf_lum"></li>
+                            <input type="checkbox" name="box" value="lum"><br>Reférence du capteur <span class="champoblig">* </span><input type="text" placeholder="Ex : 123456789" name="ref_lum"></li>
                                 
                             </ul>
                             
-                            <input class="boutons_piece" type="submit" value="Ajouter une pièce" onClick="window.location.href='signup.html'">
+                            <input class="boutons_piece" type="submit" value="Ajouter une pièce">
                             
                         </div>
                     </form>
