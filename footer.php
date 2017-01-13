@@ -1,11 +1,11 @@
 <?php echo' <footer>
                 <nav>
                     <ul>
-                        <li>Conditions href="#"</li>
+                        <li><a href="#">Conditions</a></li>
                         <li>|</li>
-                        <li>Mentions légales href="#"</li>
+                        <li><a href="#">Mentions légales</a></li>
                         <li>|</li>
-                        <li>Confidentialité href="#"</li>                        
+                        <li><a href="#">Confidentialité</a></li>                        
                     </ul>
                 </nav>
             </footer>';?>
