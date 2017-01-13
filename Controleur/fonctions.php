@@ -285,7 +285,7 @@ function temp_moyenne($id,$db)
     
     $temp_m = $temp_m / $n;
     
-    return $temp_m;
+    return ceil($temp_m);
 }
 
 function nombre_lum_on($id,$db)
