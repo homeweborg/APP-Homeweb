@@ -27,8 +27,10 @@ require("../Controleur/verifconnexion.php");
 				    <form name="login" action="../Controleur/modifier.php" method="post" accept-charset="utf-8">
                         <h1> Votre Profil </h1>
                         <div id="signupinput">
-                            <p>Modifier son adresse mail :</p>
-                            <input type="mail" name="mail" required placeholder="Ex : domisep@isep.fr">
+                            <p>Votre adresse mail :
+                            <?php echo $_SESSION['mail'];?></p>
+                            <p>Renseignez votre mot de passe actuel :</p>
+                            <input type="password" name="amdp" required placeholder="*******">
                             <p>Choisissez un nouveau mot de passe :</p>
                             <input type="password" name="mdp" required placeholder="Ex : Motdepasse123">
                             <p>Confirmer votre nouveau mot de passe :</p>
@@ -38,13 +40,8 @@ require("../Controleur/verifconnexion.php");
 				    </form>
                 </div>
 			</section>
-                <p> 
-                    <br> <b>Adresse mail</b> <?php echo $_SESSION['mail'];?>
-                    <br> <b>Mot de passe</b> ******
-                    
-                    <br><input class="boutons_modif" type="submit" value="Modifier" onClick="window.location.href='signup.php'">
-                </p>
             <?php include ("../footer.php");?> 
+        
         </div>
 	</body>
 </html>
