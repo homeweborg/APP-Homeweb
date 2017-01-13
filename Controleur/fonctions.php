@@ -318,13 +318,16 @@ function cascade_suppr($id,$db)
     
     echo "<ul>
             <li><b>PIÈCES</b> <span><b>SUPPRIMER</b></span></li>
-            <form method=\"POST\" action=\"#\"> ";
+            <form method=\"POST\" action=\"../Controleur/supprimer_page.php\"> ";
     while ($donnees = $reponse->fetch())
     {
         $nom_piece = $donnees['Nom'];
         echo ("<li>" . $nom_piece . "<input type=\"checkbox\" name=\"box[]\" value=\"$nom_piece\" \"></li>") ;
     }
-    echo "  </form>
+    echo "  
+    
+    <input class=\"boutons_piece\" type=\"submit\" value=\"Confirmer la suppression\">
+    </form>
                 </ul>";
 }
 ?>

@@ -28,18 +28,18 @@ USE `app-homeweb`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `administrateur`
+-- Structure de la table `administrateur`
 --
 
-CREATE TABLE IF NOT EXISTS `administrateur` (
+CREATE TABLE `administrateur` (
   `id` int(11) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `mdp` varchar(255) NOT NULL,
   `numero_admin` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `administrateur`
+-- Contenu de la table `administrateur`
 --
 
 INSERT INTO `administrateur` (`id`, `mail`, `mdp`, `numero_admin`) VALUES
@@ -48,19 +48,19 @@ INSERT INTO `administrateur` (`id`, `mail`, `mdp`, `numero_admin`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `capteur`
+-- Structure de la table `capteur`
 --
 
-CREATE TABLE IF NOT EXISTS `capteur` (
+CREATE TABLE `capteur` (
   `id` int(255) NOT NULL,
   `numero_capteur` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `etat` int(10) NOT NULL,
   `type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `id_client` int(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `capteur`
+-- Contenu de la table `capteur`
 --
 
 INSERT INTO `capteur` (`id`, `numero_capteur`, `etat`, `type`, `id_client`) VALUES
@@ -69,17 +69,17 @@ INSERT INTO `capteur` (`id`, `numero_capteur`, `etat`, `type`, `id_client`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `eau`
+-- Structure de la table `eau`
 --
 
-CREATE TABLE IF NOT EXISTS `eau` (
+CREATE TABLE `eau` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
   `consomation` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `eau`
+-- Contenu de la table `eau`
 --
 
 INSERT INTO `eau` (`id`, `etat`, `consomation`) VALUES
@@ -88,17 +88,17 @@ INSERT INTO `eau` (`id`, `etat`, `consomation`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `elec`
+-- Structure de la table `elec`
 --
 
-CREATE TABLE IF NOT EXISTS `elec` (
+CREATE TABLE `elec` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
   `consomation` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `elec`
+-- Contenu de la table `elec`
 --
 
 INSERT INTO `elec` (`id`, `etat`, `consomation`) VALUES
@@ -107,17 +107,17 @@ INSERT INTO `elec` (`id`, `etat`, `consomation`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gaz`
+-- Structure de la table `gaz`
 --
 
-CREATE TABLE IF NOT EXISTS `gaz` (
+CREATE TABLE `gaz` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
   `consomation` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `gaz`
+-- Contenu de la table `gaz`
 --
 
 INSERT INTO `gaz` (`id`, `etat`, `consomation`) VALUES
@@ -126,10 +126,10 @@ INSERT INTO `gaz` (`id`, `etat`, `consomation`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `maintenance`
+-- Structure de la table `maintenance`
 --
 
-CREATE TABLE IF NOT EXISTS `maintenance` (
+CREATE TABLE `maintenance` (
   `Nom` text NOT NULL,
   `Prénom` text NOT NULL,
   `Identifiant` int(10) NOT NULL,
@@ -139,10 +139,10 @@ CREATE TABLE IF NOT EXISTS `maintenance` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pieces`
+-- Structure de la table `pieces`
 --
 
-CREATE TABLE IF NOT EXISTS `pieces` (
+CREATE TABLE `pieces` (
   `id` int(11) NOT NULL,
   `id_Utilisateur` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
@@ -151,10 +151,10 @@ CREATE TABLE IF NOT EXISTS `pieces` (
   `temperature` int(11) NOT NULL,
   `lumiere` int(11) NOT NULL,
   `etat_temp` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `pieces`
+-- Contenu de la table `pieces`
 --
 
 INSERT INTO `pieces` (`id`, `id_Utilisateur`, `Nom`, `presence_temp`, `presence_lum`, `temperature`, `lumiere`, `etat_temp`) VALUES
@@ -168,16 +168,16 @@ INSERT INTO `pieces` (`id`, `id_Utilisateur`, `Nom`, `presence_temp`, `presence_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `porte`
+-- Structure de la table `porte`
 --
 
-CREATE TABLE IF NOT EXISTS `porte` (
+CREATE TABLE `porte` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `porte`
+-- Contenu de la table `porte`
 --
 
 INSERT INTO `porte` (`id`, `etat`) VALUES
@@ -186,126 +186,124 @@ INSERT INTO `porte` (`id`, `etat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utilisateurs`
+-- Structure de la table `utilisateurs`
 --
 
-CREATE TABLE IF NOT EXISTS `utilisateurs` (
+CREATE TABLE `utilisateurs` (
   `id` int(11) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `mdp` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `utilisateurs`
+-- Contenu de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`id`, `mail`, `mdp`) VALUES
-(10, 'nfaure@isep.fr', 'b68b7c777f8a984e275582af6a660128');
+(1, 'nfaure@isep.fr', 'b68b7c777f8a984e275582af6a660128'),
+(11, '', 'd41d8cd98f00b204e9800998ecf8427e');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables exportées
 --
 
 --
--- Indexes for table `administrateur`
+-- Index pour la table `administrateur`
 --
 ALTER TABLE `administrateur`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Indexes for table `capteur`
+-- Index pour la table `capteur`
 --
 ALTER TABLE `capteur`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `eau`
+-- Index pour la table `eau`
 --
 ALTER TABLE `eau`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `elec`
+-- Index pour la table `elec`
 --
 ALTER TABLE `elec`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `gaz`
+-- Index pour la table `gaz`
 --
 ALTER TABLE `gaz`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `maintenance`
+-- Index pour la table `maintenance`
 --
 ALTER TABLE `maintenance`
   ADD PRIMARY KEY (`Identifiant`),
   ADD UNIQUE KEY `Identifiant` (`Identifiant`);
 
 --
--- Indexes for table `pieces`
+-- Index pour la table `pieces`
 --
 ALTER TABLE `pieces`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `porte`
+-- Index pour la table `porte`
 --
 ALTER TABLE `porte`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `utilisateurs`
+-- Index pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables exportées
 --
 
 --
--- AUTO_INCREMENT for table `administrateur`
+-- AUTO_INCREMENT pour la table `administrateur`
 --
 ALTER TABLE `administrateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `capteur`
+-- AUTO_INCREMENT pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `eau`
+-- AUTO_INCREMENT pour la table `eau`
 --
 ALTER TABLE `eau`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `elec`
+-- AUTO_INCREMENT pour la table `elec`
 --
 ALTER TABLE `elec`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `gaz`
+-- AUTO_INCREMENT pour la table `gaz`
 --
 ALTER TABLE `gaz`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `pieces`
+-- AUTO_INCREMENT pour la table `pieces`
 --
 ALTER TABLE `pieces`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
--- AUTO_INCREMENT for table `porte`
+-- AUTO_INCREMENT pour la table `porte`
 --
 ALTER TABLE `porte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `utilisateurs`
+-- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;

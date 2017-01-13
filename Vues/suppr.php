@@ -44,8 +44,6 @@
                 <?php cascade_suppr(1,$db) ?>
                 
                 <a class="boutons_retour" href="etat.php" >Retour</a>
-                    
-                <a class="boutons_retour" href="#">Confirmer la suppression</a>
             </div>
         </div>
          <?php include ("../footer.php");?> 
