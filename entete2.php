@@ -5,9 +5,9 @@ echo '  <div id="logo">
         </div>
         <nav>
             <ul>
-                <li><a>Comptes utilisateurs href="Vues/admin.php"</a></li>
-                <li><a>Problèmes signalés</a></li>
-                <li><a>Infos générales Domisep</a></li>
+                <li><a href="#">Comptes utilisateurs</a></li>
+                <li><a href="#">Problèmes signalés</a></li>
+                <li><a href="#">Infos générales Domisep</a></li>
                 <div id=logodeco><a href="../Controleur/logout.php"><img src="../Vues/image/onoff.png"></a></div>
             </ul>
         </nav>';

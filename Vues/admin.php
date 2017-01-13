@@ -23,8 +23,7 @@ require("../Controleur/verifconnexion.php");
             <?php
             $reponse = $db->query('SELECT * FROM utilisateurs'); //On récupère tous les comptes utilisateurs
             ?>
-            <table cellspacing="2px" cellpadding="2px;" bgcolors="#D0E3FA;" rules="all" align="center" style="border:solid 1px black;">
-                
+            <table>
                 <tr>
                     <th>Identifiant BDD</th>
                     <th>Adresse mail du client</th>
