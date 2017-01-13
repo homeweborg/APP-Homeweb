@@ -244,22 +244,22 @@ function cascade_lum($id,$db)
         
         if ($etat == 0)
         {
-        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span></li>");
+        echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span></li>");
         }
             
         if ($etat == 1)
         {
-        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span></li>");
+        echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span></li>");
         }
         
         if ($etat == 2)
         {
-        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
+        echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
         }
         
         if ($etat == 3)
         {
-        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span></li>");
+        echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span></li>");
         }
         
     }
@@ -322,7 +322,7 @@ function cascade_suppr($id,$db)
     while ($donnees = $reponse->fetch())
     {
         $nom_piece = $donnees['Nom'];
-        echo ("<li>" . $nom_piece . "<input type=\"checkbox\"></li>") ;
+        echo ("<li>" . $nom_piece . "<input type=\"checkbox\" name=\"box[]\" value=\"$nom_piece\" \"></li>") ;
     }
     echo "  </form>
                 </ul>";
