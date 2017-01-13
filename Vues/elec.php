@@ -61,7 +61,7 @@ require("../Controleur/verifconnexion.php");
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>
                     
-                    <a class="boutons_retour" href="signaler.php">Signaler</a>
+                    <a class="boutons_retour" href="contact.php">Se renseigner</a>
                     
                 </div>
             <?php include ("../footer.php");?> 

@@ -48,5 +48,6 @@
                 <a class="boutons_retour" href="#">Confirmer la suppression</a>
             </div>
         </div>
+         <?php include ("../footer.php");?> 
 	</body>
 </html>

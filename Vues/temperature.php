@@ -72,6 +72,6 @@ function FunctionTemp() {
                     <a class="boutons_retour" href="signaler.php">Signaler</a>
                     
                 </div>
-                
+                 <?php include ("../footer.php");?> 
         </body>
 </html>

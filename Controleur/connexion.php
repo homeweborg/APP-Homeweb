@@ -53,10 +53,7 @@ else if ($reponse -> rowcount()!=0){
 		$_SESSION['pwd'] = $reponsepwd[0];
         
         //et on redirige vers la page d'accueil
-        header('Refresh:0 ; URL= ../Vues/etat.php');
-        
-        //on le signale sur la page 
-        echo "<script>window.alert('Vous êtes maintenant connecté')</script>" ; 
+        header('Refresh:0 ; URL= ../Vues/etat.php'); 
     }
         
 }
