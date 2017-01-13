@@ -54,5 +54,6 @@ dans cette pièce */
     }
 
 }
+header('Refresh:0 ; URL= ../Vues/etat.php');
 
 ?>

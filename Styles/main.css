@@ -301,27 +301,25 @@ form p
 
 #capteurs ul li ul li:hover
 {
-    /* Change le texte du menu au passage de la sourie */
+    /* Change le texte du menu au passage de la souris */
     font-size: 18px;
     transition: 0.5s;
-    color: grey;
     padding-left: 10px;
 }
 
 #capteurs ul li ul li a:before
 {
     /* Met un point invisible avant les lieux, les points
-    apparaîtront au passage de la sourie*/
+    apparaîtront au passage de la souris*/
     
-    content: '•';
-    position: absolute;
+    content: '• ';
     opacity: 0;
     margin-left: -12px;
 }
 
 #capteurs ul li ul li:hover a:before
 {
-    /* Rend les points visibles au passage de la sourie*/
+    /* Rend les points visibles au passage de la souris*/
     opacity: 1;
 }
 
