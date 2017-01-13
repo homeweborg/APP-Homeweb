@@ -1,9 +1,8 @@
 <?php
     
     /* Gère l'ajout de pièce */
-
-require("../Modele/connexionBDD.php");
 session_start();
+require("../Modele/connexionBDD.php");
     
 $nom_piece = $_POST['nom_piece'];
 $ref_lum = $_POST['ref_lum'];
@@ -21,14 +20,13 @@ $req->execute(array(
 
 // ON VÉRIFIE QUELLE CHECKBOX A ÉTÉ COCHÉE
 
-
-foreach($_POST['box'] as $box)
+foreach($_POST['box'] as $valeur)
 {
 
 /* On vérifie si l'utilisateur à annoncé un capteur de température
 dans cette pièce */
 
-    if ($box == "temp")
+    if ($valeur == "temp")
     {
     // Si c'est le cas on ajoute le capteur dans la pièce
 
@@ -43,7 +41,7 @@ dans cette pièce */
     /* On vérifie si l'utilisateur à annoncé un capteur de lumière
     dans cette pièce */
 
-    if ($box == "lum")
+    if ($valeur == "lum")
     {
     // Si c'est le cas on ajoute le capteur dans la pièce
 

@@ -28,11 +28,11 @@
                             <p><br><b>Capteur(s) présent(s) dans la pièce</b></p>
                             <ul>
                                 <li>Température  
-                            <input type="checkbox" name="box" value="temp"><br>
+                            <input type="checkbox" name="box[]" value="temp"><br>
                                 Reférence du capteur <span class="champoblig">* </span><input type="text" name="ref_temp" placeholder="Ex : 123456789" > 
                                 </li> 
                                 <br><li>Lumière
-                            <input type="checkbox" name="box" value="lum"><br>Reférence du capteur <span class="champoblig">* </span><input type="text" placeholder="Ex : 123456789" name="ref_lum"></li>
+                            <input type="checkbox" name="box[]" value="lum"><br>Reférence du capteur <span class="champoblig">* </span><input type="text" placeholder="Ex : 123456789" name="ref_lum"></li>
                                 
                             </ul>
                             

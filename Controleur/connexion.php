@@ -2,6 +2,7 @@
 /* CONTROLEUR POUT GERER LE FORMULAIRE DE CONNEXION DES UTILISATEURS */
 
 //Se connecte à la base de données
+session_start ();
 require("../Modele/connexionBDD.php"); 
 
 //on assigne l'adresse mail entrée à la variable $mail et le mdp entré à la variable $mdp
@@ -41,7 +42,7 @@ else if ($reponse -> rowcount()!=0){
     else { 
                 
         // on démarre la session
-        session_start (); 
+        
         
         //on recupere l'id de l'utilisateur pour sécuriser le site lorsqu'il est connecté
         $reponse5 = $db -> query('SELECT id FROM utilisateurs WHERE mail="'.$mail.'"');
