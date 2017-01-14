@@ -36,7 +36,7 @@ require("../Controleur/verifconnexion.php");
                 <tr>
                     <td><?php echo $donnees['id'];?></td>
                     <td><?php echo $donnees['mail'];?></td>
-                    <td></td>
+                    <td><?php echo $donnees['etat_general'];?></td>
                 </tr>
             <?php
             } //fin de la boucle, le tableau contient toute la BDD

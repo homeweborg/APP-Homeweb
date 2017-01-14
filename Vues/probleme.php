@@ -26,7 +26,7 @@ require("../Controleur/verifconnexion.php");
             <table>
                 <tr>
                     <th>Identifiant BDD</th>
-                    <th>Problèmes sigalés</th>
+                    <th>Problèmes signalés</th>
                     <th>Capteurs concernés</th>
                 </tr>
             <?php //On affiche les lignes du tableau une à une à l'aide d'une boucle

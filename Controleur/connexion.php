@@ -40,9 +40,6 @@ else if ($reponse -> rowcount()!=0){
         
     //si le mdp correspond 
     else { 
-                
-        // on démarre la session
-        
         
         //on recupere l'id de l'utilisateur pour sécuriser le site lorsqu'il est connecté
         $reponse5 = $db -> query('SELECT id FROM utilisateurs WHERE mail="'.$mail.'"');
@@ -61,8 +58,6 @@ else if ($reponse -> rowcount()!=0){
 
 //si l'adresse mail a été trouvée dans la BDD Administrateur
 else if ($reponse6 -> rowcount()!=0){ 
-    
-    //RAJOUTER LA CONDITION DE VERIFICATION DU NUMERO ADMINISTRATEUR RENSEIGNE LORS DE L'INSCRIPTION*s
     
     $reponse7 = $db -> query('SELECT mdp FROM administrateur WHERE mail="'.$mail.'"');
     $reponsepwdadmin = $reponse7->fetch();
