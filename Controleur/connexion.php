@@ -78,9 +78,6 @@ else if ($reponse6 -> rowcount()!=0){
     //si le mdp correspond 
     else { 
                 
-        // on démarre la session
-        session_start (); 
-        
         //on recupere l'id de l'utilisateur pour sécuriser le site lorsqu'il est connecté
         $reponse8 = $db -> query('SELECT id FROM administrateur WHERE mail="'.$mail.'"');
         $reponseidadmin= $reponse8->fetch();
