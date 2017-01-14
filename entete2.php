@@ -5,8 +5,8 @@ echo '  <div id="logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#">Comptes utilisateurs</a></li>
-                <li><a href="#">Problèmes signalés</a></li>
+                <li><a href="admin.php">Comptes utilisateurs</a></li>
+                <li><a href="probleme.php">Problèmes signalés</a></li>
                 <li><a href="#">Infos générales Domisep</a></li>
                 <div id=logodeco><a href="../Controleur/logout.php"><img src="../Vues/image/onoff.png"></a></div>
             </ul>
