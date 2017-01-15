@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 
-<?php require("../Controleur/fonctions.php");
-/*Se connecte à la base de données*/
-require("../Modele/connexionBDD.php");
+<?php
 //on vérifie si un utilisateur est connecté
 require("../Controleur/verifconnexion.php");
+// On charge toutes les fonctions nécessaires
+require("../Controleur/fonctions.php");
 ?>
 <html>
 	<head>
@@ -23,11 +23,11 @@ require("../Controleur/verifconnexion.php");
             <div id=capteurs>
                 <ul>
                     <li><a href="#">Température</a>
-                        <?php cascade_temp(1,$db) ?> 
+                        <?php cascade_temp($_SESSION['id'],$db) ?> 
                     </li>
                     
                     <li><a href="#">Lumière</a>
-                        <?php cascade_lum(1,$db) ?>
+                        <?php cascade_lum($_SESSION['id'],$db) ?>
                     </li>
                     
                     <li><a href="#">Consommation</a>
@@ -50,14 +50,14 @@ require("../Controleur/verifconnexion.php");
                     <li>Eau 
                     
                     <label class="switch">
-                        <input type="checkbox" <?php if (Etat_eau(1,$db) == 1) { ?> checked <?php } ?> >
+                        <input type="checkbox" <?php if (Etat_eau($_SESSION['id'],$db) == 1) { ?> checked <?php } ?> >
                         <div class="slider"></div>
                     </label>
                     
                     </li>
                     <li>Electricité                   
                     <label class="switch">
-                        <input type="checkbox" <?php if (Etat_elec(1,$db) == 1) { ?> checked <?php } ?>>
+                        <input type="checkbox" <?php if (Etat_elec($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
                         <div class="slider"></div>
                     </label>
                         
@@ -65,7 +65,7 @@ require("../Controleur/verifconnexion.php");
                     <li>Gaz 
                         
                     <label class="switch">
-                        <input type="checkbox" <?php if (Etat_gaz(1,$db) == 1) { ?> checked <?php } ?>>
+                        <input type="checkbox" <?php if (Etat_gaz($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
                         <div class="slider"></div>
                     </label>
                         
@@ -75,7 +75,7 @@ require("../Controleur/verifconnexion.php");
                     <li>Porte
                         
                     <label class="switch">
-                        <input type="checkbox" <?php if (Etat_porte(1,$db) == 1) { ?> checked <?php } ?>>
+                        <input type="checkbox" <?php if (Etat_porte($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
                         <div class="slider"></div>
                     </label>
                         

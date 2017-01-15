@@ -23,11 +23,11 @@ require("../Modele/connexionBDD.php");
             <div id=capteurs>
             <ul>
                 <li><a href="#">Température</a>
-                        <?php cascade_temp(1,$db) ?>
+                        <?php cascade_temp($_SESSION['id'],$db) ?>
                     </li>
                     
                     <li><a href="#">Lumière</a>
-                        <?php cascade_lum(1,$db) ?>
+                        <?php cascade_lum($_SESSION['id'],$db) ?>
                     </li>
                 <li><a href="#">Consommation</a>
                     <ul>

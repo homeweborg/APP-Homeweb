@@ -2,6 +2,7 @@
 <?php require("../Controleur/fonctions.php");
 //Se connecte à la base de données
 //require("../Modele/connexionBDD.php");
+session_start();
 ?>
 <html>
 	<head>
@@ -20,11 +21,11 @@
             <div id=capteurs>
                 <ul>
                     <li><a href="#">Température</a>
-                        <?php cascade_temp(1,$db) ?>
+                        <?php cascade_temp($_SESSION['id'],$db) ?>
                     </li>
                     
                     <li><a href="#">Lumière</a>
-                        <?php cascade_lum(1,$db) ?>
+                        <?php cascade_lum($_SESSION['id'],$db) ?>
                     </li>
                     
                     <li><a href="#">Consommation</a>
@@ -41,7 +42,7 @@
                 </ul>
 	       	</div>
             <div id=boite>
-                <?php cascade_suppr(1,$db) ?>
+                <?php cascade_suppr($_SESSION['id'],$db) ?>
                 
                 <a class="boutons_retour" href="etat.php" >Retour</a>
             </div>
