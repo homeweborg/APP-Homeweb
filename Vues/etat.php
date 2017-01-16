@@ -46,11 +46,11 @@ require("../Controleur/fonctions.php");
             <div id=boite>
                 <ul>
                     <li>Température moyenne <span><?php echo temp_moyenne(1,$db) ?> °C</span></li>
-                    <li>Etat général des capteurs <span>OK</span></li>                
+                    <li>Etat général des capteurs <?php etat_general_capteur($_SESSION['id'],$db) ?></li>                
                     <li>Eau 
                     
                     <label class="switch">
-                        <input type="checkbox" <?php if (Etat_eau($_SESSION['id'],$db) == 1) { ?> checked <?php } ?> >
+                        <input type="checkbox" <?php if (Etat_eau($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
                         <div class="slider"></div>
                     </label>
                     

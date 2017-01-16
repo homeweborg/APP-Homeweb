@@ -330,4 +330,64 @@ function cascade_suppr($id,$db)
     </form>
                 </ul>";
 }
+
+function etat_general_capteur($id,$db)
+{
+    // Cette fonction affiche une pastille de couleur générale pour l'état des capteur
+    
+    $etat_general = 0;
+    
+    $reponse = $db->prepare('SELECT etat_temp FROM Pieces WHERE id_Utilisateur = ?');
+    $reponse->execute(array($id));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        if ($donnees['etat_temp'] > $etat_general)
+        {
+        
+        // On prend le max des valeurs des etats des capteurs, plus la valeur est importante
+        // plus la donnée l'est aussi.
+            
+        $etat_general = $donnees['etat_temp'];
+        
+        }
+    }
+    
+    $reponse = $db->prepare('SELECT lumiere FROM Pieces WHERE id_Utilisateur = ?');
+    $reponse->execute(array($id));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        if ($donnees['lumiere'] > $etat_general)
+        {
+        
+        $etat_general = $donnees['lumiere'];
+        
+        }
+    }
+    
+    // On affiche l'etat général du capteur
+    
+    if ($etat_general == 0)
+        {
+        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        }
+            
+        else if ($etat_general == 1)
+        {
+        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        }
+        
+        else if ($etat_general == 2)
+        {
+        echo ("<span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span>");
+        }
+        
+        else if ($etat_general == 3)
+        {
+        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        }
+    
+    
+}
 ?>
