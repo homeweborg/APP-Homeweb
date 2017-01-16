@@ -313,7 +313,7 @@ function cascade_suppr($id,$db)
     
     $nom_piece = "";
     
-    $reponse = $db->prepare('SELECT Nom FROM Pieces WHERE id_Utilisateur = ? AND presence_lum = 1');
+    $reponse = $db->prepare('SELECT Nom FROM Pieces WHERE id_Utilisateur = ?');
     $reponse->execute(array($id));
     
     echo "<ul>
