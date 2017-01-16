@@ -325,8 +325,8 @@ function cascade_suppr($id,$db)
         echo ("<li>" . $nom_piece . "<input type=\"checkbox\" name=\"box[]\" value=\"$nom_piece\" \"></li>") ;
     }
     echo "  
-    
-    <input class=\"boutons_piece\" type=\"submit\" value=\"Confirmer la suppression\">
+    <input class=\"boutons_retour\" type=\"submit\" value=\"Retour\" onClick=\"window.location.href='etat.php'\">
+    <input class=\"boutons_retour\" type=\"submit\" value=\"Confirmer la suppression\" >
     </form>
                 </ul>";
 }

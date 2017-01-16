@@ -349,6 +349,7 @@ form p
     position: fixed;
     vertical-align:top;
     height:65%;
+    overflow:auto;
     
 }
 
@@ -375,13 +376,15 @@ form p
     border-color: #575757;
     color: white;
     text-decoration: none;
-    padding: 5px;
+    padding: 15px;
+    font-size:24px;
 }
 
 .boutons_retour:hover
 {
     background-color: grey;
     border-color: grey;
+    cursor:pointer;
 }
 
 .barre_temp

@@ -43,8 +43,6 @@ session_start();
 	       	</div>
             <div id=boite>
                 <?php cascade_suppr($_SESSION['id'],$db) ?>
-                
-                <a class="boutons_retour" href="etat.php" >Retour</a>
             </div>
         </div>
          <?php include ("../footer.php");?> 
