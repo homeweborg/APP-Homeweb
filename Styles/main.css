@@ -448,7 +448,7 @@ input:checked + .slider:hover
     border-color: grey;
 }
 
-#boite ul img
+#boite ul #image_etat img
 {
     /* Concerne l'image du thermometre */
     float: right;

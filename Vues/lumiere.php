@@ -45,7 +45,7 @@ require("../Modele/connexionBDD.php");
                 <div id=boite>
                     <ul>
                         
-                        <img class ="image_temp" src="image/light.png"/>
+                        <div id = image_etat><img class ="image_temp" src="image/light.png"/></div>
                         
                         <li>Capteur de luminosité N° <span>23</span></li>
                         <li>Dernier contrôle technique : <span>02/01/2017</span></li>

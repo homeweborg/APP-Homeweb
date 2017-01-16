@@ -42,7 +42,7 @@ require("../Controleur/verifconnexion.php");
                 <div id=boite>
                     <ul>
                         
-                        <img class ="image_temp" src="image/eau.png"/>
+                        <div id = image_etat><img class ="image_temp" src="image/eau.png"/></div>
                         
                         <li>Consommation depuis le début du mois :<span><?php echo (Conso_Eau(1,$db)) ?> m3</span></li>
                         <li>Estimation du coût : <span><?php echo (Estim_Eau(1,$db)) ?> €</span></li>

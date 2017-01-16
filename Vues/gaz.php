@@ -44,7 +44,7 @@ require("../Controleur/verifconnexion.php");
                 <div id=boite>
                     <ul>
                         
-                        <img class ="image_temp" src="image/gaz.png"/>
+                        <div id = image_etat><img class ="image_temp" src="image/gaz.png"/></div>
                         
                         <li>Consommation depuis le début du mois :<span><?php echo (Conso_Gaz(1,$db)) ?> m3</span></li>
                         <li>Estimation du coût : <span><?php echo (Estim_Gaz(1,$db)) ?> €</span></li>

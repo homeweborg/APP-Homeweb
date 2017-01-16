@@ -45,7 +45,7 @@ require("../Controleur/verifconnexion.php");
                 <div id=boite>
                     <ul>
                         
-                        <img class ="image_temp" src="image/temperature.png"/>
+                        <div id = image_etat><img class ="image_temp" src="image/temperature.png"/></div>
                         
                         <li>Capteur de température N° <span>12</span></li>
                         <li>Dernier contrôle technique : <span>02/01/2017</span></li>
