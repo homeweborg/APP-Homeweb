@@ -199,22 +199,22 @@ function cascade_temp($id,$db)
         
         if ($etat == 0)
         {
-        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_noire.png\" title=\"Éteint\"></span></li>");
+        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_noire.png\" title=\"Éteint\"></span></li>");
         }
             
         if ($etat == 1)
         {
-        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_verte.png\" title=\"Marche\"></span></li>");
+        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_verte.png\" title=\"Marche\"></span></li>");
         }
         
         if ($etat == 2)
         {
-        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
+        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
         }
         
         if ($etat == 3)
         {
-        echo ("<li><a href=\"temperature.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_rouge.png\" title=\"En Panne\"></span></li>");
+        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_rouge.png\" title=\"En Panne\"></span></li>");
         }
         
     }
@@ -244,22 +244,22 @@ function cascade_lum($id,$db)
         
         if ($etat == 0)
         {
-        echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span></li>");
+        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span></li>");
         }
             
         if ($etat == 1)
         {
-        echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span></li>");
+        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span></li>");
         }
         
         if ($etat == 2)
         {
-        echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
+        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
         }
         
         if ($etat == 3)
         {
-        echo ("<li><a href=\"lumiere.php\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span></li>");
+        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span></li>");
         }
         
     }
@@ -387,7 +387,58 @@ function etat_general_capteur($id,$db)
         {
         echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
         }
-    
-    
+      
 }
+
+function affiche_temperature($id,$db)
+{
+    // Affiche la température d'une pièce
+    
+    $nom_piece = $_GET['piece'];
+    
+    $reponse = $db->prepare('SELECT temperature FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse->execute(array($id, $nom_piece));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        echo ($donnees['temperature']);    
+    }
+}
+
+function affiche_etat_capt_temp($id,$db)
+{
+    // Affiche le numéro d'un capteur de température pour une pièce donnée
+    
+    $nom_piece = $_GET['piece'];
+    $etat_general = 4;
+    
+    $reponse = $db->prepare('SELECT etat_temp FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse->execute(array($id, $nom_piece));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $etat_general = $donnees['etat_temp'];    
+    }
+    
+    if ($etat_general == 0)
+        {
+        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        }
+            
+        else if ($etat_general == 1)
+        {
+        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        }
+        
+        else if ($etat_general == 2)
+        {
+        echo ("<span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span>");
+        }
+        
+        else if ($etat_general == 3)
+        {
+        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        }
+}
+
 ?>

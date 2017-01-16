@@ -49,8 +49,8 @@ require("../Controleur/verifconnexion.php");
                         
                         <li>Capteur de température N° <span>12</span></li>
                         <li>Dernier contrôle technique : <span>02/01/2017</span></li>
-                        <li>État : <span>Marche</span></li>
-                        <li>Température ambiante : <span>20 °C</span></li>
+                        <li>État : <span><?php affiche_etat_capt_temp($_SESSION['id'],$db) ?></li>
+                        <li>Température ambiante : <span><?php affiche_temperature($_SESSION['id'],$db) ?></span></li>
                     </ul>
                     
                     <div>
