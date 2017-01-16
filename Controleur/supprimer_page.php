@@ -10,20 +10,18 @@ $id_Utilisateur = $_SESSION['id'];
 
 foreach($_POST['box'] as $valeur)
 {
+
 // On cherche le nom des pièces de l'utilisateur dans la bdd
     
-$reponse = $db->prepare('SELECT Nom FROM pieces WHERE id_Utilisateur = "?" ');
+$reponse = $db->prepare('SELECT Nom FROM pieces WHERE id_Utilisateur = ?');
     
 $reponse->execute(array($id_Utilisateur));
     
 while ($donnees = $reponse->fetch())
 {
-    echo("wahou");
-    
     if($donnees['Nom'] == $valeur)
     {
-        echo("yes");
-        $reponse2 = $db->prepare('DELETE FROM pieces WHERE Nom = "?" ');
+        $reponse2 = $db->prepare('DELETE FROM pieces WHERE Nom = ?');
         $reponse2->execute(array($valeur));
     }
 }
