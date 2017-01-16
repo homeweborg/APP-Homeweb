@@ -558,3 +558,9 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: rgba(255,255,255,0.75);;
 }
+
+#social ul li{
+    margin-left:10px;
+    display:flex;
+    justify-content: flex-end;
+}
