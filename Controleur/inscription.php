@@ -3,6 +3,8 @@
     // CONTROLEUR POUR GERER LE FORMULAIRE D'INSCRIPTION
     
     /* Envoie les données du formulaire dans la base de données */
+
+
 require("../Modele/connexionBDD.php");
     
 $mail = $_POST['mail'];
@@ -26,6 +28,11 @@ if ($reponsecapteur[0]==$numero or $numero==$reponseadmin[0]){ //ON VERIFIE QUE 
         if ($numero==$reponsecapteur[0]){
             
             $ajout = $db->exec('INSERT INTO Utilisateurs(mail,mdp) VALUES ("'.$mail.'","'.md5($mdp).'")');
+            
+            $reponse3 = $db->query('SELECT id FROM Utilisateurs WHERE mail="'.$mail.'"');
+            $reponseid = $reponse3->fetch();
+            
+            $ajout2 = $db->exec('INSERT INTO capteur VALUES id_client="'.$reponseid.'" WHERE numero_capteur="'.$numero.'"');
         
             //on redirige vers le formulaire de connexion
             header('Refresh:0 ; URL= ../index.php');
