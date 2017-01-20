@@ -441,4 +441,22 @@ function affiche_etat_capt_temp($id,$db)
         }
 }
 
+function affiche_num_capt_temp($id,$db)
+{
+    // Affiche le numéro du capteur de température
+    
+    $nom_piece = $_GET['piece'];
+    $num = "ERREUR";
+    
+    $reponse = $db->prepare('SELECT numero_capteur_t FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse->execute(array($id, $nom_piece));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $num= $donnees['numero_capteur_t'];
+    }
+    
+    echo ($num);
+}
+
 ?>

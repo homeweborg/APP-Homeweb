@@ -47,7 +47,7 @@ require("../Controleur/verifconnexion.php");
                         
                         <div id = image_etat><img class ="image_temp" src="image/temperature.png"/></div>
                         
-                        <li>Capteur de température N° <span>12</span></li>
+                        <li>Capteur de température N° <span><?php affiche_num_capt_temp($_SESSION['id'],$db) ?></span></li>
                         <li>Dernier contrôle technique : <span>02/01/2017</span></li>
                         <li>État : <span><?php affiche_etat_capt_temp($_SESSION['id'],$db) ?></li>
                         <li>Température ambiante : <span><?php affiche_temperature($_SESSION['id'],$db) ?></span></li>
