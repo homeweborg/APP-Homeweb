@@ -1,6 +1,6 @@
 <?php
 
-// Envoie les données de température à la bbd
+// Envoie les données de lumière à la bbd
 
 session_start();
 require("../Modele/connexionBDD.php");
