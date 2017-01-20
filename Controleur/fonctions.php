@@ -658,7 +658,7 @@ function verif_consign($id,$db)
     $consigne_temp = -5;
     $temperature = -5;
     
-    $reponse = $db->prepare('SELECT temperature, consigne_temp, Nom FROM Pieces WHERE id_Utilisateur = ?');
+    $reponse = $db->prepare('SELECT temperature, consigne_temp, Nom, etat_temp FROM Pieces WHERE id_Utilisateur = ?');
     $reponse->execute(array($id));
     
     while ($donnees = $reponse->fetch())
@@ -666,8 +666,9 @@ function verif_consign($id,$db)
         $temperature = $donnees['temperature'];
         $consigne_temp = $donnees['consigne_temp'];
         $nom_piece = $donnees['Nom'];
+        $etat_temp = $donnees['etat_temp'];
         
-        if ($temperature != $consigne_temp)
+        if ($temperature != $consigne_temp && $etat_temp != 0 && $etat_temp != 3 )
         {
             
             $req = $db->prepare('UPDATE pieces SET etat_temp = :consigne WHERE id_Utilisateur = :id AND Nom = :Nom_piece');
@@ -678,7 +679,7 @@ function verif_consign($id,$db)
 	       ));
         }
         
-        else
+        else if ($temperature == $consigne_temp && $etat_temp != 0 && $etat_temp != 3 )
         {
             $req = $db->prepare('UPDATE pieces SET etat_temp = :consigne WHERE id_Utilisateur = :id AND Nom = :Nom_piece');
             $req->execute(array(
