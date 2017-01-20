@@ -28,4 +28,6 @@ while ($donnees = $reponse->fetch())
 
 }
 
+header('Refresh:0 ; URL= ../Vues/etat.php');
+
 ?>
