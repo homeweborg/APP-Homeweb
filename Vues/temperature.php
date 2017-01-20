@@ -44,7 +44,7 @@ require("../Controleur/verifconnexion.php");
             </ul>
 	       	</div>
                 <div id=boite>
-                    <form name="login" action="../Controleur/trucajouter.php" method="post" accept-charset="utf-8">
+                    <form name="login" action="../Controleur/valid_temp.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
                     <ul>
                         
                         <div id = image_etat><img class ="image_temp" src="image/temperature.png"/></div>
@@ -57,7 +57,7 @@ require("../Controleur/verifconnexion.php");
                     
                     <div>
                 
-                        <input class="barre_temp" type="range" id="mabarre" min="0" value=<?php affiche_consigne_temp($_SESSION['id'],$db) ?> max="40" onchange="FunctionTemp();" onload="FunctionTemp();"/>
+                        <input class="barre_temp" name="range" type="range" id="mabarre" min="0" value=<?php affiche_consigne_temp($_SESSION['id'],$db) ?> max="40" onchange="FunctionTemp();" onload="FunctionTemp();"/>
                         
                         <p>Valeur demandée :  <span id="valeurTemp" ></span> °C</p>
                         
