@@ -25,16 +25,34 @@ USE `app-homeweb`;
 
 -- --------------------------------------------------------
 
+-- phpMyAdmin SQL Dump
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
+--
+-- Client :  localhost:8889
+-- Généré le :  Ven 20 Janvier 2017 à 11:57
+-- Version du serveur :  5.6.33
+-- Version de PHP :  7.0.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de données :  `app-homeweb`
+--
+
+-- --------------------------------------------------------
+
 --
 -- Structure de la table `administrateur`
 --
 
-CREATE TABLE IF NOT EXISTS `administrateur` (
+CREATE TABLE `administrateur` (
   `id` int(11) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `mdp` varchar(255) NOT NULL,
   `numero_admin` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `administrateur`
@@ -51,20 +69,20 @@ INSERT INTO `administrateur` (`id`, `mail`, `mdp`, `numero_admin`) VALUES
 -- Structure de la table `capteur`
 --
 
-CREATE TABLE IF NOT EXISTS `capteur` (
+CREATE TABLE `capteur` (
   `id` int(255) NOT NULL,
   `numero_capteur` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `etat` int(10) NOT NULL,
   `type` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `id_client` int(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `id_client` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `capteur`
 --
 
 INSERT INTO `capteur` (`id`, `numero_capteur`, `etat`, `type`, `id_client`) VALUES
-(1, 'A1B2C3D4E5', 0, 'ELEC', 0);
+(1, 'A1B2C3D4E5', 0, 'ELEC', '');
 
 -- --------------------------------------------------------
 
@@ -72,7 +90,7 @@ INSERT INTO `capteur` (`id`, `numero_capteur`, `etat`, `type`, `id_client`) VALU
 -- Structure de la table `data`
 --
 
-CREATE TABLE IF NOT EXISTS `data` (
+CREATE TABLE `data` (
   `id` int(11) NOT NULL,
   `data` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `numero_capteur` varchar(200) COLLATE utf8_unicode_ci NOT NULL
@@ -84,11 +102,11 @@ CREATE TABLE IF NOT EXISTS `data` (
 -- Structure de la table `domisep`
 --
 
-CREATE TABLE IF NOT EXISTS `domisep` (
+CREATE TABLE `domisep` (
   `id` int(11) NOT NULL,
   `nom` text COLLATE utf8_unicode_ci NOT NULL,
   `contenu` text COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Contenu de la table `domisep`
@@ -105,11 +123,11 @@ INSERT INTO `domisep` (`id`, `nom`, `contenu`) VALUES
 -- Structure de la table `eau`
 --
 
-CREATE TABLE IF NOT EXISTS `eau` (
+CREATE TABLE `eau` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
   `consomation` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `eau`
@@ -124,11 +142,11 @@ INSERT INTO `eau` (`id`, `etat`, `consomation`) VALUES
 -- Structure de la table `elec`
 --
 
-CREATE TABLE IF NOT EXISTS `elec` (
+CREATE TABLE `elec` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
   `consomation` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `elec`
@@ -143,11 +161,11 @@ INSERT INTO `elec` (`id`, `etat`, `consomation`) VALUES
 -- Structure de la table `gaz`
 --
 
-CREATE TABLE IF NOT EXISTS `gaz` (
+CREATE TABLE `gaz` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
   `consomation` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `gaz`
@@ -162,7 +180,7 @@ INSERT INTO `gaz` (`id`, `etat`, `consomation`) VALUES
 -- Structure de la table `maintenance`
 --
 
-CREATE TABLE IF NOT EXISTS `maintenance` (
+CREATE TABLE `maintenance` (
   `Nom` text NOT NULL,
   `Prénom` text NOT NULL,
   `Identifiant` int(10) NOT NULL,
@@ -175,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `maintenance` (
 -- Structure de la table `pieces`
 --
 
-CREATE TABLE IF NOT EXISTS `pieces` (
+CREATE TABLE `pieces` (
   `id` int(11) NOT NULL,
   `id_Utilisateur` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL,
@@ -184,20 +202,24 @@ CREATE TABLE IF NOT EXISTS `pieces` (
   `temperature` int(11) NOT NULL,
   `lumiere` int(11) NOT NULL,
   `etat_temp` int(11) NOT NULL,
-  `numero_capteur` varchar(250) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `numero_capteur_t` varchar(250) NOT NULL,
+  `control_tech_t` date NOT NULL,
+  `control_tech_l` date NOT NULL,
+  `numero_capteur_l` varchar(250) NOT NULL,
+  `consigne_temp` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `pieces`
 --
 
-INSERT INTO `pieces` (`id`, `id_Utilisateur`, `Nom`, `presence_temp`, `presence_lum`, `temperature`, `lumiere`, `etat_temp`, `numero_capteur`) VALUES
-(1, 1, 'Salon', 1, 1, 21, 0, 0, ''),
-(2, 1, 'Salle de bain', 1, 1, 22, 0, 2, ''),
-(3, 1, 'Chambre parentale', 1, 1, 23, 0, 0, ''),
-(4, 1, 'Chambre des enfants', 1, 1, 24, 0, 1, ''),
-(5, 1, 'Cuisine', 1, 1, 25, 0, 3, ''),
-(6, 1, 'Garage', 0, 0, -1, -1, 3, '');
+INSERT INTO `pieces` (`id`, `id_Utilisateur`, `Nom`, `presence_temp`, `presence_lum`, `temperature`, `lumiere`, `etat_temp`, `numero_capteur_t`, `control_tech_t`, `control_tech_l`, `numero_capteur_l`, `consigne_temp`) VALUES
+(1, 1, 'Salon', 1, 1, 21, 1, 0, 'HBVGFT678IJT6', '2017-01-02', '2017-01-02', 'VBU765TYU876Y', 21),
+(2, 1, 'Salle de bain', 1, 1, 22, 0, 2, 'LKJHY6789OKJY', '2017-01-09', '2017-01-17', 'HGFRT87TGHUR8', 22),
+(3, 1, 'Chambre parentale', 1, 1, 23, 0, 0, 'OIUYT78OK987Y', '2017-01-15', '2017-01-16', 'H654R54T55YGYU', 23),
+(4, 1, 'Chambre des enfants', 1, 1, 24, 0, 1, 'PIHBGYUJNUYU', '2017-01-10', '2017-01-08', '9JU76TGT6UHG77', 24),
+(5, 1, 'Cuisine', 1, 1, 25, 0, 3, 'GT4567UGFR679', '2017-01-01', '2017-01-09', 'JI876YHBHY78767', 25),
+(6, 1, 'Garage', 0, 0, -1, -1, 3, 'IUYGHJIU77654E', '2016-09-04', '2017-01-01', 'GR4RFR56UHGYU', 15);
 
 -- --------------------------------------------------------
 
@@ -205,10 +227,10 @@ INSERT INTO `pieces` (`id`, `id_Utilisateur`, `Nom`, `presence_temp`, `presence_
 -- Structure de la table `porte`
 --
 
-CREATE TABLE IF NOT EXISTS `porte` (
+CREATE TABLE `porte` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `porte`
@@ -223,7 +245,7 @@ INSERT INTO `porte` (`id`, `etat`) VALUES
 -- Structure de la table `problemes`
 --
 
-CREATE TABLE IF NOT EXISTS `problemes` (
+CREATE TABLE `problemes` (
   `id` int(11) NOT NULL,
   `probleme` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `numero_capteur` varchar(200) COLLATE utf8_unicode_ci NOT NULL
@@ -235,19 +257,20 @@ CREATE TABLE IF NOT EXISTS `problemes` (
 -- Structure de la table `utilisateurs`
 --
 
-CREATE TABLE IF NOT EXISTS `utilisateurs` (
+CREATE TABLE `utilisateurs` (
   `id` int(11) NOT NULL,
   `mail` varchar(255) NOT NULL,
   `mdp` varchar(255) NOT NULL,
   `etat_general` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`id`, `mail`, `mdp`, `etat_general`) VALUES
-(1, 'noe.faure@isep.fr', 'b68b7c777f8a984e275582af6a660128', 0);
+(1, 'noe.faure@isep.fr', 'b68b7c777f8a984e275582af6a660128', 0),
+(12, '', 'd41d8cd98f00b204e9800998ecf8427e', 0);
 
 --
 -- Index pour les tables exportées
@@ -335,12 +358,12 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `administrateur`
 --
 ALTER TABLE `administrateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `data`
 --
@@ -350,32 +373,32 @@ ALTER TABLE `data`
 -- AUTO_INCREMENT pour la table `domisep`
 --
 ALTER TABLE `domisep`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `eau`
 --
 ALTER TABLE `eau`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `elec`
 --
 ALTER TABLE `elec`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `gaz`
 --
 ALTER TABLE `gaz`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `pieces`
 --
 ALTER TABLE `pieces`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT pour la table `porte`
 --
 ALTER TABLE `porte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `problemes`
 --
@@ -385,7 +408,4 @@ ALTER TABLE `problemes`
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;

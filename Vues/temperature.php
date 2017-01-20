@@ -11,6 +11,7 @@ require("../Controleur/verifconnexion.php");
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
+        <script src="../js/jquery-3.1.1.min.js"></script>
 	</head>
 	<body>
 		<div id="page">
@@ -31,9 +32,9 @@ require("../Controleur/verifconnexion.php");
                     </li>
                 <li><a href="#">Consommation</a>
                     <ul>
-                        <li><a href="eau.php">Eau</a></li>
-                        <li><a href="gaz.php">Gaz</a></li>
-                        <li><a href="elec.php">Electricité</a></li>
+                        <li><a href="eau.php">Eau</a> <span> <?php pastille_etat_eau($_SESSION['id'],$db) ?></span></li>
+                        <li><a href="gaz.php">Gaz</a> <span> <?php pastille_etat_gaz($_SESSION['id'],$db) ?></span></li>
+                        <li><a href="elec.php">Electricité</a> <span> <?php pastille_etat_elec($_SESSION['id'],$db) ?></span></li>
                     </ul>
                 </li>
                 <li>
@@ -56,14 +57,23 @@ require("../Controleur/verifconnexion.php");
                     
                     <div>
                 
-                        <input class="barre_temp" type="range" id="mabarre" min="0" value=<?php affiche_consigne_temp($_SESSION['id'],$db) ?> max="40" onchange="FunctionTemp(this.value);"/>
+                        <input class="barre_temp" type="range" id="mabarre" min="0" value=<?php affiche_consigne_temp($_SESSION['id'],$db) ?> max="40" onchange="FunctionTemp();" onload="FunctionTemp();"/>
                         
-                        <p>Valeur demandée :  <span id="valeurTemp"></span> °C</p>
+                        <p>Valeur demandée :  <span id="valeurTemp" ></span> °C</p>
                         
                         <script>
+        $( document ).ready(function() {
+        
+        var lambda = document.getElementById("mabarre").value;
+        document.getElementById("valeurTemp").innerHTML = lambda;
+        
+    });
+    
 function FunctionTemp() {
-    var x = document.getElementById("mabarre").value;
-    document.getElementById("valeurTemp").innerHTML = x;
+    
+    var lambda = document.getElementById("mabarre").value;
+    document.getElementById("valeurTemp").innerHTML = lambda;
+    
 }
                         </script>
                         

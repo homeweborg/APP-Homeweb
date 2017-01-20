@@ -579,4 +579,71 @@ function affiche_consigne_temp($id,$db)
     
     echo ($consigne);
 }
+
+function pastille_etat_eau($id,$db)
+{
+    // Affiche la pastille eau
+    
+    $etat_general = Etat_eau($id,$db);
+        
+    if ($etat_general == 0)
+        {
+        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        }
+            
+        else if ($etat_general == 1)
+        {
+        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        }
+        
+        else if ($etat_general == 3)
+        {
+        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        }
+}
+
+function pastille_etat_gaz($id,$db)
+{
+    // Affiche la pastille gaz
+    
+    $etat_general = Etat_gaz($id,$db);
+        
+    if ($etat_general == 0)
+        {
+        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        }
+            
+        else if ($etat_general == 1)
+        {
+        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        }
+        
+        else if ($etat_general == 3)
+        {
+        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        }
+}
+
+function pastille_etat_elec($id,$db)
+{
+    // Affiche la pastille elec
+    
+    $etat_general = Etat_elec($id,$db);
+        
+    if ($etat_general == 0)
+        {
+        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        }
+            
+        else if ($etat_general == 1)
+        {
+        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        }
+        
+        else if ($etat_general == 3)
+        {
+        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        }
+}
+
 ?>

@@ -28,9 +28,9 @@ require("../Controleur/verifconnexion.php");
                     </li>
                 <li><a href="#">Consommation</a>
                     <ul>
-                        <li><a href="eau.php">Eau</a></li>
-                        <li><a href="gaz.php">Gaz</a></li>
-                        <li><a href="elec.php">Electricité</a></li>
+                        <li><a href="eau.php">Eau</a> <span> <?php pastille_etat_eau($_SESSION['id'],$db) ?></span></li>
+                        <li><a href="gaz.php">Gaz</a> <span> <?php pastille_etat_gaz($_SESSION['id'],$db) ?></span></li>
+                        <li><a href="elec.php">Electricité</a> <span> <?php pastille_etat_elec($_SESSION['id'],$db) ?></span></li>
                     </ul>
                 </li>
                 <li>
