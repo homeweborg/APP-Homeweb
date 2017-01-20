@@ -42,7 +42,7 @@ require("../Controleur/verifconnexion.php");
             </ul>
 	       	</div>
                 <div id=boite>
-                    <form name="login" action="../Controleur/trucajouter.php" method="post" accept-charset="utf-8">
+                    <form name="login" action="../Controleur/valid_gaz.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
                     <ul>
                         
                         <div id = image_etat><img class ="image_temp" src="image/gaz.png"/></div>
@@ -52,7 +52,7 @@ require("../Controleur/verifconnexion.php");
                         <li>État : <span>Marche</span></li>
                         <li>
                             <label class="switch">
-                                <input type="checkbox" <?php if (Etat_gaz(1,$db) == 1) { ?> checked <?php } ?>>
+                                <input type="checkbox" name="box" value=1 <?php if (Etat_gaz(1,$db) == 1) { ?> checked <?php } ?>>
                                 <div class="slider"></div>
                             </label>
                         
