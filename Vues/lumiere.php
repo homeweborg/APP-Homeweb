@@ -43,7 +43,7 @@ require("../Modele/connexionBDD.php");
             </ul>
 	       	</div>
                 <div id=boite>
-                <form name="login" action="../Controleur/trucajouter.php" method="post" accept-charset="utf-8">
+                <form name="login" action="../Controleur/valid_lum.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
 
                     <ul>
                         
@@ -54,7 +54,7 @@ require("../Modele/connexionBDD.php");
                         <li>État : <span><?php affiche_etat_capt_lum($_SESSION['id'],$db) ?></span></li>
                         <li>
                             <label class="switch">
-                                <input type="checkbox" <?php if (Etat_lum($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
+                                <input type="checkbox" name="box" value=1 <?php if (Etat_lum($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
                                 <div class="slider"></div>
                             </label>
                         
