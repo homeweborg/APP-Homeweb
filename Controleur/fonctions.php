@@ -277,13 +277,20 @@ function temp_moyenne($id,$db)
     $temp_m = 0;
     $n = 0;
     
-    $reponse = $db->prepare('SELECT temperature FROM Pieces WHERE id_Utilisateur= ? AND presence_temp = 1');
+    $reponse = $db->prepare('SELECT temperature, etat_temp FROM Pieces WHERE id_Utilisateur= ? AND presence_temp = 1');
     $reponse->execute(array($id));
 
     while ($donnees = $reponse->fetch())
     {
+        $etat = $donnees['etat_temp'];
+        
+        if ($etat != 0)
+        {
+        // On ne prend en compte que les températures des capteurs allumés 
         $temp_m = $temp_m + $donnees['temperature'];
         $n = $n + 1;
+        }
+        
     }
     
     $temp_m = $temp_m / $n;
@@ -399,12 +406,23 @@ function affiche_temperature($id,$db)
     
     $nom_piece = $_GET['piece'];
     
-    $reponse = $db->prepare('SELECT temperature FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse = $db->prepare('SELECT temperature, etat_temp FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
     $reponse->execute(array($id, $nom_piece));
     
     while ($donnees = $reponse->fetch())
     {
-        echo ($donnees['temperature']);    
+        $etat = $donnees['etat_temp'];
+        
+        if ($etat != 0)
+        {
+        // Si le capteur n'est pas éteint, on affiche la température
+        echo ($donnees['temperature']);
+        }
+        else
+        {
+        // Si le capteur est éteint, on n'affiche pas la température
+        echo("X");
+        }
     }
 }
 
@@ -477,7 +495,17 @@ function affiche_contol_tech_temp($id,$db)
         $date= $donnees['control_tech_t'];
     }
     
+    if ($date == 0000-00-00)
+    {
+        // Si aucun controle n'a été effectué, cela est indiqué
+        echo("Aucun");
+    }
+    
+    else
+    {
+        // Sinon on affiche la date
     echo ($date);
+    }
 }
 
 function affiche_etat_capt_lum($id,$db)
@@ -544,7 +572,17 @@ function affiche_contol_tech_lum($id,$db)
         $date= $donnees['control_tech_l'];
     }
     
+    if ($date == 0000-00-00)
+    {
+        // Si aucun controle n'a été effectué, cela est indiqué
+        echo("Aucun");
+    }
+    
+    else
+    {
+        // Sinon on affiche la date
     echo ($date);
+    }
 }
 
 function affiche_num_capt_lum($id,$db)
