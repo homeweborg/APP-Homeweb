@@ -30,11 +30,12 @@ dans cette pièce */
     {
     // Si c'est le cas on ajoute le capteur dans la pièce
 
-    $req = $db->prepare('UPDATE pieces SET presence_temp = :presence_temp, id_Utilisateur = :id_Utilisateur WHERE Nom = :nom_piece');
+    $req = $db->prepare('UPDATE pieces SET presence_temp = :presence_temp, id_Utilisateur = :id_Utilisateur, numero_capteur_t = :ref_t WHERE Nom = :nom_piece');
     $req->execute(array(
         'presence_temp' => 1,
         'id_Utilisateur' => $id_Utilisateur,
-        'nom_piece' => $nom_piece
+        'nom_piece' => $nom_piece,
+        'ref_t' => $ref_temp
         ));
     }
 
@@ -45,11 +46,12 @@ dans cette pièce */
     {
     // Si c'est le cas on ajoute le capteur dans la pièce
 
-    $req = $db->prepare('UPDATE pieces SET presence_lum = :presence_lum, id_Utilisateur = :id_Utilisateur WHERE Nom = :nom_piece');
+    $req = $db->prepare('UPDATE pieces SET presence_lum = :presence_lum, id_Utilisateur = :id_Utilisateur, numero_capteur_l = :ref_l WHERE Nom = :nom_piece');
     $req->execute(array(
         'presence_lum' => 1,
         'id_Utilisateur' => $id_Utilisateur,
-        'nom_piece' => $nom_piece
+        'nom_piece' => $nom_piece,
+        'ref_l' => $ref_lum
         ));
     }
 

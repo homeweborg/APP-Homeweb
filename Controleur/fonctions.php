@@ -187,6 +187,9 @@ function cascade_temp($id,$db)
     
     $nom_piece = "";
     
+    //ON RAFRAICHIS L'ETAT DES PASTILLES ORANGE
+    verif_consign($id,$db);
+    
     $reponse = $db->prepare('SELECT Nom, etat_temp FROM Pieces WHERE id_Utilisateur = ? AND presence_temp = 1');
     $reponse->execute(array($id));
     
@@ -644,6 +647,47 @@ function pastille_etat_elec($id,$db)
         {
         echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
         }
+}
+
+function verif_consign($id,$db)
+{
+    
+    // PAS ENCORE TOTALEMENT FONCTIONNELLE 
+    /* Cette fonction compare la consigne de chaque capteur de temperature et son etat actuel, si les deux sont différent : la variable etat_temp prend la valeur 2 (en cours de régulation) */
+    
+    $consigne_temp = -5;
+    $temperature = -5;
+    
+    $reponse = $db->prepare('SELECT temperature, consigne_temp, Nom FROM Pieces WHERE id_Utilisateur = ?');
+    $reponse->execute(array($id));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $temperature = $donnees['temperature'];
+        $consigne_temp = $donnees['consigne_temp'];
+        $nom_piece = $donnees['Nom'];
+        
+        if ($temperature != $consigne_temp)
+        {
+            
+            $req = $db->prepare('UPDATE pieces SET etat_temp = :consigne WHERE id_Utilisateur = :id AND Nom = :Nom_piece');
+            $req->execute(array(
+            'consigne' => 2,
+            'id' => $id,
+            'Nom_piece' => $nom_piece
+	       ));
+        }
+        
+        else
+        {
+            $req = $db->prepare('UPDATE pieces SET etat_temp = :consigne WHERE id_Utilisateur = :id AND Nom = :Nom_piece');
+            $req->execute(array(
+            'consigne' => 1,
+            'id' => $id,
+            'Nom_piece' => $nom_piece
+	       ));
+        }
+    }
 }
 
 ?>
