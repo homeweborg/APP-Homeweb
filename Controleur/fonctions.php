@@ -561,4 +561,22 @@ function affiche_num_capt_lum($id,$db)
     
     echo ($num);
 }
+
+function affiche_consigne_temp($id,$db)
+{
+    // Affiche la valeur demandé par l'utilisateur
+    
+    $nom_piece = $_GET['piece'];
+    $consigne = "ERREUR";
+    
+    $reponse = $db->prepare('SELECT consigne_temp FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse->execute(array($id, $nom_piece));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $consigne= $donnees['consigne_temp'];
+    }
+    
+    echo ($consigne);
+}
 ?>

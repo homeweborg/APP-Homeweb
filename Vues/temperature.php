@@ -56,7 +56,8 @@ require("../Controleur/verifconnexion.php");
                     
                     <div>
                 
-                        <input class="barre_temp" type="range" id="mabarre" min="0" max="40" onchange="FunctionTemp(this.value);"/>
+                        <input class="barre_temp" type="range" id="mabarre" min="0" value=<?php affiche_consigne_temp($_SESSION['id'],$db) ?> max="40" onchange="FunctionTemp(this.value);"/>
+                        
                         <p>Valeur demandée :  <span id="valeurTemp"></span> °C</p>
                         
                         <script>
