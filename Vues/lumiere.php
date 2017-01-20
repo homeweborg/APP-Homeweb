@@ -47,12 +47,12 @@ require("../Modele/connexionBDD.php");
                         
                         <div id = image_etat><img class ="image_temp" src="image/light.png"/></div>
                         
-                        <li>Capteur de luminosité N° <span>23</span></li>
-                        <li>Dernier contrôle technique : <span>02/01/2017</span></li>
-                        <li>État : <span>Éteint</span></li>
+                        <li>Capteur de luminosité N° <span><?php affiche_num_capt_lum($_SESSION['id'],$db) ?></span></li>
+                        <li>Dernier contrôle technique : <span><?php affiche_contol_tech_lum($_SESSION['id'],$db) ?></span></li>
+                        <li>État : <span><?php affiche_etat_capt_lum($_SESSION['id'],$db) ?></span></li>
                         <li>
                             <label class="switch">
-                                <input type="checkbox">
+                                <input type="checkbox" <?php if (Etat_lum($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
                                 <div class="slider"></div>
                             </label>
                         

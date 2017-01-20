@@ -459,4 +459,106 @@ function affiche_num_capt_temp($id,$db)
     echo ($num);
 }
 
+function affiche_contol_tech_temp($id,$db)
+{
+    // Affiche le numéro du capteur de température
+    
+    $nom_piece = $_GET['piece'];
+    $date = "ERREUR";
+    
+    $reponse = $db->prepare('SELECT control_tech_t FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse->execute(array($id, $nom_piece));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $date= $donnees['control_tech_t'];
+    }
+    
+    echo ($date);
+}
+
+function affiche_etat_capt_lum($id,$db)
+{
+    // Affiche le numéro d'un capteur de lumière pour une pièce donnée
+    
+    $nom_piece = $_GET['piece'];
+    $etat_general = 4;
+    
+    $reponse = $db->prepare('SELECT lumiere FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse->execute(array($id, $nom_piece));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $etat_general = $donnees['lumiere'];    
+    }
+    
+    if ($etat_general == 0)
+        {
+        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        }
+            
+        else if ($etat_general == 1)
+        {
+        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        }
+        
+        else if ($etat_general == 3)
+        {
+        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        }
+}
+
+function Etat_lum($id,$db)
+{
+    // Place le bouton checkbox correctement
+    
+    $nom_piece = $_GET['piece'];
+    $etat = "ERREUR";
+    
+    $reponse = $db->prepare('SELECT lumiere FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse->execute(array($id, $nom_piece));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $etat= $donnees['lumiere'];
+    }
+    
+    return ($etat);
+}
+
+function affiche_contol_tech_lum($id,$db)
+{
+    // Affiche le numéro du capteur de lumière
+    
+    $nom_piece = $_GET['piece'];
+    $date = "ERREUR";
+    
+    $reponse = $db->prepare('SELECT control_tech_l FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse->execute(array($id, $nom_piece));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $date= $donnees['control_tech_l'];
+    }
+    
+    echo ($date);
+}
+
+function affiche_num_capt_lum($id,$db)
+{
+    // Affiche le numéro du capteur de lumière
+    
+    $nom_piece = $_GET['piece'];
+    $num = "ERREUR";
+    
+    $reponse = $db->prepare('SELECT numero_capteur_l FROM Pieces WHERE id_Utilisateur = ? AND Nom = ?');
+    $reponse->execute(array($id, $nom_piece));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $num= $donnees['numero_capteur_l'];
+    }
+    
+    echo ($num);
+}
 ?>
