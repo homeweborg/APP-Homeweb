@@ -24,12 +24,10 @@ require("../Controleur/fonctions.php");
                 <ul>
                     <li><a href="#">Température</a>
                         <?php cascade_temp($_SESSION['id'],$db) ?> 
-                    </li>
-                    
+                    </li>                 
                     <li><a href="#">Lumière</a>
                         <?php cascade_lum($_SESSION['id'],$db) ?>
-                    </li>
-                    
+                    </li>             
                     <li><a href="#">Consommation</a>
                         <ul>
                             <li><a href="eau.php">Eau</a></li>
@@ -44,43 +42,38 @@ require("../Controleur/fonctions.php");
                 </ul>
 	       	</div>
             <div id=boite>
+                <form name="login" action="../Controleur/trucajouter.php" method="post" accept-charset="utf-8">
                 <ul>
                     <li>Température moyenne <span><?php echo temp_moyenne(1,$db) ?> °C</span></li>
                     <li>Etat général des capteurs <?php etat_general_capteur($_SESSION['id'],$db) ?></li>                
-                    <li>Eau 
-                    
-                    <label class="switch">
-                        <input type="checkbox" <?php if (Etat_eau($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
-                        <div class="slider"></div>
-                    </label>
-                    
+                    <li>Eau
+                        <label class="switch">
+                            <input type="checkbox" <?php if (Etat_eau($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
+                            <div class="slider"></div>
+                        </label>      
                     </li>
-                    <li>Electricité                   
-                    <label class="switch">
-                        <input type="checkbox" <?php if (Etat_elec($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
-                        <div class="slider"></div>
-                    </label>
-                        
+                    <li>Electricité               
+                        <label class="switch">
+                            <input type="checkbox" <?php if (Etat_elec($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
+                            <div class="slider"></div>
+                        </label>
                     </li>
-                    <li>Gaz 
-                        
-                    <label class="switch">
-                        <input type="checkbox" <?php if (Etat_gaz($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
-                        <div class="slider"></div>
-                    </label>
-                        
+                    <li>Gaz
+                        <label class="switch">
+                            <input type="checkbox" <?php if (Etat_gaz($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
+                            <div class="slider"></div>
+                        </label>
                     </li>
                     <li>Nombre de lumières allumée(s) <span><?php echo nombre_lum_on(1,$db) ?></span></li>
-                    
                     <li>Porte
-                        
-                    <label class="switch">
-                        <input type="checkbox" <?php if (Etat_porte($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
-                        <div class="slider"></div>
-                    </label>
-                        
-                        </li>
+                        <label class="switch">
+                            <input type="checkbox" <?php if (Etat_porte($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>
+                            <div class="slider"></div>
+                        </label>                 
+                    </li>
                 </ul>
+                    <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
+                </form>
             </div>
             <?php include ("../footer.php");?> 
         </div>

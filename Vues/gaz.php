@@ -42,6 +42,7 @@ require("../Controleur/verifconnexion.php");
             </ul>
 	       	</div>
                 <div id=boite>
+                    <form name="login" action="../Controleur/trucajouter.php" method="post" accept-charset="utf-8">
                     <ul>
                         
                         <div id = image_etat><img class ="image_temp" src="image/gaz.png"/></div>
@@ -62,7 +63,8 @@ require("../Controleur/verifconnexion.php");
                     <a class="boutons_retour" href="etat.php" >Retour</a>
                     
                     <a class="boutons_retour" href="contact.php">Se renseigner</a>
-                    
+                    <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
+                    </form>
                 </div>
             <?php include ("../footer.php");?> 
         </div>
