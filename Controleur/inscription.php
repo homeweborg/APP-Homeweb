@@ -31,54 +31,78 @@ if ($mdp == $mdpc){
     //SI LE MAIL N'EXISTE PAS ENCORE DANS LA BDD
     if($reponse4->rowcount()==0 and $reponse5->rowcount()==0){        
         
-        //ON VERIFIE QUE LE NUMERO EXISTE                                                                                        ICI
-        if ($reponsecapteur['numero_capteur']==$numero or $numero==$reponseadmin['numero_admin'])
+        //ON VERIFIE QUE LE NUMERO EXISTE                                                                                        
+        if ($numero==$reponsecapteur['numero_capteur'] or $numero==$reponseadmin['numero_admin'])
         { 
-            
-            echo "ce numero de capteur existe";
+                        
+            //SI LE NUMERO EST UN NUMERO DE CAPTEUR                               
+            if ($numero==$reponsecapteur['numero_capteur']){
+                
+                //ON VERIFIE SI LE NUMERO EST ASSOCIE A UN CLIENT
+                if ($reponsecapteur['id_client']==NULL){  
+                    
+                    $ajout = $db->exec('INSERT INTO Utilisateurs(mail,mdp,etat_general) VALUES ("'.$mail.'","'.md5($mdp).'",0)');
+                    
+                    $reponse3 = $db->query('SELECT id FROM Utilisateurs WHERE mail="'.$mail.'"');
+                    $reponseid = $reponse3->fetch();
+                    
+                    $modif = $db -> prepare('UPDATE capteur SET id_client=:id WHERE numero_capteur="'.$numero.'"');
+                    $modif->execute(array(
+                    'id' => $reponseid[0]
+                    ));
+    
+                    //on redirige vers le formulaire de connexion
+                    header('Refresh:0 ; URL= ../index.php');
 
-            //SI LE NUMERO EST UN NUMERO DE CAPTEUR ET QU'IL N'EST ASSOCIE A AUCUN CLIENT
-            if ($numero==$reponsecapteur['numero_capteur'] and $reponsecapteur['id_client']==0 ){
+                    //on le signale sur la page 
+                    echo "<script>window.alert('Inscription réussie ')</script>" ;
+                }
+                    
+                //SI LE NUMERO EST DEJA UTILISE
+                else {
 
-                $ajout = $db->exec('INSERT INTO Utilisateurs(mail,mdp,etat_general) VALUES ("'.$mail.'","'.md5($mdp).'",0)');
-
-                $reponse3 = $db->query('SELECT id FROM Utilisateurs WHERE mail="'.$mail.'"');
-                $reponseid = $reponse3->fetch();
-
-                $ajout2 = $db -> exec('INSERT INTO capteur.id_client VALUES "'.$reponseid[0].'" WHERE numero_capteur="'.$numero.'"');
-
-                //on redirige vers le formulaire de connexion
-                header('Refresh:0 ; URL= ../index.php');
+                //on redirige vers le formulaire d'inscription
+                header('Refresh:0 ; URL= ../Vues/signup.php'); //NE MARCHE PAS
 
                 //on le signale sur la page 
-                echo "<script>window.alert('Inscription réussie ')</script>" ;
+                echo "<script>window.alert('Ce numéro de capteur est déjà utilisé)</script>" ;
+                }
+                   
             }
 
-            //SI LE NUMERO EST UN NUMERO D'ADMIN ET QU'IL N'EST ASSOCIE A AUCUN ADMIN
-            else if ($numero==$reponseadmin['numero_admin'] and isset($reponseadmin['mail'])==False){
-
-                $req = $db -> prepare('UPDATE administrateur SET mail = :mail , mdp = :mdp WHERE numero_admin="'.$numero.'"');
-
-                $req->execute(array(
-                'mail' => $mail,
-                'mdp' => md5($mdp)
-                ));
-
-                //on redirige vers le formulaire de connexion
-                header('Refresh:0 ; URL= ../index.php');
-
-                //on le signale sur la page  // AA VERIIIFIIIIIERRRR
-                echo "<script>window.alert('Inscription réussie ')</script>" ;
-}
-
-            //SI LE NUMERO EST DEJA UTILISE
+            //SI LE NUMERO EST UN NUMERO D'ADMIN
             else {
 
-            //on redirige vers le formulaire d'inscription
-            header('Refresh:0 ; URL= ../Vues/signup.php'); //NE MARCHE PAS
+                echo "ce numero de capteur est un numéro admin";
+                
+                //ON VERIFIE SI LE NUMERO EST ASSOCIE A UN ADMIN
+                if ($reponseadmin['mail']==NULL){ 
 
-            //on le signale sur la page 
-            echo "<script>window.alert('Ce numéro de capteur est déjà utilisé)</script>" ;
+                    $req = $db -> prepare('UPDATE administrateur SET mail = :mail , mdp = :mdp WHERE numero_admin="'.$numero.'"');
+
+                    $req->execute(array(
+                    'mail' => $mail,
+                    'mdp' => md5($mdp)
+                    ));
+
+                    //on redirige vers le formulaire de connexion
+                    header('Refresh:0 ; URL= ../index.php');
+
+                    //on le signale sur la page  // AA VERIIIFIIIIIERRRR
+                    echo "<script>window.alert('Inscription réussie ')</script>" ;
+                    
+                }
+                    
+                //SI LE NUMERO EST DEJA UTILISE
+                else {
+
+                //on redirige vers le formulaire d'inscription
+                header('Refresh:0 ; URL= ../Vues/signup.php'); //NE MARCHE PAS
+
+                //on le signale sur la page 
+                echo "<script>window.alert('Ce numéro est déjà utilisé)</script>" ;
+                }
+                  
             }
 
         }
