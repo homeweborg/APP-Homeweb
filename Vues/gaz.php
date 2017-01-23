@@ -50,6 +50,7 @@ require("../Controleur/verifconnexion.php");
                         <li>Consommation depuis le début du mois :<span><?php echo (Conso_Gaz(1,$db)) ?> m3</span></li>
                         <li>Estimation du coût : <span><?php echo (Estim_Gaz(1,$db)) ?> €</span></li>
                         <li>État : <span>Marche</span></li>
+                        <li>Prix du m3 : <span><input type="text" class="Prix_entree" name="Prix_gaz" value=<?php echo(affiche_prix_gaz($_SESSION['id'],$db)) ?> placeholder="en €"></span></li>
                         <li>
                             <label class="switch">
                                 <input type="checkbox" name="box" value=1 <?php if (Etat_gaz(1,$db) == 1) { ?> checked <?php } ?>>
@@ -57,7 +58,7 @@ require("../Controleur/verifconnexion.php");
                             </label>
                         
                         </li>
-                        <li><I style="font-size : 14px;">L' estimation correspond à une moyenne des prix, renseignez-vous auprès de votre fournisseur pour plus de renseignements</I></li>
+                        <li><I style="font-size : 14px;">Par défaut le prix d'un m3 de gaz est fixé à 9.5 € (Moyenne Française 2015)</I></li>
                     </ul>
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>

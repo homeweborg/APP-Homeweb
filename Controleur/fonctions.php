@@ -165,13 +165,23 @@ function Estim_Elec($id,$db,$prix = 0.5691)
     
 }
 
-function Estim_Gaz($id,$db)
+function Estim_Gaz($id,$db,$prix = 9.5)
 {
     // Estime le prix de la consommation gaz
     
     $estim = -1;
     
-    $estim = ceil((Conso_Gaz($id,$db))*(9.5));
+    $reponse = $db->prepare('SELECT prix_gaz FROM gaz WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+	   $prix = $donnees['prix_gaz'];
+    }
+    
+    $prix = floatval($prix);
+    
+    $estim = ceil((Conso_Gaz($id,$db))*($prix));
     
     return $estim;
     
@@ -781,5 +791,20 @@ function affiche_prix_elec($id,$db)
     }
     
     return($prix_elec);
+}
+
+function affiche_prix_gaz($id,$db)
+{
+    $prix_gaz = 0;
+    
+    $reponse = $db->prepare('SELECT prix_gaz FROM gaz WHERE id = ?');
+    $reponse->execute(array($id));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $prix_gaz = $donnees['prix_gaz'];
+    }
+    
+    return($prix_gaz);
 }
 ?>
