@@ -8,7 +8,7 @@ echo '  <div id="logo">
                 <li><a href="admin.php">Comptes utilisateurs</a></li>
                 <li><a href="probleme.php">Problèmes signalés</a></li>
                 <li><a href="domisep.php">Infos générales Domisep</a></li>
-                <div id=logodeco><a href="../Controleur/logout.php"><img src="../Vues/image/onoff.png"></a></div>
+                <div id=logodeco><a href="../Controleur/logout_admin.php"><img src="../Vues/image/onoff.png"></a></div>
             </ul>
         </nav>';
 ?>

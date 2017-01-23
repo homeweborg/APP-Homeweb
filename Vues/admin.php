@@ -17,7 +17,7 @@ require("../Controleur/verifconnexion.php");
         <!-- Header (commentaire test) -->
             <header>
                 <?php 
-                include ("../entete2.php");
+                include ("../entete_admin.php");
                 ?>
             </header>
             <?php
