@@ -612,3 +612,10 @@ tr:nth-child(odd) {
     padding: 5px;
     width: 150px;
 }
+
+#social{
+    height:22px;
+    position:fixed;
+    margin-left:71%;
+
+}
