@@ -165,12 +165,24 @@ function Estim_Gaz($id,$db)
     
 }
 
-function Estim_Eau($id,$db)
+function Estim_Eau($id,$db,$prix = 3.1)
 {
     // Estime le prix de la consommation eau
     $estim = -1;
     
-    $estim = ceil((Conso_Eau($id,$db))*(3.1));
+    // On cherche si l'utilisateur a rentré une préférence de tarif dans la bdd
+
+    $reponse = $db->prepare('SELECT prix_eau FROM eau WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+	   $prix = $donnees['prix_eau'];
+    }
+    
+    $prix = floatval($prix);
+    
+    $estim = ceil((Conso_Eau($id,$db))*($prix));
     
     return $estim;
     
@@ -727,6 +739,21 @@ function verif_consign($id,$db)
 	       ));
         }
     }
+}
+
+function affiche_prix_eau($id,$db)
+{
+    $prix_eau = 0;
+    
+    $reponse = $db->prepare('SELECT prix_eau FROM eau WHERE id = ?');
+    $reponse->execute(array($id));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $prix_eau = $donnees['prix_eau'];
+    }
+    
+    return($prix_eau);
 }
 
 ?>

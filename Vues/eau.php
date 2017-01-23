@@ -45,17 +45,18 @@ require("../Controleur/verifconnexion.php");
                         
                         <div id = image_etat><img class ="image_temp" src="image/eau.png"/></div>
                         
-                        <li>Consommation depuis le début du mois :<span><?php echo (Conso_Eau(1,$db)) ?> m3</span></li>
-                        <li>Estimation du coût : <span><?php echo (Estim_Eau(1,$db)) ?> €</span></li>
+                        <li>Consommation depuis le début du mois :<span><?php echo (Conso_Eau($_SESSION['id'],$db)) ?> m3</span></li>
+                        <li>Estimation du coût : <span><?php echo (Estim_Eau($_SESSION['id'],$db)) ?> €</span></li>
                         <li>État : <span>Marche</span></li>
+                        <li>Prix du m3 : <span><input type="text" class="Prix_entree" name="Prix_eau" value=<?php echo(affiche_prix_eau($_SESSION['id'],$db)) ?> placeholder="en €"></span></li>
                         <li>
                             <label class="switch">
-                                <input type="checkbox" name="box" value=1 <?php if (Etat_eau(1,$db) == 1) { ?> checked <?php } ?> >
+                                <input type="checkbox" name="box" value=1 <?php if (Etat_eau($_SESSION['id'],$db) == 1) { ?> checked <?php } ?> >
                                 <div class="slider"></div>
                             </label>
                         
                         </li>
-                        <li><I style="font-size : 14px;">L' estimation correspond à une moyenne des prix, renseignez-vous auprès de votre fournisseur pour plus de renseignements</I></li>
+                        <li><I style="font-size : 14px;">Par défaut le prix d'un m3 d'eau est fixé à 3.1 € (Moyenne Française 2015)</I></li>
                     </ul>
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>

@@ -18,13 +18,13 @@
                         <div id="signupinput">
                             <p> <b>Objet de votre demande</b><span class="champoblig"> * </span></p>
                             
-                            <input type="text" name="capteurD" required placeholder="Ex : 123456789">
+                            <input type="text" name="capteurD" required placeholder="Ex : Problème de connection">
                             
                             <p><br><b>Exprimez-vous</b><span class="champoblig"> * </span></p>
                             
                             <textarea type="text" class="description" name="descriptioncapteurD"></textarea>
                             
-                            <input class="boutons_piece" type="submit" value="Envoyer" onClick="window.location.href='#'">
+                            <input class="boutons_contact_envoyer" type="submit" value="Envoyer" onClick="window.location.href='#'">
                             
                         </div>
                     </form>

@@ -208,7 +208,7 @@ nav a
     color: white;
     width: 150px;
     padding: 5px;
-    margin-left: 350px;
+    margin-left: 400px;
     margin-bottom: 5px;
     margin-top:50px;
 }
@@ -446,8 +446,9 @@ input:checked + .slider:hover
     text-align: center;
     font-size: 15px;
     margin-right: 0%;
-    margin-left: 260px;
+    margin-left: 315px;
 }
+
 
 #signupinput .boutons_piece:hover
 {
@@ -455,6 +456,27 @@ input:checked + .slider:hover
     border-color: grey;
     background-color: grey;
 }
+
+#signupinput .boutons_contact_envoyer
+{
+    /* Bouton envoyer dans contact*/
+    
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 0%;
+    margin-left: 310px;
+}
+
+#signupinput .boutons_contact_envoyer:hover
+{
+    
+    border-color: grey;
+    background-color: grey;
+}
+
+
+
 #logodeco{
     height:25px;
     margin-left: 10px;
@@ -578,4 +600,15 @@ tr:nth-child(odd) {
     padding-right:10px;
     font-size:20px;
     
+}
+
+#boite ul li .Prix_entree
+{
+    background-color: #575757;
+    border: none;
+    color: white;
+    font-size: 22px;
+    text-align: right;
+    padding: 5px;
+    width: 150px;
 }
