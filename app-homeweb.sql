@@ -30,7 +30,7 @@ USE `app-homeweb`;
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Ven 20 Janvier 2017 à 11:57
+-- Généré le :  Lun 23 Janvier 2017 à 14:18
 -- Version du serveur :  5.6.33
 -- Version de PHP :  7.0.12
 
@@ -126,15 +126,16 @@ INSERT INTO `domisep` (`id`, `nom`, `contenu`) VALUES
 CREATE TABLE `eau` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
-  `consomation` int(11) NOT NULL
+  `consomation` int(11) NOT NULL,
+  `prix_eau` float NOT NULL DEFAULT '3.1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `eau`
 --
 
-INSERT INTO `eau` (`id`, `etat`, `consomation`) VALUES
-(1, 1, 14);
+INSERT INTO `eau` (`id`, `etat`, `consomation`, `prix_eau`) VALUES
+(1, 0, 14, 3.4);
 
 -- --------------------------------------------------------
 
@@ -145,15 +146,16 @@ INSERT INTO `eau` (`id`, `etat`, `consomation`) VALUES
 CREATE TABLE `elec` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
-  `consomation` int(11) NOT NULL
+  `consomation` int(11) NOT NULL,
+  `prix_elec` float NOT NULL DEFAULT '0.5691'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `elec`
 --
 
-INSERT INTO `elec` (`id`, `etat`, `consomation`) VALUES
-(1, 0, 375);
+INSERT INTO `elec` (`id`, `etat`, `consomation`, `prix_elec`) VALUES
+(1, 0, 375, 0.5691);
 
 -- --------------------------------------------------------
 
@@ -164,15 +166,16 @@ INSERT INTO `elec` (`id`, `etat`, `consomation`) VALUES
 CREATE TABLE `gaz` (
   `id` int(11) NOT NULL,
   `etat` int(11) NOT NULL,
-  `consomation` int(11) NOT NULL
+  `consomation` int(11) NOT NULL,
+  `prix_gaz` float NOT NULL DEFAULT '9.5'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `gaz`
 --
 
-INSERT INTO `gaz` (`id`, `etat`, `consomation`) VALUES
-(1, 0, 10);
+INSERT INTO `gaz` (`id`, `etat`, `consomation`, `prix_gaz`) VALUES
+(1, 1, 10, 10);
 
 -- --------------------------------------------------------
 
@@ -206,7 +209,7 @@ CREATE TABLE `pieces` (
   `control_tech_t` date NOT NULL,
   `control_tech_l` date NOT NULL,
   `numero_capteur_l` varchar(250) NOT NULL,
-  `consigne_temp` int(11) NOT NULL
+  `consigne_temp` int(11) NOT NULL DEFAULT '25'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -214,12 +217,11 @@ CREATE TABLE `pieces` (
 --
 
 INSERT INTO `pieces` (`id`, `id_Utilisateur`, `Nom`, `presence_temp`, `presence_lum`, `temperature`, `lumiere`, `etat_temp`, `numero_capteur_t`, `control_tech_t`, `control_tech_l`, `numero_capteur_l`, `consigne_temp`) VALUES
-(1, 1, 'Salon', 1, 1, 21, 1, 0, 'HBVGFT678IJT6', '2017-01-02', '2017-01-02', 'VBU765TYU876Y', 21),
-(2, 1, 'Salle de bain', 1, 1, 22, 0, 2, 'LKJHY6789OKJY', '2017-01-09', '2017-01-17', 'HGFRT87TGHUR8', 22),
-(3, 1, 'Chambre parentale', 1, 1, 23, 0, 0, 'OIUYT78OK987Y', '2017-01-15', '2017-01-16', 'H654R54T55YGYU', 23),
-(4, 1, 'Chambre des enfants', 1, 1, 24, 0, 1, 'PIHBGYUJNUYU', '2017-01-10', '2017-01-08', '9JU76TGT6UHG77', 24),
-(5, 1, 'Cuisine', 1, 1, 25, 0, 3, 'GT4567UGFR679', '2017-01-01', '2017-01-09', 'JI876YHBHY78767', 25),
-(6, 1, 'Garage', 0, 0, -1, -1, 3, 'IUYGHJIU77654E', '2016-09-04', '2017-01-01', 'GR4RFR56UHGYU', 15);
+(1, 1, 'Salon', 1, 1, 21, 0, 1, 'HBVGFT678IJT6', '2017-01-02', '2017-01-02', 'VBU765TYU876Y', 21),
+(2, 1, 'Salle de bain', 1, 1, 22, 1, 0, 'LKJHY6789OKJY', '2017-01-09', '2017-01-17', 'HGFRT87TGHUR8', 22),
+(3, 1, 'Chambre parentale', 1, 1, 23, 1, 1, 'OIUYT78OK987Y', '2017-01-15', '2017-01-16', 'H654R54T55YGYU', 23),
+(4, 1, 'Chambre des enfants', 1, 1, 24, 1, 2, 'PIHBGYUJNUYU', '2017-01-10', '2017-01-08', '9JU76TGT6UHG77', 20),
+(5, 1, 'Cuisine', 1, 1, 25, 0, 3, 'GT4567UGFR679', '2017-01-01', '2017-01-09', 'JI876YHBHY78767', 25);
 
 -- --------------------------------------------------------
 
@@ -270,7 +272,8 @@ CREATE TABLE `utilisateurs` (
 
 INSERT INTO `utilisateurs` (`id`, `mail`, `mdp`, `etat_general`) VALUES
 (1, 'noe.faure@isep.fr', 'b68b7c777f8a984e275582af6a660128', 0),
-(12, '', 'd41d8cd98f00b204e9800998ecf8427e', 0);
+(12, '', 'd41d8cd98f00b204e9800998ecf8427e', 0),
+(13, '', 'd41d8cd98f00b204e9800998ecf8427e', 0);
 
 --
 -- Index pour les tables exportées
@@ -393,7 +396,7 @@ ALTER TABLE `gaz`
 -- AUTO_INCREMENT pour la table `pieces`
 --
 ALTER TABLE `pieces`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `porte`
 --
@@ -408,4 +411,4 @@ ALTER TABLE `problemes`
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
