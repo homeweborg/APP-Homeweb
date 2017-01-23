@@ -140,14 +140,26 @@ function Conso_Eau($id,$db)
     
 }
 
-function Estim_Elec($id,$db)
+function Estim_Elec($id,$db,$prix = 0.5691)
 {
     // Estime le prix de la consommation délectricité
     $estim = -1;
     
+    // On cherche si l'utilisateur a rentré une préférence de tarif dans la bdd
+
+    $reponse = $db->prepare('SELECT prix_elec FROM elec WHERE id= ?');
+    $reponse->execute(array($id));
+
+    while ($donnees = $reponse->fetch())
+    {
+	   $prix = $donnees['prix_elec'];
+    }
+    
+    $prix = floatval($prix);
+    
     // On multiplie la conso par le prix moyen d'un kWh
     // Ceil arrondit au nombre entier supérieur
-    $estim = ceil((Conso_Elec($id,$db))*(0.5691));
+    $estim = ceil((Conso_Elec($id,$db))*($prix));
     
     return $estim;
     
@@ -756,4 +768,18 @@ function affiche_prix_eau($id,$db)
     return($prix_eau);
 }
 
+function affiche_prix_elec($id,$db)
+{
+    $prix_elec = 0;
+    
+    $reponse = $db->prepare('SELECT prix_elec FROM elec WHERE id = ?');
+    $reponse->execute(array($id));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $prix_elec = $donnees['prix_elec'];
+    }
+    
+    return($prix_elec);
+}
 ?>
