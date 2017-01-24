@@ -36,6 +36,6 @@ if (isset($_POST['Prix_gaz']))
     
 }
 
-header('Refresh:0 ; URL= ../Vues/gaz.php');
+header('Refresh:0 ; URL= ../Vues/User/gaz.php');
 
 ?>

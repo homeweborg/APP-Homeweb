@@ -24,6 +24,6 @@ $req->execute(array(
 	'Nom_piece' => $nom_piece
 	));
 
-header('Refresh:0 ; URL= ../Vues/etat.php');
+header('Refresh:0 ; URL= ../Vues/User/etat.php');
 
 ?>

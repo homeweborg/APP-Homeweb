@@ -2,7 +2,7 @@
 
 session_start();
 require("../Modele/connexionBDD.php");
-require("fonctions.php");
+require("../Modele/fonctions.php");
 
 $id_Utilisateur = $_SESSION['id'];
 $nom_piece = $_GET['piece'];
@@ -39,6 +39,6 @@ if (isset($_POST['Prix_eau']))
     
 }
 
-header('Refresh:0 ; URL= ../Vues/eau.php');
+header('Refresh:0 ; URL= ../Vues/User/eau.php');
 
 ?>

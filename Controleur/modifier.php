@@ -29,7 +29,7 @@ if (md5($amdp) == $_SESSION['pwd']){
 
     else {
         //on revient vers la page de modification
-        header('Refresh:0 ; URL= ../Vues/infos.php');
+        header('Refresh:0 ; URL= ../Vues/User/infos.php');
 
          //on le signale sur la page 
          echo "<script>window.alert('Mots de passe non identiques')</script>" ;
@@ -37,7 +37,7 @@ if (md5($amdp) == $_SESSION['pwd']){
 }
 else {
     //on revient vers la page de modification
-    header('Refresh:0 ; URL= ../Vues/infos.php');
+    header('Refresh:0 ; URL= ../Vues/User/infos.php');
 
     //on le signale sur la page 
     echo "<script>window.alert('Mot de passe incorrect')</script>" ;

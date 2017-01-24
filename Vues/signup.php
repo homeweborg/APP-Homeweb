@@ -10,7 +10,7 @@
 		<div id="page">
 		<!-- Header -->
             <header>
-                <?php include ("../entete.php");?>
+                <?php include ("entete.php");?>
             </header>
 		<!-- Body -->
 			<section class="loginform cf">
@@ -27,7 +27,7 @@
                             <p>Numéro du capteur acheté :</p>
                             <input type="string" name="numero_capteur" required placeholder="Ex : A7TB0Y6TE86F">
                         </div>
-                        <p><input type="checkbox" name="cgu" required><a href="#">Accepter les conditions générales d'utilisation</a></p>
+                    </br><input type="checkbox" name="cgu" required><a href="#">Accepter les conditions générales d'utilisation</a></p>
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
 				    </form>
                 <h2 class="infos_confidentialite">Tous les champs sont obligatoires. <br><br>Le Numéro du capteur Domisep acheté peut être trouvé sur le capteur.<br><br></h2>
@@ -36,6 +36,6 @@
            
 		</div>
 	</body>
-             <?php include ("../footer.php");?>
+             <?php include ("footer.php");?>
 
 </html>

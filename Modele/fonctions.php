@@ -1,6 +1,6 @@
 <?php
 /* FICHIER REGROUPANT TOUTES LES FONCTIONS PHP ANNEXES */
-require("../Modele/connexionBDD.php");
+require("connexionBDD.php");
 
 function Etat_eau($id,$db)
 {
@@ -236,22 +236,22 @@ function cascade_temp($id,$db)
         
         if ($etat == 0)
         {
-        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_noire.png\" title=\"Éteint\"></span></li>");
+        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Éteint\"></span></li>");
         }
             
         if ($etat == 1)
         {
-        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_verte.png\" title=\"Marche\"></span></li>");
+        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Marche\"></span></li>");
         }
         
         if ($etat == 2)
         {
-        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
+        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
         }
         
         if ($etat == 3)
         {
-        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_rouge.png\" title=\"En Panne\"></span></li>");
+        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En Panne\"></span></li>");
         }
         
     }
@@ -281,22 +281,22 @@ function cascade_lum($id,$db)
         
         if ($etat == 0)
         {
-        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span></li>");
+        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Eteint\"></span></li>");
         }
             
         if ($etat == 1)
         {
-        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span></li>");
+        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Allumé\"></span></li>");
         }
         
         if ($etat == 2)
         {
-        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
+        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
         }
         
         if ($etat == 3)
         {
-        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span></li>");
+        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En panne\"></span></li>");
         }
         
     }
@@ -362,7 +362,7 @@ function cascade_suppr($id,$db)
     
     echo "<ul>
             <li><b>PIÈCES</b> <span><b>SUPPRIMER</b></span></li>
-            <form method=\"POST\" action=\"../Controleur/supprimer_page.php\"> ";
+            <form method=\"POST\" action=\"../../Controleur/supprimer_page.php\"> ";
     while ($donnees = $reponse->fetch())
     {
         $nom_piece = $donnees['Nom'];
@@ -414,22 +414,22 @@ function etat_general_capteur($id,$db)
     
     if ($etat_general == 0)
         {
-        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Eteint\"></span>");
         }
             
         else if ($etat_general == 1)
         {
-        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Allumé\"></span>");
         }
         
         else if ($etat_general == 2)
         {
-        echo ("<span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_orange.png\" title=\"En cours de régulation\"></span>");
         }
         
         else if ($etat_general == 3)
         {
-        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En panne\"></span>");
         }
       
 }
@@ -477,22 +477,22 @@ function affiche_etat_capt_temp($id,$db)
     
     if ($etat_general == 0)
         {
-        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Eteint\"></span>");
         }
             
         else if ($etat_general == 1)
         {
-        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Allumé\"></span>");
         }
         
         else if ($etat_general == 2)
         {
-        echo ("<span><img src=\"../image/Pastille_orange.png\" title=\"En cours de régulation\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_orange.png\" title=\"En cours de régulation\"></span>");
         }
         
         else if ($etat_general == 3)
         {
-        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En panne\"></span>");
         }
 }
 
@@ -559,17 +559,17 @@ function affiche_etat_capt_lum($id,$db)
     
     if ($etat_general == 0)
         {
-        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Eteint\"></span>");
         }
             
         else if ($etat_general == 1)
         {
-        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Allumé\"></span>");
         }
         
         else if ($etat_general == 3)
         {
-        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En panne\"></span>");
         }
 }
 
@@ -663,17 +663,17 @@ function pastille_etat_eau($id,$db)
         
     if ($etat_general == 0)
         {
-        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Eteint\"></span>");
         }
             
         else if ($etat_general == 1)
         {
-        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Allumé\"></span>");
         }
         
         else if ($etat_general == 3)
         {
-        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En panne\"></span>");
         }
 }
 
@@ -685,17 +685,17 @@ function pastille_etat_gaz($id,$db)
         
     if ($etat_general == 0)
         {
-        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Eteint\"></span>");
         }
             
         else if ($etat_general == 1)
         {
-        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Allumé\"></span>");
         }
         
         else if ($etat_general == 3)
         {
-        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En panne\"></span>");
         }
 }
 
@@ -707,17 +707,17 @@ function pastille_etat_elec($id,$db)
         
     if ($etat_general == 0)
         {
-        echo ("<span><img src=\"../image/Pastille_noire.png\" title=\"Eteint\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Eteint\"></span>");
         }
             
         else if ($etat_general == 1)
         {
-        echo ("<span><img src=\"../image/Pastille_verte.png\" title=\"Allumé\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Allumé\"></span>");
         }
         
         else if ($etat_general == 3)
         {
-        echo ("<span><img src=\"../image/Pastille_rouge.png\" title=\"En panne\"></span>");
+        echo ("<span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En panne\"></span>");
         }
 }
 

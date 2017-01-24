@@ -52,7 +52,7 @@ if ($mdp == $mdpc){
                     ));
     
                     //on redirige vers le formulaire de connexion
-                    header('Refresh:0 ; URL= ../index.php');
+                    header('Refresh:0 ; URL= ../Vues/login.php');
 
                     //on le signale sur la page 
                     echo "<script>window.alert('Inscription réussie ')</script>" ;
@@ -72,8 +72,6 @@ if ($mdp == $mdpc){
 
             //SI LE NUMERO EST UN NUMERO D'ADMIN
             else {
-
-                echo "ce numero de capteur est un numéro admin";
                 
                 //ON VERIFIE SI LE NUMERO EST ASSOCIE A UN ADMIN
                 if ($reponseadmin['mail']==NULL){ 
@@ -86,7 +84,7 @@ if ($mdp == $mdpc){
                     ));
 
                     //on redirige vers le formulaire de connexion
-                    header('Refresh:0 ; URL= ../index.php');
+                    header('Refresh:0 ; URL= ../Vues/login.php');
 
                     //on le signale sur la page  // AA VERIIIFIIIIIERRRR
                     echo "<script>window.alert('Inscription réussie ')</script>" ;

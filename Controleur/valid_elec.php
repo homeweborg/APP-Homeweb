@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require("../Modele/connexionBDD.php");
+require("../../Modele/Modele/connexionBDD.php");
 
 $id_Utilisateur = $_SESSION['id'];
 $nom_piece = $_GET['piece'];
@@ -38,6 +38,6 @@ if (isset($_POST['Prix_elec']))
     
 }
 
-header('Refresh:0 ; URL= ../Vues/elec.php');
+header('Refresh:0 ; URL= ../Vues/User/elec.php');
 
 ?>

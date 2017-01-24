@@ -56,6 +56,6 @@ dans cette pièce */
     }
 
 }
-header('Refresh:0 ; URL= ../Vues/etat.php');
+header('Refresh:0 ; URL= ../Vues/User/etat.php');
 
 ?>

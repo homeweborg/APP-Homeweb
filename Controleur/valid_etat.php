@@ -83,6 +83,6 @@ $req->execute(array(
 	'id_Utilisateur' => $id_Utilisateur
 	));
 
-header('Refresh:0 ; URL= ../Vues/etat.php');
+header('Refresh:0 ; URL= ../Vues/User/etat.php');
 
 ?>
