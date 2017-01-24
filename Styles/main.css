@@ -105,9 +105,34 @@ footer nav ul li a{
 	background-color: rgba(255,255,255,0.9);
 	width: 550px;
 	margin: auto;
-	margin-top: 120px;
+	margin-top: 60px;
 	padding: 9px 10px 5px 15px;
 }
+
+#forminfosdomisep
+{
+	background-color: rgba(255,255,255,0.9);
+	width: 550px;
+	margin: auto;
+	margin-top: 50px;
+	padding: 9px 10px 5px 15px;
+}
+
+#formcontact
+{
+	background-color: rgba(255,255,255,0.9);
+	width: 550px;
+	margin: auto;
+	margin-top: 60px;
+	padding: 9px 10px 5px 15px;
+}
+
+
+#formlogin h1, #formsignup h1, #forminfosdomisep h1, #formcontact h1
+{
+	text-align: center;
+}
+
 .champoblig
 {
     color: orange;
@@ -124,16 +149,10 @@ footer nav ul li a{
     text-align: left;
     width : 220px;
     position : absolute;
-    top : 53.5%;
+    top : 40%;
     left : 50%;
     
     
-}
-
-
-#formlogin h1, #formsignup h1
-{
-	text-align: center;
 }
 
 nav a
@@ -188,6 +207,18 @@ nav a
 {
 	text-align: left; 
     width: 240px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 0px;
+	background-color: #575757;
+	border-color: #575757;
+	color: white;	
+	border-style: solid;
+}
+
+#forminfosdomisep textarea
+{
+	text-align: left; 
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-right: 0px;
@@ -537,14 +568,14 @@ input:checked + .slider:hover
 
 table{
     color:#575757;
-    margin-top:100px;
     border: 1px solid white;
     border-collapse: collapse;
     margin:auto;
-    margin-top:100px;
+    margin-top:70px;
     box-shadow: 0px 3px 5px white;
     font-size:20px;
-    
+    max-height: 70%;
+    overflow:auto;
 }
 
 td, th {
@@ -627,6 +658,9 @@ tr:nth-child(odd) {
     border-radius:6px;
 }
 
+
+
+/* CSS pour le formulaire des mentions légales*/
 #formmention{
     background-color: rgba(57,57,57,0.6);
     color: white;
@@ -640,11 +674,13 @@ tr:nth-child(odd) {
     
 }
 
+/* CSS pour le formulaire des mentions légales*/
 #formmention:link
 {
     color:darkcyan;
 }
 
+/* CSS pour colorier les liens*/
 a{
     color: darkcyan;
 }

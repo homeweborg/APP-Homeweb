@@ -25,7 +25,7 @@ require("../../Controleur/verifconnexion.php");
                 ?>
             </header>
             <?php
-            $reponse = $db->query('SELECT * FROM utilisateurs'); //On récupère tous les comptes utilisateurs
+            $reponse2 = $db->query('SELECT * FROM domisep_messagerie'); //On récupère tous les comptes utilisateurs
             ?>
             <table>
                 <tr>
@@ -34,13 +34,13 @@ require("../../Controleur/verifconnexion.php");
                     <th>Demande</th>
                 </tr>
             <?php //On affiche les lignes du tableau une à une à l'aide d'une boucle
-            while($donnees = $reponse->fetch())
+            while($donnees2 = $reponse2->fetch())
             {
             ?>
                 <tr>
-                    <td><?php echo $donnees['id'];?></td>
-                    <td><?php echo $donnees['mail'];?></td>
-                    <td><?php etat_general_capteur($donnees['id'],$db) ?></td>
+                    <td><?php echo $donnees2['nom'];?></td>
+                    <td><?php echo $donnees2['objet'];?></td>
+                    <td><?php $donnees2['contenu'] ?></td>
                 </tr>
             <?php
             } //fin de la boucle, le tableau contient toute la BDD

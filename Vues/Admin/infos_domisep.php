@@ -21,26 +21,26 @@ require("../../Controleur/verifconnexion.php");
                 ?>
             </header>
              <section class="loginform cf">
-                <div id= formsignup>
+                <div id= forminfosdomisep>
                     <?php
-            $reponse = $db->query('SELECT * FROM domisep'); //On récupère toutes les infos
+            $reponse = $db->query('SELECT * FROM domisep_infos'); //On récupère toutes les infos
             ?>
 				    <form name="login" action="../../Controleur/modifier_admin.php" method="post" accept-charset="utf-8">
                         <h1> Informations Domisep </h1>
                         <div id="signupinput">
                             <p>Adresse mail de contact :</p>
-                            <input type="mail" name="mail" value="<?php $reponse2 = $db -> query('SELECT contenu FROM domisep WHERE nom="mail"');
+                            <input type="mail" name="mail" value="<?php $reponse2 = $db -> query('SELECT contenu FROM domisep_infos WHERE nom="mail"');
                             $mail=$reponse2->fetch();
                             echo "$mail[0]"; ?>">
                             <p>Conditions générales d'utilisation :</p>
                             <textarea name="cgu" rows="5" cols="78">
-                            <?php $reponse3 = $db -> query('SELECT contenu FROM domisep WHERE nom="cgu"');
+                            <?php $reponse3 = $db -> query('SELECT contenu FROM domisep_infos WHERE nom="cgu"');
                             $mentions=$reponse3->fetch();
                             echo "$mentions[0]"; ?>
                             </textarea>
                             <p>Mentions légales :</p>
                             <textarea name="mentions" rows="5" cols="78">
-                            <?php $reponse4 = $db -> query('SELECT contenu FROM domisep WHERE nom="mentions"');
+                            <?php $reponse4 = $db -> query('SELECT contenu FROM domisep_infos WHERE nom="mentions"');
                             $cgu=$reponse4->fetch();
                             echo "$cgu[0]"; ?>
                             </textarea>
