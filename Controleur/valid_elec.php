@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require("../../Modele/Modele/connexionBDD.php");
+require("../Modele/connexionBDD.php");
 
 $id_Utilisateur = $_SESSION['id'];
 $nom_piece = $_GET['piece'];

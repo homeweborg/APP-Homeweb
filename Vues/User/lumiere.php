@@ -43,11 +43,11 @@ require("../../Modele/connexionBDD.php");
             </ul>
 	       	</div>
                 <div id=boite>
-                <form name="login" action="../Controleur/valid_lum.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
+                <form name="login" action="../../Controleur/valid_lum.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
 
                     <ul>
                         
-                        <div id = image_etat><img class ="image_temp" src="image/light.png"/></div>
+                        <div id = image_etat><img class ="image_temp" src="../../Styles/image/light.png"/></div>
                         
                         <li>Capteur de luminosité N° <span><?php affiche_num_capt_lum($_SESSION['id'],$db) ?></span></li>
                         <li>Dernier contrôle technique : <span><?php affiche_contol_tech_lum($_SESSION['id'],$db) ?></span></li>

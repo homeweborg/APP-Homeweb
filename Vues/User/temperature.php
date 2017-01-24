@@ -44,10 +44,10 @@ require("../../Controleur/verifconnexion.php");
             </ul>
 	       	</div>
                 <div id=boite>
-                    <form name="login" action="../Controleur/valid_temp.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
+                    <form name="login" action="../../Controleur/valid_temp.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
                     <ul>
                         
-                        <div id = image_etat><img class ="image_temp" src="image/temperature.png"/></div>
+                        <div id = image_etat><img class ="image_temp" src="../../Styles/image/temperature.png"/></div>
                         
                         <li>Capteur de température N° <span><?php affiche_num_capt_temp($_SESSION['id'],$db) ?></span></li>
                         <li>Dernier contrôle technique : <span><?php affiche_contol_tech_temp($_SESSION['id'],$db) ?></span></li>
