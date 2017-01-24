@@ -43,32 +43,20 @@ session_start();
                 </ul>
 	       	</div>
             <div id=boite>
-                <table id=Detail>
+                <form>
+                    <table id=Detail>
+
+                        <tr>
+                            <th>Nom de la pièce</th>
+                            <th>Type du capteur</th>
+                            <th>Numéro du capteur</th>
+                        </tr>
+
+                        <?php detail_piece($_SESSION['id'],$db); ?>
+                    </table>
                     
-                    <tr>
-                        <th>Nom de la pièce</th>
-                        <th>Type du capteur</th>
-                        <th>Numéro du capteur</th>
-                    </tr>
-                    
-                    <tr>
-                        <td>Salon</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    
-                    <tr>
-                        <td></td>
-                        <td>Température</td>
-                        <td><input type="checkbox"><input type=text></td>
-                    </tr>
-                    
-                    <tr>
-                        <td></td>
-                        <td>Lumière</td>
-                        <td><input type="checkbox"><input type=text></td>
-                    </tr>
-                </table>
+                    <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
+                </form>
             </div>
         </div>
          <?php include ("../footer.php");?> 

@@ -812,7 +812,7 @@ function detail_piece($id,$db)
 {
     // Cette fonction affiche en détails les caractéristiques des pièces
     
-    $reponse = $db->prepare('SELECT Nom, presence_temp, presence_lum, numero_capteur_t, numero_capteur_l FROM pieces WHERE id = ?');
+    $reponse = $db->prepare('SELECT Nom, presence_temp, presence_lum, numero_capteur_t, numero_capteur_l FROM pieces WHERE id_Utilisateur = ?');
     $reponse->execute(array($id));
     
     while ($donnees = $reponse->fetch())
@@ -823,6 +823,59 @@ function detail_piece($id,$db)
         $numero_capteur_t = $donnees['numero_capteur_t'];
         $numero_capteur_l = $donnees['numero_capteur_l'];
         
+        // On affiche le nom de la pièce
+        
+        echo("<tr>
+                        <td>".$nom_piece."</td>
+                        <td></td>
+                        <td></td>
+                    </tr>");
+        
+        // On affiche le capteur de température
+        // Si il y en a un, on coche la case et on affiche son numéro
+        
+        if ($presence_temp == 1)
+        {
+        echo("<tr>
+                        <td></td>
+                        <td>Température</td>
+                        <td><input type=\"checkbox\" checked><input type=text value=".$numero_capteur_t."></td>
+                    </tr>");
+        }
+        
+        // Si il y en a pas on décoche 
+        
+        else if ($presence_temp == 0)
+        {
+        echo("<tr>
+                        <td></td>
+                        <td>Température</td>
+                        <td><input type=\"checkbox\" ><input type=text></td>
+                    </tr>");
+        }
+        
+        // On affiche le capteur de lumière
+        // Si il y en a un, on coche la case et on affiche son numéro
+        
+        if ($presence_lum == 1)
+        {
+        echo("<tr>
+                        <td></td>
+                        <td>Lumière</td>
+                        <td><input type=\"checkbox\" checked><input type=text value=".$numero_capteur_l."></td>
+                    </tr>");
+        }
+        
+        // Si il y en a pas on décoche 
+        
+        else if ($presence_lum == 0)
+        {
+        echo("<tr>
+                        <td></td>
+                        <td>lumière</td>
+                        <td><input type=\"checkbox\" ><input type=text></td>
+                    </tr>");
+        }
         
     }
 }
