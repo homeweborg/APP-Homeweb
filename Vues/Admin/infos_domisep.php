@@ -2,22 +2,22 @@
 
 <?php 
 /*Se connecte à la base de données*/
-require("../Modele/connexionBDD.php");
+require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
-require("../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexion.php");
 ?>
 <html>
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
 	</head>
 	<body>
         <div id="page">
         <!-- Header (commentaire test) -->
             <header>
                 <?php 
-                include ("../entete_admin.php");
+                include ("entete_admin.php");
                 ?>
             </header>
              <section class="loginform cf">
@@ -25,7 +25,7 @@ require("../Controleur/verifconnexion.php");
                     <?php
             $reponse = $db->query('SELECT * FROM domisep'); //On récupère toutes les infos
             ?>
-				    <form name="login" action="../Controleur/modifier_admin.php" method="post" accept-charset="utf-8">
+				    <form name="login" action="../../Controleur/modifier_admin.php" method="post" accept-charset="utf-8">
                         <h1> Informations Domisep </h1>
                         <div id="signupinput">
                             <p>Adresse mail de contact :</p>
@@ -48,7 +48,6 @@ require("../Controleur/verifconnexion.php");
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="Modifier"/>
 				    </form>
                 </div>
-            <?php include ("../footer.php");?> 
         </div>
 	</body>
 </html>

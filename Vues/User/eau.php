@@ -1,21 +1,21 @@
 <!DOCTYPE HTML>
-<?php require("../Controleur/fonctions.php");
+<?php require("../../Modele/fonctions.php");
 //Se connecte à la base de données
-require("../Modele/connexionBDD.php");
+require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
-require("../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexion.php");
 ?>
 <html>
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
 	</head>
 	<body>
 		<div id="page">
         <!-- Header (commentaire test) -->
             <header>
-                <?php include ("../entete.php");?>
+                <?php include ("entete_user.php");?>
             </header>
             <div id=capteurs>
             <ul>
@@ -40,10 +40,10 @@ require("../Controleur/verifconnexion.php");
             </ul>
 	       	</div>
                 <div id=boite>
-                    <form name="login" action="../Controleur/valid_eau.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
+                    <form name="login" action="../../Controleur/valid_eau.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
                     <ul>
                         
-                        <div id = image_etat><img class ="image_temp" src="image/eau.png"/></div>
+                        <div id = image_etat><img class ="image_temp" src="../../Styles/image/eau.png"/></div>
                         
                         <li>Consommation depuis le début du mois :<span><?php echo (Conso_Eau($_SESSION['id'],$db)) ?> m3</span></li>
                         <li>Estimation du coût : <span><?php echo (Estim_Eau($_SESSION['id'],$db)) ?> €</span></li>
@@ -61,7 +61,7 @@ require("../Controleur/verifconnexion.php");
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>
                     
-                    <a class="boutons_retour" href="contact.php">Se renseigner</a>
+                    <a class="boutons_retour" href="../contact.php">Se renseigner</a>
                     <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
                     </form>
                 </div>

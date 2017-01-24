@@ -1,16 +1,16 @@
 <!DOCTYPE HTML>
-<?php require("../Controleur/fonctions.php");
+<?php require("../../Modele/fonctions.php");
 //Se connecte à la base de données
-require("../Modele/connexionBDD.php");
+require("../../Modele/connexionBDD.php");
 
 //on vérifie si un utilisateur est connecté
-require("../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexion.php");
 ?>
 <html>
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
         <script src="../js/jquery-3.1.1.min.js"></script>
 	</head>
 	<body>
@@ -18,7 +18,7 @@ require("../Controleur/verifconnexion.php");
         <!-- Header (commentaire test) -->
             <header>
                 <?php 
-                include ("../entete.php");
+                include ("entete_user.php");
                 ?>
             </header>
             <div id=capteurs>

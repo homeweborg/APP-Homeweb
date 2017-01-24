@@ -2,22 +2,22 @@
 
 <?php 
 /*Se connecte à la base de données*/
-require("../Modele/connexionBDD.php");
+require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
-require("../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexion.php");
 ?>
 <html>
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
 	</head>
 	<body>
         <div id="page">
         <!-- Header (commentaire test) -->
             <header>
                 <?php 
-                include ("../entete_admin.php");
+                include ("entete_admin.php");
                 ?>
             </header>
              <?php
@@ -42,7 +42,6 @@ require("../Controleur/verifconnexion.php");
             } //fin de la boucle, le tableau contient toute la BDD
             ?>
             </table>
-            <?php include ("../footer.php");?> 
         </div>
 	</body>
 </html>

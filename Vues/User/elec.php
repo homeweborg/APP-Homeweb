@@ -1,22 +1,22 @@
 <!DOCTYPE HTML>
-<?php require("../Controleur/fonctions.php");
+<?php require("../../Modele/fonctions.php");
 //Se connecte à la base de données
-require("../Modele/connexionBDD.php");
+require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
-require("../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexion.php");
 ?>
 <html>
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
 	</head>
 	<body>
 		<div id="page">
         <!-- Header (commentaire test) -->
             <header>
                 <?php 
-                include ("../entete.php");
+                include ("entete_user.php");
                 ?>
             </header>
             <div id=capteurs>
@@ -42,33 +42,34 @@ require("../Controleur/verifconnexion.php");
             </ul>
 	       	</div>
                 <div id=boite>
-                    <form name="login" action="../Controleur/valid_gaz.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
+                    <form name="login" action="../../Controleur/valid_elec.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
                     <ul>
                         
-                        <div id = image_etat><img class ="image_temp" src="image/gaz.png"/></div>
+                        <div id = image_etat><img class ="image_temp" src="../../Styles/image/elec.png"/></div>
                         
-                        <li>Consommation depuis le début du mois :<span><?php echo (Conso_Gaz(1,$db)) ?> m3</span></li>
-                        <li>Estimation du coût : <span><?php echo (Estim_Gaz(1,$db)) ?> €</span></li>
+                        <li>Consommation depuis le début du mois :<span><?php echo (Conso_Elec(1,$db)) ?> kWh</span></li>
+                        <li>Estimation du coût : <span><?php echo (Estim_Elec(1,$db)) ?> €</span></li>
                         <li>État : <span>Marche</span></li>
-                        <li>Prix du m3 : <span><input type="text" class="Prix_entree" name="Prix_gaz" value=<?php echo(affiche_prix_gaz($_SESSION['id'],$db)) ?> placeholder="en €"></span></li>
+                        <li>Prix du kWh : <span><input type="text" class="Prix_entree" name="Prix_elec" value=<?php echo(affiche_prix_elec($_SESSION['id'],$db)) ?> placeholder="en €"></span></li>
                         <li>
                             <label class="switch">
-                                <input type="checkbox" name="box" value=1 <?php if (Etat_gaz(1,$db) == 1) { ?> checked <?php } ?>>
+                                <input type="checkbox" value=1 name="box" <?php if (Etat_elec(1,$db) == 1) { ?> checked <?php } ?>>
                                 <div class="slider"></div>
                             </label>
                         
                         </li>
-                        <li><I style="font-size : 14px;">Par défaut le prix d'un m3 de gaz est fixé à 9.5 € (Moyenne Française 2015)</I></li>
+                        <li><I style="font-size : 14px;">Par défaut le prix d'un kWh d'électricité est fixé à 0.3 € (Moyenne Française 2015)</I></li>
                     </ul>
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>
                     
-                    <a class="boutons_retour" href="contact.php">Se renseigner</a>
+                    <a class="boutons_retour" href="../contact.php">Se renseigner</a>
                     <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
                     </form>
                 </div>
             <?php include ("../footer.php");?> 
         </div>
+        
                 
         </body>
 </html>

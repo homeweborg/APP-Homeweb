@@ -1,30 +1,30 @@
 <!DOCTYPE HTML>
 <?php
-require("../Controleur/fonctions.php");
+require("../../Modele/fonctions.php");
 //Se connecte à la base de données
-require("../Modele/connexionBDD.php");
+require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
-require("../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexion.php");
 ?>
 <html>
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
 	</head>
 	<body>
 		<div id="page">
 		<!-- Header -->
             <header>
                 <?php 
-                include ("../entete.php");
+                include ("entete_user.php");
                 ?>
             </header>
             
         <!-- Body -->                
                 <section class="loginform cf">
                 <div id= formsignup>
-				    <form name="login" action="../Controleur/modifier.php" method="post" accept-charset="utf-8">
+				    <form name="login" action="../../Controleur/modifier.php" method="post" accept-charset="utf-8">
                         <h1> Votre Profil </h1>
                         <div id="signupinput">
                             <p>Votre adresse mail :
