@@ -43,7 +43,7 @@ session_start();
                 </ul>
 	       	</div>
             <div id=boite>
-                <?php cascade_suppr($_SESSION['id'],$db) ?>
+                
             </div>
         </div>
          <?php include ("../footer.php");?> 

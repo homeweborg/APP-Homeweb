@@ -39,6 +39,7 @@ require("../../Modele/connexionBDD.php");
                 <li>
                         <a class="bouton_type" href="ajout_piece.php">+  AJOUTER une pièce</a>
                         <a class="bouton_type" href="suppr.php">- SUPPRIMER une pièce</a>
+                        <a class="bouton_type" href="detailpiece.php">= DÉTAILS des pièces</a>
                     </li>
             </ul>
 	       	</div>
