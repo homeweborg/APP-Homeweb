@@ -807,4 +807,23 @@ function affiche_prix_gaz($id,$db)
     
     return($prix_gaz);
 }
+
+function detail_piece($id,$db)
+{
+    // Cette fonction affiche en détails les caractéristiques des pièces
+    
+    $reponse = $db->prepare('SELECT Nom, presence_temp, presence_lum, numero_capteur_t, numero_capteur_l FROM pieces WHERE id = ?');
+    $reponse->execute(array($id));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $nom_piece = $donnees['Nom'];
+        $presence_temp = $donnees['presence_temp'];
+        $presence_lum = $donnees['presence_lum'];
+        $numero_capteur_t = $donnees['numero_capteur_t'];
+        $numero_capteur_l = $donnees['numero_capteur_l'];
+        
+        
+    }
+}
 ?>
