@@ -620,6 +620,30 @@ tr:nth-child(odd) {
 
 }
 
+<<<<<<< Updated upstream
 #social ul li:hover{
         background: url(image/boutonOFF.png) no-repeat;
+=======
+#formmention
+{
+    background-color: rgba(57,57,57,0.6);
+    color: white;
+    width: 700px;
+	margin: auto;
+	margin-top: 50px;
+	padding: 9px 10px 5px 15px;
+    overflow:auto;
+    height:450px;
+    text-decoration:none;
+    
+}
+
+#formmention:link
+{
+    color:darkcyan;
+}
+
+a{
+    color: darkcyan;
+>>>>>>> Stashed changes
 }

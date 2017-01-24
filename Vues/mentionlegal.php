@@ -2,89 +2,70 @@
 <?php require("../Controleur/fonctions.php");
 //Se connecte à la base de données
 require("../Modele/connexionBDD.php");
-
-//on vérifie si un utilisateur est connecté
-require("../Controleur/verifconnexion.php");
 ?>
 <html>
+    
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
-        <script src="../js/jquery-3.1.1.min.js"></script>
 	</head>
+    
 	<body>
 		<div id="page">
-        <!-- Header (commentaire test) -->
-            <header>
-                <?php 
-                include ("../entete.php");
-                ?>
-            </header>
-            <div id=capteurs>
+		<!-- Header -->
+            <header> <!-- En tete -->
+                <div id="logo">
+            <a href="image/logo.png"><img src="image/logomini.png" alt="Logo HomeWeb" title="Logo HomeWeb"/>
+        </div>
+        <nav>
             <ul>
-                <li><a href="#">Température</a>
-                        <?php cascade_temp($_SESSION['id'],$db) ?>
-                    </li>
-                    
-                    <li><a href="#">Lumière</a>
-                        <?php cascade_lum($_SESSION['id'],$db) ?>
-                    </li>
-                <li><a href="#">Consommation</a>
-                    <ul>
-                        <li><a href="eau.php">Eau</a> <span> <?php pastille_etat_eau($_SESSION['id'],$db) ?></span></li>
-                        <li><a href="gaz.php">Gaz</a> <span> <?php pastille_etat_gaz($_SESSION['id'],$db) ?></span></li>
-                        <li><a href="elec.php">Electricité</a> <span> <?php pastille_etat_elec($_SESSION['id'],$db) ?></span></li>
-                    </ul>
-                </li>
-                <li>
-                        <a class="bouton_type" href="ajout_piece.php">+  AJOUTER une pièce</a>
-                        <a class="bouton_type" href="suppr.php">- SUPPRIMER une pièce</a>
-                    </li>
+                <li><a href="Vues/etat.php">Etat de la maison</a></li>
+                <li><a href="Vues/infos.php">Mes informations</a></li>
+                <li><a href="Vues/contact.php">Contact</a></li>
+                <div id=logodeco><a href="Controleur/logout.php"><img src="image/onoff.png"></a></div>
             </ul>
-	       	</div>
-                <div id=boite>
-                    <form name="login" action="../Controleur/valid_temp.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
-                    <ul>
-                        
-                        <div id = image_etat><img class ="image_temp" src="image/temperature.png"/></div>
-                        
-                        <li>Capteur de température N° <span><?php affiche_num_capt_temp($_SESSION['id'],$db) ?></span></li>
-                        <li>Dernier contrôle technique : <span><?php affiche_contol_tech_temp($_SESSION['id'],$db) ?></span></li>
-                        <li>État : <span><?php affiche_etat_capt_temp($_SESSION['id'],$db) ?></li>
-                        <li>Température ambiante : <span><?php affiche_temperature($_SESSION['id'],$db) ?></span></li>
-                    </ul>
+        </nav>
+            </header>       
+		<!-- Body -->
+			<section class="loginform cf"> <!--formulaire d'identification-->
+                <div id=formmention>
+                    <?php
                     
-                    <div>
-                
-                        <input class="barre_temp" name="range" type="range" id="mabarre" min="0" value=<?php affiche_consigne_temp($_SESSION['id'],$db) ?> max="40" onchange="FunctionTemp();" onload="FunctionTemp();"/>
-                        
-                        <p>Valeur demandée :  <span id="valeurTemp" ></span> °C</p>
-                        
-                        <script>
-        $( document ).ready(function() {
-        
-        var lambda = document.getElementById("mabarre").value;
-        document.getElementById("valeurTemp").innerHTML = lambda;
-        
-    });
-    
-function FunctionTemp() {
-    
-    var lambda = document.getElementById("mabarre").value;
-    document.getElementById("valeurTemp").innerHTML = lambda;
-    
-}
-                        </script>
-                        
-                    </div>
+                    $mention ="";
+
+                    $reponse = $db->prepare('SELECT contenu FROM domisep WHERE nom= ?');
+                    $reponse->execute(array("mentions"));
+
+                        while ($donnees = $reponse->fetch())
+                        {
+                           $mention = $donnees['contenu'];
+                        }
+
+                        echo($mention);
                     
-                    <a class="boutons_retour" href="etat.php" >Retour</a>
-                    
-                    <a class="boutons_retour" href="signaler.php">Signaler</a>
-                    <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
-                    </form>
+                    ?>
                 </div>
-                 <?php include ("../footer.php");?> 
-        </body>
+			</section>
+        <footer>
+                <nav>
+                    <ul>
+                        <li><a href="#">Conditions</a></li>
+                        <li>|</li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li>|</li>
+                        <li><a href="#">Confidentialité</a></li>                        
+                    <div id=social>
+                        <ul>
+                        <li><a href="image/facebook.png"><img src="image/facebook.png" alt="Facebook" title="Facebook"/></li>
+                        <li><a href="image/twitter.png"><img src="image/twitter.png" alt="Twitter" title="Twitter"/></li>
+                        <li><a href="image/linkedin.png"><img src="image/linkedin.png" alt="Linkedin" title="Linkedin"/></li>
+                        </ul>
+                    </div>
+                    </ul>
+                </nav>
+            </footer>  
+		</div>
+	</body>
+        
 </html>
