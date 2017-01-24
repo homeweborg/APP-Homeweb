@@ -15,17 +15,7 @@ require("../Modele/connexionBDD.php");
 		<div id="page">
 		<!-- Header -->
             <header> <!-- En tete -->
-                <div id="logo">
-            <a href="image/logo.png"><img src="image/logomini.png" alt="Logo HomeWeb" title="Logo HomeWeb"/>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="Vues/etat.php">Etat de la maison</a></li>
-                <li><a href="Vues/infos.php">Mes informations</a></li>
-                <li><a href="Vues/contact.php">Contact</a></li>
-                <div id=logodeco><a href="Controleur/logout.php"><img src="image/onoff.png"></a></div>
-            </ul>
-        </nav>
+                <?php include ("entete.php");?>
             </header>       
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->

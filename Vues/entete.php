@@ -7,8 +7,8 @@ echo '  <div id="logo">
             <ul>
                 
                 <li><a href="contact.php">Contact</a></li>
-                <li><a>Se connecter</a></li>
-                <div id=logodeco><a><img src="../Styles/image/onoff.png"></a></div>
+                <li><a>Se connecter</a>
+                <div id=logodeco><a href="login.php"><img src="../Styles/image/onoff.png"></a></div>
             </ul>
         </nav>';
 ?>
