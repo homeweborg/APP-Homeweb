@@ -26,18 +26,17 @@ require("../../Controleur/verifconnexionadmin.php");
             <table>
                 <tr>
                     <th>Mail Utilisateur</th>
-                    <th>Problèmes signalés</th>
                     <th>Capteurs concernés</th>
+                    <th>Problèmes signalés</th>
                 </tr>
             <?php //On affiche les lignes du tableau une à une à l'aide d'une boucle
             while($donnees = $reponse->fetch())
             {
             ?>
                 <tr>
-                    <td><?php echo $donnees['mail'];?></td>
+                    <td><?php $reponse2 = $db->query('SELECT mail FROM utilisateurs WHERE id="'.$donnees['id_user'].'"'); $donnees2=$reponse2->fetch();echo $donnees2['mail'];?></td>
                     <td><?php echo $donnees['capteur'];?></td>
-                    <td><?php $reponse2 = $db->query('SELECT mail FROM utilisateurs WHERE id=="'.$donnees[id_user].'"'); 
-                echo $donnees2['mail'];?></td>
+                    <td><?php echo $donnees['probleme'];?></td>
                 </tr>
             <?php
             } //fin de la boucle, le tableau contient toute la BDD

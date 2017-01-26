@@ -26,7 +26,7 @@
                             
                             <textarea type="text" class="description" name="demande"></textarea>
                             
-                            <input class="boutons_contact_envoyer" type="submit" value="Envoyer" onClick="window.location.href='#'">
+                            <input class="boutons_contact_envoyer" type="submit" value="Envoyer">
                             
                         </div>
                     </form>

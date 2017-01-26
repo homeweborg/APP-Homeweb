@@ -69,21 +69,6 @@ INSERT INTO `capteur` (`id`, `numero_capteur`, `etat`, `type`, `id_client`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `consos`
---
-
-CREATE TABLE IF NOT EXISTS `consos` (
-  `id` int(11) NOT NULL,
-  `conso` int(10) NOT NULL,
-  `etat` int(10) NOT NULL,
-  `prix` int(10) NOT NULL,
-  `type` int(10) NOT NULL,
-  `id_user` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `data`
 --
 
@@ -123,9 +108,9 @@ INSERT INTO `domisep_infos` (`id`, `nom`, `contenu`) VALUES
 CREATE TABLE IF NOT EXISTS `domisep_messagerie` (
   `id` int(11) NOT NULL,
   `mail` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `objet` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `objet` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `demande` longtext COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `domisep_messagerie`
@@ -144,16 +129,16 @@ INSERT INTO `domisep_messagerie` (`id`, `mail`, `objet`, `demande`) VALUES
 CREATE TABLE IF NOT EXISTS `domisep_probleme` (
   `id` int(11) NOT NULL,
   `capteur` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
-  `probleme` int(11) NOT NULL,
+  `probleme` longtext COLLATE utf8_unicode_ci NOT NULL,
   `id_user` varchar(100) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `domisep_probleme`
 --
 
 INSERT INTO `domisep_probleme` (`id`, `capteur`, `probleme`, `id_user`) VALUES
-(1, '54353453453', 0, '1'),
+(1, '54353453453', 0, '1');
 
 -- --------------------------------------------------------
 
@@ -290,7 +275,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `mail` varchar(255) NOT NULL,
   `mdp` varchar(255) NOT NULL,
   `etat_general` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `utilisateurs`
@@ -315,12 +300,6 @@ ALTER TABLE `administrateur`
 -- Indexes for table `capteur`
 --
 ALTER TABLE `capteur`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `consos`
---
-ALTER TABLE `consos`
   ADD PRIMARY KEY (`id`);
 
 --
