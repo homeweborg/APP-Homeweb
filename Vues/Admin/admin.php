@@ -27,7 +27,7 @@ require("../../Controleur/verifconnexionadmin.php");
             <?php
             $reponse = $db->query('SELECT * FROM utilisateurs'); //On récupère tous les comptes utilisateurs
             ?>
-            <form name="admin" action="../../Controleur/redirection.php" method="post" accept-charset="utf-8">
+            <form name="admin" action="../../Controleur/redirection.php" method="post" target=_blank accept-charset="utf-8">
                 <div id = table_admin>
                 <table>
                     <tr>
@@ -47,7 +47,7 @@ require("../../Controleur/verifconnexionadmin.php");
                 <?php
                 } //fin de la boucle, le tableau contient toute la BDD
                 ?>
-                    <input class="boutons_contact_envoyer" type="submit" value="Envoyer">
+                    <input class="boutons_contact_envoyer" type="submit" value="Accéder à ce compte" >
                 </table>
                 </div>
             </form>
