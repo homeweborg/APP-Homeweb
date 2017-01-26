@@ -94,6 +94,70 @@ else
 	));
 }
 
-header('Refresh:0 ; URL= ../Vues/User/etat.php');
+//ON MET À JOUR LES NUMÉROS DES CAPTEURS DE LUMIÈRES
+
+$tableau_numero_l = $_POST['numero_capteur_l'];
+
+// On parcours les pièces pour changer un par un les numèros de capteurs
+
+$reponse = $db->prepare('SELECT Nom FROM pieces WHERE id_Utilisateur = ?');
+$reponse->execute(array($id_Utilisateur));
+    
+    // initialisation de la variable qui parcours le tableau
+
+    $n =0;
+
+    while ($donnees = $reponse->fetch())
+    {
+        $nom_piece = $donnees['Nom'];
+        
+        if ($tableau_numero_l[$n] != "")
+        {
+        $req = $db->prepare('UPDATE pieces SET numero_capteur_l = :consigne WHERE id_Utilisateur = :id AND Nom=:Nom_piece');
+        $req->execute(array(
+        'consigne' => $tableau_numero_l[$n],
+        'id' => $id_Utilisateur,
+        'Nom_piece' => $nom_piece
+        ));
+        }
+        
+        $n =$n+1;
+        
+    }
+
+//ON MET À JOUR LES NUMÉROS DES CAPTEURS DE TEMPÉRATURE
+// ( MÊME MÉTHODE )
+
+$tableau_numero_t = $_POST['numero_capteur_t'];
+
+// On parcours les pièces pour changer un par un les numèros de capteurs
+
+$reponse = $db->prepare('SELECT Nom FROM pieces WHERE id_Utilisateur = ?');
+$reponse->execute(array($id_Utilisateur));
+    
+    // initialisation de la variable qui parcours le tableau
+
+    $n =0;
+
+    while ($donnees = $reponse->fetch())
+    {
+        $nom_piece = $donnees['Nom'];
+        
+        if ($tableau_numero_t[$n] != "")
+        {
+        $req = $db->prepare('UPDATE pieces SET numero_capteur_t = :consigne WHERE id_Utilisateur = :id AND Nom=:Nom_piece');
+        $req->execute(array(
+        'consigne' => $tableau_numero_t[$n],
+        'id' => $id_Utilisateur,
+        'Nom_piece' => $nom_piece
+        ));
+        }
+        
+        $n =$n+1;
+        
+    }
+
+
+header('Refresh:0 ; URL= ../Vues/User/detailpiece.php');
 
 ?>

@@ -850,7 +850,7 @@ function detail_piece($id,$db)
         echo("<tr>
                         <td></td>
                         <td>Température</td>
-                        <td><input class=\"colonne_I\" type=\"checkbox\" checked name=\"box_temp[]\" value=\"");echo($nom_piece);echo("\"><input class=\"colonne\" type=text value=".$numero_capteur_t."></td>
+                        <td><input class=\"colonne_I\" type=\"checkbox\" checked name=\"box_temp[]\" value=\"");echo($nom_piece);echo("\"><input class=\"colonne\" type=text name=\"numero_capteur_t[]\" value=".$numero_capteur_t."></td>
                     </tr>");
         }
         
@@ -861,7 +861,7 @@ function detail_piece($id,$db)
         echo("<tr>
                         <td></td>
                         <td>Température</td>
-                        <td><input class=\"colonne_I\" type=\"checkbox\" name=\"box_temp[]\" value=\"");echo($nom_piece);echo("\"><input class=\"colonne\" type=text placeholder=".$numero_capteur_t."></td>
+                        <td><input class=\"colonne_I\" type=\"checkbox\" name=\"box_temp[]\" value=\"");echo($nom_piece);echo("\"><input class=\"colonne\" name=\"numero_capteur_t[]\" type=text placeholder=".$numero_capteur_t."></td>
                     </tr>");
         }
         
@@ -873,7 +873,7 @@ function detail_piece($id,$db)
         echo("<tr>
                         <td></td>
                         <td>Lumière</td>
-                        <td><input class=\"colonne_I\" type=\"checkbox\" checked name=\"box_lum[]\" value=\"");echo($nom_piece);echo("\"><input class=\"colonne\" type=text value=".$numero_capteur_l."></td>
+                        <td><input class=\"colonne_I\" type=\"checkbox\" checked name=\"box_lum[]\" value=\"");echo($nom_piece);echo("\"><input class=\"colonne\" type=text name=\"numero_capteur_l[]\" value=".$numero_capteur_l."></td>
                     </tr>");
         }
         
@@ -884,7 +884,7 @@ function detail_piece($id,$db)
         echo("<tr>
                         <td></td>
                         <td>lumière</td>
-                        <td><input class=\"colonne_I\" type=\"checkbox\" name=\"box_lum[]\" value=\"");echo($nom_piece);echo("\"><input class=\"colonne\" type=text placeholder=".$numero_capteur_l."></td>
+                        <td><input class=\"colonne_I\" type=\"checkbox\" name=\"box_lum[]\" value=\"");echo($nom_piece);echo("\"><input class=\"colonne\" type=text name=\"numero_capteur_l[]\" placeholder=".$numero_capteur_l."></td>
                     </tr>");
         }
         
