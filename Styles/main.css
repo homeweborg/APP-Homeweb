@@ -684,3 +684,12 @@ tr:nth-child(odd) {
 a{
     color: darkcyan;
 }
+
+#boite .tableau_detail
+{
+    
+    /* Concerne le tableau détails des pièces */
+    
+    margin:auto;
+    background:none;
+}

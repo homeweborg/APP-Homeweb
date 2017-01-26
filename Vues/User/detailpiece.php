@@ -43,8 +43,8 @@ session_start();
                 </ul>
 	       	</div>
             <div id=boite>
-                <form>
-                    <table id=Detail>
+                <form action="../../Controleur/valid_details.php" method="post">
+                    <table class="tableau_detail" id=Detail>
 
                         <tr>
                             <th>Nom de la pièce</th>
