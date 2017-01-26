@@ -48,7 +48,7 @@ require("../../Controleur/verifconnexion.php");
                         
                         <li>Consommation depuis le début du mois :<span><?php echo (Conso_Eau($_SESSION['id'],$db)) ?> m3</span></li>
                         <li>Estimation du coût : <span><?php echo (Estim_Eau($_SESSION['id'],$db)) ?> €</span></li>
-                        <li>État : <span>Marche</span></li>
+                        <li>État : <span><?php pastille_etat_eau($_SESSION['id'],$db) ?></span></li>
                         <li>Prix du m3 : <span><input type="text" class="Prix_entree" name="Prix_eau" value=<?php echo(affiche_prix_eau($_SESSION['id'],$db)) ?> placeholder="en €"></span></li>
                         <li>
                             <label class="switch">

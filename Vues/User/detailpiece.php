@@ -55,7 +55,7 @@ session_start();
 
                         <?php detail_piece($_SESSION['id'],$db); ?>
                     </table>
-                    
+                        
                         <div id=boutonvalider><input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/></div>
                     </div>
                 </form>

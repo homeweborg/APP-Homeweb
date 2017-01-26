@@ -50,7 +50,7 @@ require("../../Controleur/verifconnexion.php");
                         
                         <li>Consommation depuis le début du mois :<span><?php echo (Conso_Gaz(1,$db)) ?> m3</span></li>
                         <li>Estimation du coût : <span><?php echo (Estim_Gaz(1,$db)) ?> €</span></li>
-                        <li>État : <span>Marche</span></li>
+                        <li>État : <span><?php pastille_etat_gaz($_SESSION['id'],$db) ?></span></li>
                         <li>Prix du m3 : <span><input type="text" class="Prix_entree" name="Prix_gaz" value=<?php echo(affiche_prix_gaz($_SESSION['id'],$db)) ?> placeholder="en €"></span></li>
                         <li>
                             <label class="switch">

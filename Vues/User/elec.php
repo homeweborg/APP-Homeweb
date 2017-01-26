@@ -50,7 +50,7 @@ require("../../Controleur/verifconnexion.php");
                         
                         <li>Consommation depuis le début du mois :<span><?php echo (Conso_Elec(1,$db)) ?> kWh</span></li>
                         <li>Estimation du coût : <span><?php echo (Estim_Elec(1,$db)) ?> €</span></li>
-                        <li>État : <span>Marche</span></li>
+                        <li>État : <span><?php pastille_etat_elec($_SESSION['id'],$db) ?></span></li>
                         <li>Prix du kWh : <span><input type="text" class="Prix_entree" name="Prix_elec" value=<?php echo(affiche_prix_elec($_SESSION['id'],$db)) ?> placeholder="en €"></span></li>
                         <li>
                             <label class="switch">

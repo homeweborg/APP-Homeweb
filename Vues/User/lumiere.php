@@ -50,6 +50,7 @@ require("../../Modele/connexionBDD.php");
                         
                         <div id = image_etat><img class ="image_temp" src="../../Styles/image/light.png"/></div>
                         
+                        <li>Pièce : <span><?php echo($_GET['piece']) ?></span></li>
                         <li>Capteur de luminosité N° <span><?php affiche_num_capt_lum($_SESSION['id'],$db) ?></span></li>
                         <li>Dernier contrôle technique : <span><?php affiche_contol_tech_lum($_SESSION['id'],$db) ?></span></li>
                         <li>État : <span><?php affiche_etat_capt_lum($_SESSION['id'],$db) ?></span></li>

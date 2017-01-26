@@ -45,7 +45,7 @@ require("../../Modele/fonctions.php");
             <div id=boite>
                 <form name="login" action="../Controleur/valid_etat.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
                 <ul>
-                    <li>Température moyenne <span><?php echo temp_moyenne(1,$db) ?> °C</span></li>
+                    <li>Température moyenne <span><?php echo temp_moyenne($_SESSION['id'],$db) ?> °C</span></li>
                     <li>Etat général des capteurs <?php etat_general_capteur($_SESSION['id'],$db) ?></li>                
                     <li>Eau
                         <label class="switch">
@@ -65,7 +65,7 @@ require("../../Modele/fonctions.php");
                             <div class="slider"></div>
                         </label>
                     </li>
-                    <li>Nombre de lumières allumée(s) <span><?php echo nombre_lum_on(1,$db) ?></span></li>
+                    <li>Nombre de lumières allumée(s) <span><?php echo nombre_lum_on($_SESSION['id'],$db) ?></span></li>
                     <li>Porte
                         <label class="switch">
                             <input type="checkbox" value=1 name="porte" <?php if (Etat_porte($_SESSION['id'],$db) == 1) { ?> checked <?php } ?>>

@@ -50,6 +50,7 @@ require("../../Controleur/verifconnexion.php");
                         
                         <div id = image_etat><img class ="image_temp" src="../../Styles/image/temperature.png"/></div>
                         
+                        <li>Pièce : <span><?php echo($_GET['piece']) ?></span></li>
                         <li>Capteur de température N° <span><?php affiche_num_capt_temp($_SESSION['id'],$db) ?></span></li>
                         <li>Dernier contrôle technique : <span><?php affiche_contol_tech_temp($_SESSION['id'],$db) ?></span></li>
                         <li>État : <span><?php affiche_etat_capt_temp($_SESSION['id'],$db) ?></li>
