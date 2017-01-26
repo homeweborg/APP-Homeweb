@@ -884,7 +884,7 @@ function detail_piece($id,$db)
         echo("<tr>
                         <td></td>
                         <td>lumière</td>
-                        <td><input type=\"checkbox\" name=\"box_temp[]\" value=\"");echo($nom_piece);echo("\"><input type=text placeholder=".$numero_capteur_l."></td>
+                        <td><input type=\"checkbox\" name=\"box_lum[]\" value=\"");echo($nom_piece);echo("\"><input type=text placeholder=".$numero_capteur_l."></td>
                     </tr>");
         }
         

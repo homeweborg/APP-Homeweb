@@ -28,7 +28,6 @@ if (isset($_POST['box_temp']))
     
     foreach($nom_piece_tableau as $nom_piece)
     {
-        echo($nom_piece);
         /* On met à jour dans la bdd les pièces dont le capteur_t est coché */
 
         $req = $db->prepare('UPDATE pieces SET presence_temp = :consigne WHERE id_Utilisateur = :id AND Nom=:Nom_piece');
@@ -72,8 +71,7 @@ if (isset($_POST['box_lum']))
     
     foreach($nom_piece_tableau as $nom_piece)
     {
-        echo($nom_piece);
-        /* On met à jour dans la bdd les pièces dont le capteur_t est coché */
+        /* On met à jour dans la bdd les pièces dont le capteur_l est coché */
 
         $req = $db->prepare('UPDATE pieces SET presence_lum = :consigne WHERE id_Utilisateur = :id AND Nom=:Nom_piece');
         $req->execute(array(
