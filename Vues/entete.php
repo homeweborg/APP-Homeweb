@@ -5,9 +5,8 @@ echo '  <div id="logo">
         </div>
         <nav>
             <ul>
-                
                 <li><a href="contact.php">Contact</a></li>
-                <li><a>Se connecter</a>
+                <div id=barreenmoins><li><a href>Se connecter</a></li></div>
                 <div id=logodeco><a href="login.php"><img src="../Styles/image/onoff.png"></a></div>
             </ul>
         </nav>';

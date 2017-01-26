@@ -46,6 +46,10 @@ header nav li
     border-right-style:solid;
 }
 
+header nav ul #barreenmoins li{
+    border-right-style:none;
+}
+
 header
 {
     display: flex;
