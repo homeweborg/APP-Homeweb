@@ -8,14 +8,14 @@ require("../Modele/connexionBDD.php");
 	<head>
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../Styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
 	</head>
     
 	<body>
 		<div id="page">
 		<!-- Header -->
             <header> <!-- En tete -->
-                <?php include ("entete.php");?>
+                <?php include ("entete_user.php");?>
             </header>       
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
@@ -37,7 +37,7 @@ require("../Modele/connexionBDD.php");
                     ?>
                 </div>
 			</section>
-                <?php include ("footer.php");?>   
+                <?php include ("footer_user.php");?>   
 		</div>
 	</body>
         
