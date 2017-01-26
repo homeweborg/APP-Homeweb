@@ -25,16 +25,16 @@ require("../../Controleur/verifconnexion.php");
                 <section class="loginform cf">
                 <div id= formsignup>
 				    <form name="login" action="../../Controleur/modifier.php" method="post" accept-charset="utf-8">
-                        <h1> Votre Profil </h1>
+                        <h1>Votre Profil</h1>
                         <div id="signupinput">
-                            <p>Votre adresse mail :
-                            <?php echo $_SESSION['mail'];?></p>
+                            <b><p>Votre adresse mail :
+                            <?php echo $_SESSION['mail'];?></p></b><br>
                             <p>Renseignez votre mot de passe actuel :</p>
-                            <input type="password" name="amdp" required placeholder="*******">
+                            <input class="info" type="password" name="amdp" required placeholder="*******">
                             <p>Choisissez un nouveau mot de passe :</p>
-                            <input type="password" name="mdp" required placeholder="Ex : Motdepasse123">
+                            <input class="info"type="password" name="mdp" required placeholder="Ex : Motdepasse123">
                             <p>Confirmer votre nouveau mot de passe :</p>
-                            <input type="password" name="mdpc" required placeholder="Ex : Motdepasse123">
+                            <input class="info"type="password" name="mdpc" required placeholder="Ex : Motdepasse123">
                         </div>
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="Modifier"/>
 				    </form>

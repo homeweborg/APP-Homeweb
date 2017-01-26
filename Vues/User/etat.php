@@ -74,6 +74,7 @@ require("../../Modele/fonctions.php");
                     </li>
                 </ul>
                     <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
+                    <span class="bouton_rafraichir"><a class="texte" href="etat.php"><img class="image" src="../../Styles/image/refresh.png"> Rafraîchir</a></span>
                 </form>
             </div>
             <?php include ("footer_user.php");?> 
