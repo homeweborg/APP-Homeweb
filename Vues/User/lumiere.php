@@ -68,7 +68,7 @@ require("../../Modele/connexionBDD.php");
                     <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
                     </form> 
               </div>
-            <?php include ("../footer.php");?> 
+            <?php include ("footer_user.php");?> 
         </div>
         </body>
 </html>

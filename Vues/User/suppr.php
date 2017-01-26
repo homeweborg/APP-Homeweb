@@ -2,6 +2,8 @@
 <?php require("../../Modele/fonctions.php");
 //Se connecte à la base de données
 require("../../Modele/connexionBDD.php");
+//on vérifie si un utilisateur est connecté
+require("../../Controleur/verifconnexion.php");
 session_start();
 ?>
 <html>
@@ -46,6 +48,6 @@ session_start();
                 <?php cascade_suppr($_SESSION['id'],$db) ?>
             </div>
         </div>
-         <?php include ("../footer.php");?> 
+         <?php include ("footer_user.php");?> 
 	</body>
 </html>

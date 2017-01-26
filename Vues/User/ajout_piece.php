@@ -42,7 +42,7 @@ require("../../Controleur/verifconnexion.php");
                     </form>
                 </div>
 			</section>
-        <?php include ("../footer.php");?> 
+        <?php include ("footer_user.php");?> 
 		</div>
 	</body>
 </html>

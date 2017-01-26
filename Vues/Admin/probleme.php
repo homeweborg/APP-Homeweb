@@ -4,7 +4,7 @@
 /*Se connecte à la base de données*/
 require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
-require("../../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexionadmin.php");
 ?>
 <html>
 	<head>
@@ -21,11 +21,11 @@ require("../../Controleur/verifconnexion.php");
                 ?>
             </header>
              <?php
-            $reponse = $db->query('SELECT * FROM problemes'); //On récupère tous les comptes utilisateurs
+            $reponse = $db->query('SELECT * FROM domisep_probleme'); //On récupère tous les problemes
             ?>
             <table>
                 <tr>
-                    <th>Identifiant BDD</th>
+                    <th>Mail Utilisateur</th>
                     <th>Problèmes signalés</th>
                     <th>Capteurs concernés</th>
                 </tr>
@@ -34,9 +34,10 @@ require("../../Controleur/verifconnexion.php");
             {
             ?>
                 <tr>
-                    <td><?php echo $donnees['id'];?></td>
-                    <td><?php echo $donnees['probleme'];?></td>
-                    <td><?php echo $donnees['numero_capteur'];?></td>
+                    <td><?php echo $donnees['mail'];?></td>
+                    <td><?php echo $donnees['capteur'];?></td>
+                    <td><?php $reponse2 = $db->query('SELECT mail FROM utilisateurs WHERE id=="'.$donnees[id_user].'"'); 
+                echo $donnees2['mail'];?></td>
                 </tr>
             <?php
             } //fin de la boucle, le tableau contient toute la BDD

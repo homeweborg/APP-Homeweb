@@ -8,7 +8,7 @@ require("../../Modele/connexionBDD.php");
 require("../../Modele/fonctions.php");
 
 //on vérifie si un utilisateur est connecté
-require("../../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexionadmin.php");
 ?>
 <html>
 	<head>
@@ -27,6 +27,7 @@ require("../../Controleur/verifconnexion.php");
             <?php
             $reponse = $db->query('SELECT * FROM utilisateurs'); //On récupère tous les comptes utilisateurs
             ?>
+            <div id = table_admin>
             <table>
                 <tr>
                     <th>Identifiant BDD</th>
@@ -46,6 +47,7 @@ require("../../Controleur/verifconnexion.php");
             } //fin de la boucle, le tableau contient toute la BDD
             ?>
             </table>
+            </div>
         </div>
 	</body>
 </html>

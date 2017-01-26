@@ -78,9 +78,9 @@ else if ($reponse6 -> rowcount()!=0){
         $reponseidadmin= $reponse8->fetch();
         
         //on assigne les variables de session
-        $_SESSION['id'] = $reponseidadmin[0];
-        $_SESSION['mail'] = $reponsemailadmin[0];
-		$_SESSION['pwd'] = $reponsepwdadmin[0];
+        $_SESSION['idadmin'] = $reponseidadmin[0];
+        $_SESSION['mailadmin'] = $reponsemailadmin[0];
+		$_SESSION['pwdadmin'] = $reponsepwdadmin[0];
         
         //et on redirige vers la page d'
         header('Refresh:0 ; URL= ../Vues/Admin/admin.php');

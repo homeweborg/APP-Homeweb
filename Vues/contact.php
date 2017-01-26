@@ -13,11 +13,11 @@
                 <?php include ("entete.php");?>
             </header>
             <div id=formcontact>
-                    <form name="login" action="contact.php" method="get" accept-charset="utf-8">
+                    <form name="login" action="../Controleur/contact.php" method="post" accept-charset="utf-8">
 					   <h1> Nous contacter </h1>
                         <div id="signupinput">
-                            <p> <b>Qui êtes-vous?</b><span class="champoblig"> * </span></p>
-                            <input type="text" name="nom" required placeholder="Ex : Noé Faure">
+                            <p> <b>Votre adresse mail:</b><span class="champoblig"> * </span></p>
+                            <input type="text" name="nom" required placeholder="Ex : noe.faure@isep.fr">
                             <p><br> <b>Objet de votre demande</b><span class="champoblig"> * </span></p>
                             
                             <input type="text" name="objet" required placeholder="Ex : Problème de connection">

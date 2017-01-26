@@ -18,7 +18,7 @@ require("../../Controleur/verifconnexion.php");
                 <?php include ("entete_user.php");?>
             </header>
             <div id=formcontact>
-                    <form name="login" action="contact.php" method="get" accept-charset="utf-8">
+                    <form name="login" action="../../Controleur/contact_user.php" method="post" accept-charset="utf-8">
 					   <h1> Nous contacter </h1>
                         <div id="signupinput">
                             <p> <b>Qui êtes-vous?</b><span class="champoblig"> * </span></p>
@@ -36,7 +36,7 @@ require("../../Controleur/verifconnexion.php");
                         </div>
                     </form>
                 </div>
-        <?php include ("footer.php");?>
+        <?php include ("footer_user.php");?>
 		</div>
 	</body>
 </html>
