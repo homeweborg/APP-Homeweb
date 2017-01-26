@@ -752,5 +752,14 @@ a{
 
 #tableau_detail .colonne
 {
+     
+}
 
+#idinput .erreur
+{
+    display: flex;
+    position: fixed;
+    color: firebrick;
+    font-size: 15px;
+    margin-top: -16px;
 }
