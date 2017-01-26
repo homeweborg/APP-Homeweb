@@ -27,25 +27,31 @@ require("../../Controleur/verifconnexionadmin.php");
             <?php
             $reponse = $db->query('SELECT * FROM utilisateurs'); //On récupère tous les comptes utilisateurs
             ?>
-            <table>
-                <tr>
-                    <th>Identifiant BDD</th>
-                    <th>Adresse mail du client</th>
-                    <th>Etat général du système</th>
-                </tr>
-            <?php //On affiche les lignes du tableau une à une à l'aide d'une boucle
-            while($donnees = $reponse->fetch())
-            {
-            ?>
-                <tr>
-                    <td><?php echo $donnees['id'];?></td>
-                    <td><?php echo $donnees['mail'];?></td>
-                    <td><?php etat_general_capteur($donnees['id'],$db) ?></td>
-                </tr>
-            <?php
-            } //fin de la boucle, le tableau contient toute la BDD
-            ?>
-            </table>
+                <form name="admin" action="../../Controleur/accescompte.php" method="post" accept-charset="utf-8">
+                    <table>
+                        <tr>
+                            <th>Identifiant BDD</th>
+                            <th>Adresse mail du client</th>
+                            <th>Etat général du système</th>
+                        </tr>
+                    <?php //On affiche les lignes du tableau une à une à l'aide d'une boucle
+                    while($donnees = $reponse->fetch())
+                    {
+                    ?>
+                        <tr>
+                            <td><?php echo $donnees['id'];?></td>
+                            <td><input type=radio name=box value=$donnees['mail']> <?php echo $donnees['mail'];?></td>
+                            <td><?php etat_general_capteur($donnees['id'],$db) ?></td>
+                        </tr>
+                    <?php
+                    } //fin de la boucle, le tableau contient toute la BDD
+                    ?>
+                            <div id=formcontact>
+                            <input class="boutons_contact_envoyer" type="submit" value="Accéder au compte">
+                            </div>
+                    </table>
+                </form>
+
         </div>
 	</body>
 </html>

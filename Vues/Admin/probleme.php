@@ -23,26 +23,27 @@ require("../../Controleur/verifconnexionadmin.php");
              <?php
             $reponse = $db->query('SELECT * FROM domisep_probleme'); //On récupère tous les problemes
             ?>
-            <table>
-                <tr>
-                    <th>Mail Utilisateur</th>
-                    <th>Problèmes signalés</th>
-                    <th>Capteurs concernés</th>
-                </tr>
-            <?php //On affiche les lignes du tableau une à une à l'aide d'une boucle
-            while($donnees = $reponse->fetch())
-            {
-            ?>
-                <tr>
-                    <td><?php echo $donnees['mail'];?></td>
-                    <td><?php echo $donnees['capteur'];?></td>
-                    <td><?php $reponse2 = $db->query('SELECT mail FROM utilisateurs WHERE id=="'.$donnees[id_user].'"'); 
-                echo $donnees2['mail'];?></td>
-                </tr>
-            <?php
-            } //fin de la boucle, le tableau contient toute la BDD
-            ?>
-            </table>
+            
+                <table>
+                    <tr>
+                        <th>Mail Utilisateur</th>
+                        <th>Capteurs concernés</th>
+                        <th>Problèmes signalés</th>
+                    </tr>
+                <?php //On affiche les lignes du tableau une à une à l'aide d'une boucle
+                while($donnees = $reponse->fetch())
+                {
+                ?>
+                    <tr>
+                        <td><?php $reponse2 = $db->query('SELECT mail FROM utilisateurs WHERE id="'.$donnees['id_user'].'"'); $donnees2=$reponse2->fetch(); echo $donnees2['mail'];?></td>
+                        <td>capteur <?php echo $donnees['capteur'];?></td>
+                        <td><?php echo $donnees['probleme'];?></td>
+                    </tr>
+                <?php
+                } //fin de la boucle, le tableau contient toute la BDD
+                ?>
+                </table>
+            
         </div>
 	</body>
 </html>
