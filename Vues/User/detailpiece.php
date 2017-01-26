@@ -42,9 +42,10 @@ session_start();
                     </li>
                 </ul>
 	       	</div>
-            <div id=boite>
+            <div id=boitetable>
                 <form action="../../Controleur/valid_details.php" method="post" accept-charset="utf-8">
-                    <table class="tableau_detail" id=Detail>
+                    <div id=tableau_detail>
+                    <table>
 
                         <tr>
                             <th>Nom de la pièce</th>
@@ -55,7 +56,8 @@ session_start();
                         <?php detail_piece($_SESSION['id'],$db); ?>
                     </table>
                     
-                    <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
+                        <div id=boutonvalider><input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/></div>
+                    </div>
                 </form>
             </div>
         </div>
