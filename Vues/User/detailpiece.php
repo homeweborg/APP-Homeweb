@@ -43,7 +43,7 @@ session_start();
                 </ul>
 	       	</div>
             <div id=boite>
-                <form action="../../Controleur/valid_details.php" method="post">
+                <form action="../../Controleur/valid_details.php" method="post" accept-charset="utf-8">
                     <table class="tableau_detail" id=Detail>
 
                         <tr>

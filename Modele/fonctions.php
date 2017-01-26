@@ -327,9 +327,20 @@ function temp_moyenne($id,$db)
         
     }
     
-    $temp_m = $temp_m / $n;
+    if ($n != 0)
+    {
+        // Pour éviter la division par 0
+        
+        $temp_m = $temp_m / $n;
+
+        return ceil($temp_m);
+        
+    }
     
-    return ceil($temp_m);
+    else
+    {
+        echo("Aucun capteur connecté");
+    }
 }
 
 function nombre_lum_on($id,$db)
@@ -839,7 +850,7 @@ function detail_piece($id,$db)
         echo("<tr>
                         <td></td>
                         <td>Température</td>
-                        <td><input type=\"checkbox\" checked><input type=text value=".$numero_capteur_t."></td>
+                        <td><input type=\"checkbox\" checked name=\"box_temp[]\" value=\"");echo($nom_piece);echo("\"><input type=text value=".$numero_capteur_t."></td>
                     </tr>");
         }
         
@@ -850,7 +861,7 @@ function detail_piece($id,$db)
         echo("<tr>
                         <td></td>
                         <td>Température</td>
-                        <td><input type=\"checkbox\" ><input type=text></td>
+                        <td><input type=\"checkbox\" name=\"box_temp[]\" value=\"");echo($nom_piece);echo("\"><input type=text placeholder=".$numero_capteur_t."></td>
                     </tr>");
         }
         
@@ -862,7 +873,7 @@ function detail_piece($id,$db)
         echo("<tr>
                         <td></td>
                         <td>Lumière</td>
-                        <td><input type=\"checkbox\" checked><input type=text value=".$numero_capteur_l."></td>
+                        <td><input type=\"checkbox\" checked name=\"box_lum[]\" value=\"");echo($nom_piece);echo("\"><input type=text value=".$numero_capteur_l."></td>
                     </tr>");
         }
         
@@ -873,7 +884,7 @@ function detail_piece($id,$db)
         echo("<tr>
                         <td></td>
                         <td>lumière</td>
-                        <td><input type=\"checkbox\" ><input type=text></td>
+                        <td><input type=\"checkbox\" name=\"box_temp[]\" value=\"");echo($nom_piece);echo("\"><input type=text placeholder=".$numero_capteur_l."></td>
                     </tr>");
         }
         
