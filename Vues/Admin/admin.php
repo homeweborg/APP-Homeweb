@@ -41,7 +41,7 @@ require("../../Controleur/verifconnexionadmin.php");
                 ?>
                     <tr>
                         <td><?php echo $donnees['id'];?></td>
-                        <td><input type=radio name=box value="$donnees['mail']"> <?php echo $donnees['mail'];?></td>
+                        <td><input type=radio name=box value=<?php echo $donnees['mail'];?>> <?php echo $donnees['mail'];?></td>
                         <td><?php etat_general_capteur($donnees['id'],$db) ?></td>
                     </tr>
                 <?php
