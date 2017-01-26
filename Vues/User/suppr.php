@@ -46,6 +46,6 @@ session_start();
                 <?php cascade_suppr($_SESSION['id'],$db) ?>
             </div>
         </div>
-         <?php include ("../footer.php");?> 
+         <?php include ("footer_user.php");?> 
 	</body>
 </html>

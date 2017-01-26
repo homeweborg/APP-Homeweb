@@ -139,7 +139,5 @@ else {
     //on le signale sur la page 
     echo "<script>window.alert('Mots de passe non identiques')</script>" ;
 } 
-        
-    
 
 ?>

@@ -1,5 +1,10 @@
 <!DOCTYPE HTML>
 
+<?php
+//on vérifie si un utilisateur est connecté
+require("../Controleur/verifnonconnexion.php");
+?>
+
 <html>
     
 	<head>

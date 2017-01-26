@@ -10,7 +10,7 @@ $demande = $_POST['demande'];
     
 $ajout = $db->exec('INSERT INTO domisep_messagerie (nom,objet,demande) VALUES ("'.$nom.'","'.$objet.'","'.$demande.'")');
 
-header('Refresh:0 ; URL= ../Vues/User/etat.php');
+header('Refresh:0 ; URL= ../Vues/login.php');
 
 //on le signale sur la page 
 echo "<script>window.alert('Demande envoyée')</script>" ;

@@ -27,7 +27,7 @@ require("../../Controleur/verifconnexion.php");
             <?php
             $reponse2 = $db->query('SELECT * FROM domisep_messagerie'); //On récupère tous les comptes utilisateurs
             ?>
-            <table>
+            <table id=tablemessage>
                 <tr>
                     <th>Qui?</th>
                     <th>Objet de la demande</th>
@@ -38,9 +38,9 @@ require("../../Controleur/verifconnexion.php");
             {
             ?>
                 <tr>
-                    <td><?php echo $donnees2['nom'];?></td>
+                    <td><?php echo $donnees2['mail'];?></td>
                     <td><?php echo $donnees2['objet'];?></td>
-                    <td><?php $donnees2['contenu'] ?></td>
+                    <td><?php $donnees2['demande'] ?></td>
                 </tr>
             <?php
             } //fin de la boucle, le tableau contient toute la BDD
