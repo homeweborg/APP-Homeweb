@@ -27,7 +27,8 @@ require("../../Controleur/verifconnexionadmin.php");
             <?php
             $reponse = $db->query('SELECT * FROM utilisateurs'); //On récupère tous les comptes utilisateurs
             ?>
-            <form name="admin" action="../Controleur/redirection.php" method="post" accept-charset="utf-8">
+            <form name="admin" action="../../Controleur/redirection.php" method="post" accept-charset="utf-8">
+                <div id = table_admin>
                 <table>
                     <tr>
                         <th>Identifiant BDD</th>
@@ -48,6 +49,7 @@ require("../../Controleur/verifconnexionadmin.php");
                 ?>
                     <input class="boutons_contact_envoyer" type="submit" value="Envoyer">
                 </table>
+                </div>
             </form>
         </div>
 	</body>

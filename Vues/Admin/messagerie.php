@@ -27,7 +27,8 @@ require("../../Controleur/verifconnexionadmin.php");
             <?php
             $reponse2 = $db->query('SELECT * FROM domisep_messagerie'); //On récupère tous les comptes utilisateurs
             ?>
-            <table id=tablemessage>
+            <div id=tablemessage>
+            <table>
                 <tr>
                     <th>Qui?</th>
                     <th>Objet de la demande</th>
@@ -46,6 +47,7 @@ require("../../Controleur/verifconnexionadmin.php");
             } //fin de la boucle, le tableau contient toute la BDD
             ?>
             </table>
+            </div>
         </div>
 	</body>
 </html>

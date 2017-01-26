@@ -23,6 +23,7 @@ require("../../Controleur/verifconnexionadmin.php");
              <?php
             $reponse = $db->query('SELECT * FROM domisep_probleme'); //On récupère tous les problemes
             ?>
+            <div id=table_admin>
             <table>
                 <tr>
                     <th>Mail Utilisateur</th>
@@ -42,6 +43,7 @@ require("../../Controleur/verifconnexionadmin.php");
             } //fin de la boucle, le tableau contient toute la BDD
             ?>
             </table>
+            </div>
         </div>
 	</body>
 </html>
