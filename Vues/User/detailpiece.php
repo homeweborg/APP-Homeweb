@@ -50,7 +50,7 @@ session_start();
                         <tr>
                             <th>Nom de la pièce</th>
                             <th>Type du capteur</th>
-                            <th>Numéro du capteur</th>
+                            <th class="colonne">Numéro du capteur</th>
                         </tr>
 
                         <?php detail_piece($_SESSION['id'],$db); ?>

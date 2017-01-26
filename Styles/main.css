@@ -749,3 +749,8 @@ a{
     margin-bottom:2%;
     margin-top:2%;
 }
+
+#tableau_detail .colonne
+{
+    text-align: right;
+}
