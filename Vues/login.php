@@ -24,6 +24,9 @@
                             <input type="username" name="username" required>
                             <p>Mot de passe</p>
                             <input type="password" name="password" required>
+                            <?php if (isset($_GET["erreur"])){
+                                        $erreur = $_GET["erreur"];
+                                        echo("<br/><br><font color=\"red\">$erreur</font>");}?>
                         </div>
                         <div>
                             <input class="boutons_id" type="submit" value="Login">
