@@ -8,7 +8,7 @@ require("../../Modele/connexionBDD.php");
 require("../../Modele/fonctions.php");
 
 //on vérifie si un utilisateur est connecté
-require("../../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexionadmin.php");
 ?>
 <html>
 	<head>

@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 //on vérifie si un utilisateur est déjà connecté
 if (isset ($_SESSION['id']) == False or empty($_SESSION['id'])) {
     

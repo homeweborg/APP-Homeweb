@@ -4,7 +4,7 @@
 /*Se connecte à la base de données*/
 require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
-require("../../Controleur/verifconnexion.php");
+require("../../Controleur/verifconnexionadmin.php");
 ?>
 <html>
 	<head>
