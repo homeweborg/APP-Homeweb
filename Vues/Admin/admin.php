@@ -27,6 +27,7 @@ require("../../Controleur/verifconnexionadmin.php");
             <?php
             $reponse = $db->query('SELECT * FROM utilisateurs'); //On récupère tous les comptes utilisateurs
             ?>
+            <div id = table_admin>
             <table>
                 <tr>
                     <th>Identifiant BDD</th>
@@ -46,6 +47,7 @@ require("../../Controleur/verifconnexionadmin.php");
             } //fin de la boucle, le tableau contient toute la BDD
             ?>
             </table>
+            </div>
         </div>
 	</body>
 </html>

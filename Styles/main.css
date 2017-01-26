@@ -566,7 +566,7 @@ input:checked + .slider:hover
     color:white;
 }
 
-table{
+#table_admin table{
     color:#575757;
     border: 0px solid white;
     border-collapse: collapse;
@@ -590,16 +590,16 @@ table{
     overflow:auto;
 }
 
-td, th {
+#table_admin td, #table_admin th {
     text-align: left;
     padding: 7px;
 }
     
-tr:nth-child(even) {
+#table_admin tr:nth-child(even) {
     background-color: rgba(255,255,255,0.9);
 }
     
-tr:nth-child(odd) {
+#table_admin tr:nth-child(odd) {
     background-color: rgba(255,255,255,0.75);;
 }
 
@@ -697,11 +697,51 @@ a{
     color: darkcyan;
 }
 
-#boite .tableau_detail
-{
+#boitetable{
+    background-color: rgba(255,255,255,0.9) ;
+    margin-top: 3%;
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 65%;
+    display:inline-block;
+    position: fixed;
+    height:70%;
+    overflow:auto;
+    
+}
+
+#tableau_detail table{
+    font-size: 24px;
+    width:90%;
+    color:#575757;
+    border-collapse: collapse;
+    margin-top:5%;
+    margin-left:5%;
+    margin-right:5%;
     
     /* Concerne le tableau détails des pièces */
+}
+
+#tableau_detail table td,#tableau_detail table th{
+    border-bottom: 1px solid rgb(199,199,199);
+    padding:5px;
+    text-align:left;
+}
+
+
+#tableau_detail input
+{
     
-    margin:auto;
-    background:none;
+    /* Concerne les boutons de modifications des données utilisateurs */
+    border-style: solid;
+    background-color: #575757;
+    border-color: #575757;
+    font-size: 15px;
+    color:white;
+}
+
+#boutonvalider{
+    padding-left:5%;
+    margin-bottom:2%;
+    margin-top:2%;
 }
