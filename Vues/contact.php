@@ -20,8 +20,13 @@
                             <input type="text" name="nom" required placeholder="Ex : noe.faure@isep.fr">
                             <p><br> <b>Objet de votre demande</b><span class="champoblig"> * </span></p>
                             
-                            <input type="text" name="objet" required placeholder="Ex : Problème de connection">
-                            
+                            <select type="text" name="objet" required>
+                                <option>Mot de passe oublié
+                                <option>Mon adresse mail n'est pas reconnue
+                                    <option>Où puis-je trouver mon numéro de capteur
+                                        <option>Mon numéro de capteur n'existe pas
+                                            <option>Autres (précisez dans votre demande)
+                            </select>
                             <p><br><b>Exprimez-vous</b><span class="champoblig"> * </span></p>
                             
                             <textarea type="text" class="description" name="demande"></textarea>

@@ -21,8 +21,6 @@ $reponsemailadmin = $reponse6->fetch();
 if ($reponse -> rowcount()==0 and $reponse6 -> rowcount()==0) { 
     //on redirige vers la page d'accueil
     header('Refresh:0 ; URL= ../Vues/login.php?erreur=Adresse mail incorrecte'); 
-    //on le signale sur la page 
-    //echo "<script>window.alert('Adresse mail incorrecte')</script>" ;
     }
 
 //si l'adresse mail a été trouvée dans la BDD client
@@ -34,8 +32,6 @@ else if ($reponse -> rowcount()!=0){
     if ((md5($pwd)) != $reponsepwd[0]){ 
         //et on redirige vers la page d'accueil
         header('Refresh:0 ; URL= ../Vues/login.php?erreur=Mot de passe incorrect'); 
-        //on le signale sur la page
-        //echo "<script>window.alert('Mot de Passe incorrect')</script>" ;
     }
         
     //si le mdp correspond 
@@ -66,8 +62,6 @@ else if ($reponse6 -> rowcount()!=0){
     if ((md5($pwd)) != $reponsepwdadmin[0]){ 
         //et on redirige vers la page d'accueil
         header('Refresh:0 ; URL= ../Vues/login.php?erreur=Mot de passe incorrect'); 
-        //on le signale sur la page
-        //echo "<script>window.alert('Mot de Passe incorrect')</script>" ;
     }
         
     //si le mdp correspond 
@@ -85,8 +79,6 @@ else if ($reponse6 -> rowcount()!=0){
         //et on redirige vers la page d'
         header('Refresh:0 ; URL= ../Vues/Admin/admin.php');
         
-        //on le signale sur la page 
-        //echo "<script>window.alert('Vous êtes maintenant connecté')</script>" ; 
     }
         
 }
