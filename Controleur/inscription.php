@@ -50,6 +50,11 @@ if ($mdp == $mdpc){
                     $modif->execute(array(
                     'id' => $reponseid[0]
                     ));
+                    
+                    //ON CRÉER LES DONNÉES NÉCESSAIRE AU CLIENT
+                    $ajout_eau = $db->exec('INSERT INTO eau(id,etat,consomation) VALUES ("'.$reponseid[0].'",0,0)');
+                    $ajout_gaz = $db->exec('INSERT INTO gaz(id,etat,consomation) VALUES ("'.$reponseid[0].'",0,0)');
+                    $ajout_elec = $db->exec('INSERT INTO elec(id,etat,consomation) VALUES ("'.$reponseid[0].'",0,0)');
     
                     //on redirige vers le formulaire de connexion
                     header('Refresh:0 ; URL= ../Vues/login.php');

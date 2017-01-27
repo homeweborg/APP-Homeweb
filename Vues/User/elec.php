@@ -48,8 +48,8 @@ require("../../Controleur/verifconnexion.php");
                         
                         <div id = image_etat><img class ="image_temp" src="../../Styles/image/elec.png"/></div>
                         
-                        <li>Consommation depuis le début du mois :<span><?php echo (Conso_Elec(1,$db)) ?> kWh</span></li>
-                        <li>Estimation du coût : <span><?php echo (Estim_Elec(1,$db)) ?> €</span></li>
+                        <li>Consommation depuis le début du mois :<span><?php echo (Conso_Elec($_SESSION['id'],$db)) ?> kWh</span></li>
+                        <li>Estimation du coût : <span><?php echo (Estim_Elec($_SESSION['id'],$db)) ?> €</span></li>
                         <li>État : <span><?php pastille_etat_elec($_SESSION['id'],$db) ?></span></li>
                         <li>Prix du kWh : <span><input type="text" class="Prix_entree" name="Prix_elec" value=<?php echo(affiche_prix_elec($_SESSION['id'],$db)) ?> placeholder="en €"></span></li>
                         <li>
@@ -59,7 +59,7 @@ require("../../Controleur/verifconnexion.php");
                             </label>
                         
                         </li>
-                        <li><I style="font-size : 14px;">Par défaut le prix d'un kWh d'électricité est fixé à 0.3 € (Moyenne Française 2015)</I></li>
+                        <li><I style="font-size : 14px;">Par défaut le prix d'un kWh d'électricité est fixé à 0.6 € (Moyenne Française 2015)</I></li>
                     </ul>
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>

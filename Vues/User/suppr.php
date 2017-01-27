@@ -4,7 +4,6 @@
 require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
 require("../../Controleur/verifconnexion.php");
-session_start();
 ?>
 <html>
 	<head>
