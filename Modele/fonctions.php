@@ -890,4 +890,5 @@ function detail_piece($id,$db)
         
     }
 }
+
 ?>

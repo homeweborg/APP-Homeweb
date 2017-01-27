@@ -55,6 +55,7 @@ if ($mdp == $mdpc){
                     $ajout_eau = $db->exec('INSERT INTO eau(id,etat,consomation) VALUES ("'.$reponseid[0].'",0,0)');
                     $ajout_gaz = $db->exec('INSERT INTO gaz(id,etat,consomation) VALUES ("'.$reponseid[0].'",0,0)');
                     $ajout_elec = $db->exec('INSERT INTO elec(id,etat,consomation) VALUES ("'.$reponseid[0].'",0,0)');
+                    $porte = $db->exec('INSERT INTO porte(id,etat) VALUES ("'.$reponseid[0].'",0)');
     
                     //on redirige vers le formulaire de connexion
                     header('Refresh:0 ; URL= ../Vues/login.php');

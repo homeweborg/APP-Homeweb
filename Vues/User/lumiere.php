@@ -65,7 +65,7 @@ require("../../Modele/connexionBDD.php");
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>
                     
-                    <a class="boutons_retour" href="signaler.php">Signaler</a>
+                    <a class="boutons_retour" href="signaler.php?num_capteur=<?php affiche_num_capt_lum($_SESSION['id'],$db) ?>">Signaler</a>
                     <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
                     </form> 
               </div>

@@ -29,13 +29,13 @@ require("../../Controleur/verifconnexion.php");
                             
                             <p><br> <b>Référence du capteur défaillant </b><I style="font-size : 12px">(Si le problème concerne un capteur)</I></p>
                             
-                            <input type="text" name="capteurD" required value="">
+                            <input type="text" name="capteurD" required value="<?php if(isset($_GET['num_capteur'])){ echo($_GET['num_capteur']); } ?>">
                             <p><br> <b>Objet de votre demande</b><span class="champoblig"> * </span></p>
                             
                             <select type="text" name="objet" required>
                                 <option>Un problème inexistant est signalé
                                 <option>Les infos reçues sont fausses
-                                <option>Je n'arrive à envoyer d'ordre
+                                <option>Je n'arrive pas à envoyer d'ordre
                                 <option>Autres (précisez votre problème ci-dessous)
                             </select>
                             
