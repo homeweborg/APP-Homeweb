@@ -47,8 +47,8 @@ require("../../Controleur/verifconnexionadmin.php");
                 <?php
                 } //fin de la boucle, le tableau contient toute la BDD
                 ?>
-                    <input class="boutons_contact_envoyer" type="submit" value="Accéder à ce compte" >
                 </table>
+                    <div id=boutonacceder><input id="boutons_valider" type="submit" name="bouton_submit" value="Accéder à ce compte"/></div>
                 </div>
             </form>
         </div>

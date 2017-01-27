@@ -27,7 +27,7 @@ require("../../Controleur/verifconnexionadmin.php");
             <?php
             $reponse2 = $db->query('SELECT * FROM domisep_messagerie'); //On récupère tous les comptes utilisateurs
             ?>
-            <div id=tablemessage>
+            <div id=table_admin>
             <table>
                 <tr>
                     <th>Qui?</th>

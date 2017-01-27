@@ -582,19 +582,22 @@ input:checked + .slider:hover
     overflow:auto;
 }
 
-#tablemessage{
-    color:#575757;
-    border: 0px solid white;
-    border-collapse: collapse;
+
+#boutonacceder{
+    width:70%;
     margin:auto;
-    margin-top:60px;
+    background-color:rgba(255,255,255,0.9);
     box-shadow: 0px 3px 5px white;
-    width: 70%;
-    max-height: 70%;
-    overflow:auto;
 }
 
-#table_admin td, #table_admin th {
+#boutonacceder input{
+    margin-top:1%;
+    margin-bottom:1%;
+    margin-left:1%;
+}
+
+
+#table_admin td, #table_admin th{
     text-align: left;
     padding: 7px;
 }
@@ -603,8 +606,8 @@ input:checked + .slider:hover
     background-color: rgba(255,255,255,0.9);
 }
     
-#table_admin tr:nth-child(odd) {
-    background-color: rgba(255,255,255,0.75);;
+#table_admin tr:nth-child(odd){
+    background-color: rgba(255,255,255,0.75);
 }
 
 #social ul li{
@@ -750,10 +753,6 @@ a{
     margin-top:2%;
 }
 
-#tableau_detail .colonne
-{
-     
-}
 
 #idinput .erreur
 {
@@ -802,4 +801,16 @@ a{
 {
     text-decoration: none;
     color:white;
+}
+
+#signupinput select
+{
+    text-align: left; 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 0px;
+	background-color: #575757;
+	border-color: #575757;
+	color: white;	
+	border-style: solid;
 }
