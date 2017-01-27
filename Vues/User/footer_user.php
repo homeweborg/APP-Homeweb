@@ -3,7 +3,7 @@
                     <ul>
                         <li><a href="#">Conditions</a></li>
                         <li>|</li>
-                        <li><a href="../mentionlegal.php">Mentions légales</a></li>
+                        <li><a href="mentionlegal.php">Mentions légales</a></li>
                         <li>|</li>
                         <li><a href="#">Confidentialité</a></li>                        
                     <div id=social>

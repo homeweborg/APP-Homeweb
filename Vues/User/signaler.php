@@ -33,11 +33,10 @@ require("../../Controleur/verifconnexion.php");
                             <p><br> <b>Objet de votre demande</b><span class="champoblig"> * </span></p>
                             
                             <select type="text" name="objet" required>
-                                <option>Mot de passe oublié
-                                <option>Mon adresse mail n'est pas reconnue
-                                    <option>Où puis-je trouver mon numéro de capteur
-                                        <option>Mon numéro de capteur n'existe pas
-                                            <option>Autres (précisez dans votre demande)
+                                <option>Un problème inexistant est signalé
+                                <option>Les infos reçues sont fausses
+                                <option>Je n'arrive à envoyer d'ordre
+                                <option>Autres (précisez votre problème ci-dessous)
                             </select>
                             
                             <p><br><b>Décrivez la nature du problème</b><span class="champoblig"> * </span>
