@@ -26,6 +26,7 @@ require("../../Controleur/verifconnexion.php");
                 <div id= formsignup>
 				    <form name="login" action="../../Controleur/modifier.php" method="post" accept-charset="utf-8">
                         <h1>Votre Profil</h1>
+                        <img class="image_profile" src="../../Styles/image/profile-user.png">
                         <div id="signupinput">
                             <b><p>Votre adresse mail :
                             <?php echo $_SESSION['mail'];?></p></b><br>

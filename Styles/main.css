@@ -821,3 +821,12 @@ a{
     position: absolute;
     margin-left: -165px;
 }
+
+#formsignup .image_profile
+{
+    /* Image sur la page info */
+    width:130px;
+    margin-left: 400px;
+    margin-top: -50px;
+    position:absolute;
+}

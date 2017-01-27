@@ -1,11 +1,11 @@
 <?php echo(' <footer>
                 <nav>
                     <ul>
-                        <li><a href="#">Conditions</a></li>
+                        <li><a href="#" class="contact_footer">Adresse mail : contact@homeweb.com</a></li>
                         <li>|</li>
                         <li><a href="mentionlegal.php">Mentions légales</a></li>
                         <li>|</li>
-                        <li><a href="#">Confidentialité</a></li>                        
+                        <li><a href="#">Tel : 01 23 45 67 89</a></li>                        
                     <div id=social>
                         <ul>
                         <li><a href="../Styles/image/facebook.png"><img src="../Styles/image/facebook.png" alt="Facebook" title="Facebook"/></li>

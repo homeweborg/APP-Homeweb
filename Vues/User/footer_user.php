@@ -3,7 +3,7 @@
                     <ul>
                         <li><a href="#" class="contact_footer">Adresse mail : contact@homeweb.com</a></li>
                         <li>|</li>
-                        <li><a href="mentionlegal.php">Mentions légales</a></li>
+                        <li><a href="../mentionlegal.php">Mentions légales</a></li>
                         <li>|</li>
                         <li><a href="#">Tel : 01 23 45 67 89</a></li>                        
                     <div id=social>
