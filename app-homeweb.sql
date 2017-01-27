@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `administrateur` (
   `mail` varchar(255) NOT NULL,
   `mdp` varchar(255) NOT NULL,
   `numero_admin` varchar(10) NOT NULL
-) ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `administrateur`
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `domisep_infos` (
   `id` int(11) NOT NULL,
   `nom` text COLLATE utf8_unicode_ci NOT NULL,
   `contenu` text COLLATE utf8_unicode_ci NOT NULL
-) NGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `domisep_infos`
@@ -138,8 +138,7 @@ CREATE TABLE IF NOT EXISTS `domisep_probleme` (
 --
 
 INSERT INTO `domisep_probleme` (`id`, `capteur`, `probleme`, `id_user`) VALUES
-(1, '54353453453', '0', '1'),
-(0, '', '', '');
+(1, '54353453453', '0', '1');
 
 -- --------------------------------------------------------
 
@@ -284,6 +283,16 @@ INSERT INTO `utilisateurs` (`id`, `mail`, `mdp`, `Nom`, `prenom`, `adresse`, `te
 -- Indexes for table `administrateur`
 --
 
+ALTER TABLE `administrateur`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Indexes for table `capteur`
+--
+ALTER TABLE `capteur`
+  ADD PRIMARY KEY (`id`);
+
 -- Indexes for table `data`
 --
 ALTER TABLE `data`
@@ -323,25 +332,6 @@ ALTER TABLE `elec`
 -- Indexes for table `gaz`
 --
 ALTER TABLE `gaz`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `maintenance`
---
-ALTER TABLE `maintenance`
-  ADD PRIMARY KEY (`Identifiant`),
-  ADD UNIQUE KEY `Identifiant` (`Identifiant`);
-
---
-
-ALTER TABLE `administrateur`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
-
---
--- Indexes for table `capteur`
---
-ALTER TABLE `capteur`
   ADD PRIMARY KEY (`id`);
 
 --
