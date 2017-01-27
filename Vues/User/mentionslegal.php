@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<?php require("../Modele/fonctions.php");
+<?php require("../../Modele/fonctions.php");
 //Se connecte à la base de données
-require("../Modele/connexionBDD.php");
+require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
 require("../../Controleur/verifconnexion.php");
 ?>
