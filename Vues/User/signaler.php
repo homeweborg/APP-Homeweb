@@ -23,7 +23,7 @@ require("../../Controleur/verifconnexion.php");
                     <form name="login" action="../../Controleur/probleme.php" method="post" accept-charset="utf-8">
 					   <h1> Signaler un problème </h1>
                         <div id="signupinput">
-                            <p> <b>Votre adresse mail </b><I style="font-size : 12px">)</I></p>
+                            <p> <b>Votre adresse mail </b><I style="font-size : 12px"></I></p>
                             
                             <input type="text" name="nom" value=<?php echo($_SESSION['mail']); ?> >
                             

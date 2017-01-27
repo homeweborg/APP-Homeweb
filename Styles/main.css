@@ -577,31 +577,38 @@ input:checked + .slider:hover
     margin:auto;
     margin-top:60px;
     box-shadow: 0px 3px 5px white;
-    width: 70%;
+    width: 80%;
     max-height: 70%;
     overflow:auto;
 }
 
 
 #boutonacceder{
-    width:70%;
+    width:80%;
     margin:auto;
     background-color:rgba(255,255,255,0.9);
     box-shadow: 0px 3px 5px white;
+    text-align: 
 }
 
 #boutonacceder input{
-    margin-top:1%;
-    margin-bottom:1%;
-    margin-left:1%;
+    margin-top:10px;
+    margin-bottom:5px;
+    margin-left:100px;
+    padding: 8px;
+    font-size: 85%;
 }
 
 
 #table_admin td, #table_admin th{
-    text-align: left;
+    text-align: ;
     padding: 7px;
 }
-    
+  
+#table_admin td:nth-child(odd) {
+    text-align: center;
+}
+
 #table_admin tr:nth-child(even) {
     background-color: rgba(255,255,255,0.9);
 }

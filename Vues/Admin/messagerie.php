@@ -27,9 +27,11 @@ require("../../Controleur/verifconnexionadmin.php");
             <?php
             $reponse2 = $db->query('SELECT * FROM domisep_messagerie'); //On récupère tous les comptes utilisateurs
             ?>
+            <form name="admin" action="../../Controleur/admin_suppr.php" method="post" accept-charset="utf-8">
             <div id=table_admin>
             <table>
                 <tr>
+                    <th>Id BDD</th>
                     <th>Qui?</th>
                     <th>Objet de la demande</th>
                     <th>Demande</th>
@@ -39,6 +41,7 @@ require("../../Controleur/verifconnexionadmin.php");
             {
             ?>
                 <tr>
+                    <td><input type=radio name=box value=<?php echo $donnees2['id'];?>><?php echo $donnees2['id'];?></td>
                     <td><?php echo $donnees2['mail'];?></td>
                     <td><?php echo $donnees2['objet'];?></td>
                     <td><?php $donnees2['demande'] ?></td>
@@ -47,7 +50,9 @@ require("../../Controleur/verifconnexionadmin.php");
             } //fin de la boucle, le tableau contient toute la BDD
             ?>
             </table>
-            </div>
+            <div id=boutonacceder><input id="boutons_valider" type="submit" name="bouton_submit" value="Supprimer ce message"/></div>
+                </div>
+            </form>
         </div>
 	</body>
 </html>
