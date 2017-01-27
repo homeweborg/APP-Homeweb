@@ -26,7 +26,7 @@ require("../Modele/connexionBDD.php");
                     
                     $mention ="";
 
-                    $reponse = $db->prepare('SELECT contenu FROM domisep WHERE nom= ?');
+                    $reponse = $db->prepare('SELECT contenu FROM domisep_infos WHERE nom= ?');
                     $reponse->execute(array("mentions"));
 
                         while ($donnees = $reponse->fetch())
