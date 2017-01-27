@@ -814,3 +814,10 @@ a{
 	color: white;	
 	border-style: solid;
 }
+
+.contact_footer
+{
+    /* Centrage de l'adresse mail dans le footer */
+    position: absolute;
+    margin-left: -165px;
+}

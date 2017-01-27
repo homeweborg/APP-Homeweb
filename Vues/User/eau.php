@@ -62,7 +62,7 @@ require("../../Controleur/verifconnexion.php");
                     
                     <a class="boutons_retour" href="etat.php" >Retour</a>
                     
-                    <a class="boutons_retour" href="../contact.php">Se renseigner</a>
+                    <a class="boutons_retour" href="../signaler.php">Se renseigner</a>
                     <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
                     </form>
                 </div>
