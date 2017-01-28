@@ -10,6 +10,10 @@ $mail = $_SESSION['mail'];
 $amdp = $_POST['amdp'];
 $mdp = $_POST['mdp'];
 $mdpc = $_POST['mdpc'];
+$nom = $_POST['nom'];
+$prenom = $_POST['prenom'];
+$adresse = $_POST['adresse'];
+$tel = $_POST['tel'];
 
 if (md5($amdp) == $_SESSION['pwd']){
     if ($mdp == $mdpc){ //ON VERIFIE QUE LE MDP ET SA CONFIRMATION SONT SEMBLABLES 

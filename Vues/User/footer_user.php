@@ -1,11 +1,11 @@
 <?php echo(' <footer>
                 <nav>
                     <ul>
-                        <li><a href="#" class="contact_footer">Adresse mail : contact@homeweb.com</a></li>
+                        <li><a class="contact_footer">Mail : '); $reponse = $db -> query('SELECT contenu FROM domisep_infos WHERE nom="mail"');$mail=$reponse->fetch();echo "$mail[0]"; echo('</a></li>
                         <li>|</li>
                         <li><a href="../mentionlegal.php">Mentions légales</a></li>
                         <li>|</li>
-                        <li><a href="#">Tel : 01 23 45 67 89</a></li>                        
+                        <li><a>Téléphone : '); $reponse2 = $db -> query('SELECT contenu FROM domisep_infos WHERE nom="tel"');$tel=$reponse2->fetch();echo "$tel[0]"; echo('</a></li>                        
                     <div id=social>
                         <ul>
                         <li><a href="../../Styles/image/facebook.png"><img src="../../Styles/image/facebook.png" alt="Facebook" title="Facebook"/></li>

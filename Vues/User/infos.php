@@ -23,21 +23,20 @@ require("../../Controleur/verifconnexion.php");
             
         <!-- Body -->                
                 <section class="loginform cf">
-                <div id= formsignup>
+                <div id= forminfos>
 				    <form name="login" action="../../Controleur/modifier.php" method="post" accept-charset="utf-8">
                         <h1>Votre Profil</h1>
                         <img class="image_profile" src="../../Styles/image/profile-user.png">
-                        <div id="signupinput">
-                            <b><p>Votre adresse mail :
-                            <?php echo $_SESSION['mail'];?></p></b><br>
-                            <p>Renseignez votre mot de passe actuel :</p>
-                            <input class="info" type="password" name="amdp" required placeholder="*******">
-                            <p>Choisissez un nouveau mot de passe :</p>
-                            <input class="info"type="password" name="mdp" required placeholder="Ex : Motdepasse123">
-                            <p>Confirmer votre nouveau mot de passe :</p>
-                            <input class="info"type="password" name="mdpc" required placeholder="Ex : Motdepasse123">
-                        </div>
-                        <input id="boutons_signup" type="submit" name="bouton_submit" value="Modifier"/>
+                        <b><p>Votre adresse mail :  <input id=forminfos_input class="info" type="mail" name="mail" required value="<?php echo $_SESSION['mail'];?>"></p></b>
+                            <b><p>Votre nom :  <input id=forminfos_input class="info" type="text" name="nom" required value="<?php echo $_SESSION['nom'];?>"></p></b>
+                            <b><p>Votre prénom :  <input id=forminfos_input class="info" type="text" name="prenom" required value="<?php echo $_SESSION['prenom'];?>"></p></b>
+                            <b><p>Votre adresse postale :  <input id=forminfos_input class="info" type="text" name="adresse" required value="<?php echo $_SESSION['adresse'];?>"></p></b>
+                            <b><p>Votre téléphone :  <input id=forminfos_input class="info" type="tel" name="tel" required value="<?php echo $_SESSION['tel'];?>"></p></b>
+                            <b><p>Renseignez votre mot de passe actuel :  <input id=forminfos_input class="info" type="password" name="amdp" required placeholder="*******"></p></b>
+                            <b><p>Choisissez un nouveau mot de passe :  <input id=forminfos_input class="info"type="password" name="mdp" required placeholder="Ex : Motdepasse123"></p></b>
+                            
+                            <b><p>Confirmer votre nouveau mot de passe :  <input id=forminfos_input class="info"type="password" name="mdpc" required placeholder="Ex : Motdepasse123"></p></b>
+                        <input id="boutons_modifier" type="submit" name="bouton_modifier" value="Modifier"/>
 				    </form>
                 </div>
 			</section>

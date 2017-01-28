@@ -10,10 +10,10 @@ $modif->execute(array(
 'contenu3' => $_POST['mentions']
 ));
 
-$modif = $db -> prepare('UPDATE domisep_infos SET contenu = :contenu2 WHERE nom="cgu"');
+$modif = $db -> prepare('UPDATE domisep_infos SET contenu = :contenu2 WHERE nom="tel"');
 
 $modif->execute(array(
-'contenu2' => $_POST['cgu']
+'contenu2' => $_POST['tel']
 ));
 
 //UPDATE LE MAIL

@@ -1,5 +1,9 @@
 <!DOCTYPE HTML>
 
+<?php //Se connecte à la base de données
+require("../Modele/connexionBDD.php");
+?>
+
 <html>
 	<head>
 		<title>HomeWeb</title>

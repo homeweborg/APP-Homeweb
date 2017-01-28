@@ -38,11 +38,15 @@ else if ($reponse -> rowcount()!=0){
     else { 
         
         //on recupere l'id de l'utilisateur pour sécuriser le site lorsqu'il est connecté
-        $reponse5 = $db -> query('SELECT id FROM utilisateurs WHERE mail="'.$mail.'"');
-        $reponseid= $reponse5->fetch();
+        $reponse5 = $db -> query('SELECT * FROM utilisateurs WHERE mail="'.$mail.'"');
+        $reponseuser= $reponse5->fetch();
         
         //on assigne les variables de session
-        $_SESSION['id'] = $reponseid[0];
+        $_SESSION['id'] = $reponseuser['id'];
+        $_SESSION['nom'] = $reponseuser['nom'];
+        $_SESSION['prenom'] = $reponseuser['prenom'];
+        $_SESSION['adresse'] = $reponseuser['adresse'];
+        $_SESSION['tel'] = $reponseuser['tel'];
         $_SESSION['mail'] = $reponsemail[0];
 		$_SESSION['pwd'] = $reponsepwd[0];
         

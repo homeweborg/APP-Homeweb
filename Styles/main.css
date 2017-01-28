@@ -113,6 +113,25 @@ footer nav ul li a{
 	padding: 9px 10px 5px 15px;
 }
 
+#formpb
+{
+	background-color: rgba(255,255,255,0.9);
+	width: 550px;
+	margin: auto;
+	margin-top: 40px;
+    height:auto;
+	padding: 9px 10px 5px 15px;
+}
+
+#forminfos
+{
+	background-color: rgba(255,255,255,0.9);
+	width: 85%;
+	margin: auto;
+	margin-top: 25px;
+	padding: 9px 10px 5px 15px;
+}
+
 #forminfosdomisep
 {
 	background-color: rgba(255,255,255,0.9);
@@ -132,7 +151,7 @@ footer nav ul li a{
 }
 
 
-#formlogin h1, #formsignup h1, #forminfosdomisep h1, #formcontact h1
+#formlogin h1, #formsignup h1, #forminfosdomisep h1, #formcontact h1, #formpb h1, #forminfos h1
 {
 	text-align: center;
 }
@@ -213,6 +232,7 @@ nav a
     width: 240px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+    margin-bottom: 5px;
 	padding-right: 0px;
 	background-color: #575757;
 	border-color: #575757;
@@ -225,6 +245,44 @@ nav a
 	text-align: left; 
 	padding-top: 5px;
 	padding-bottom: 5px;
+	padding-right: 0px;
+	background-color: #575757;
+	border-color: #575757;
+	color: white;	
+	border-style: solid;
+}
+
+#boutons_modifier
+{
+    /* Concerne le bouton d'envoi dans le formulaire */
+    
+    cursor: pointer;
+    border-style: solid;
+    background-color: #575757;
+    border-color: #575757;
+    color: white;
+    width: 150px;
+    padding: 5px;
+    margin-left: 10%;
+    margin-bottom: 1.5%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#boutons_modifier:hover
+{
+    background-color: grey;
+    border-color: grey;
+}
+
+#forminfos_input
+{
+    margin-left: 3%;
+	text-align: left; 
+    width: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+    margin-bottom: 10px;
 	padding-right: 0px;
 	background-color: #575757;
 	border-color: #575757;
@@ -245,7 +303,7 @@ nav a
     padding: 5px;
     margin-left: 400px;
     margin-bottom: 5px;
-    margin-top:50px;
+    margin-top: 30px;
 }
 
 #boutons_signup:hover
@@ -271,12 +329,14 @@ form p
     margin: 0;
     list-style: none;
 }
+
 #objects {
 /* on centre le menu dans la page */
 	margin-top:0px;
     text-align: center;
     background-color: white;
 }
+
 #objects li {
 /* on place les liens du menu horizontalement  */
     display: inline-block;
@@ -374,16 +434,18 @@ form p
 
 #boite{
     background-color: rgba(255,255,255,0.9) ;
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 3%;
-    margin-right: 5%;
-    margin-left: 5%;
-    width: 65%;
+    margin-right: 4%;
+    margin-left: 4%;
+    width:65%;
+    max-width: 70%;
     padding: 3% 3% 3% 3%;
     display:inline-block;
     position: fixed;
-    vertical-align:top;
-    height:65%;
+    vertical-align:middle;
+    height:auto;
+    max-height: 65%;
     overflow:auto;
     
 }
@@ -514,6 +576,7 @@ input:checked + .slider:hover
 
 #logodeco{
     height:25px;
+    margin:auto;
     margin-left: 10px;
     margin-right:10px;
 }
@@ -588,14 +651,14 @@ input:checked + .slider:hover
     margin:auto;
     background-color:rgba(255,255,255,0.9);
     box-shadow: 0px 3px 5px white;
-    text-align: 
+    text-align: right
 }
 
 #boutonacceder input{
     margin-top:10px;
     margin-bottom:5px;
-    margin-left:100px;
-    padding: 8px;
+    margin-right:10px;
+    padding: 7px;
     font-size: 85%;
 }
 
@@ -829,7 +892,7 @@ a{
     margin-left: -165px;
 }
 
-#formsignup .image_profile
+#forminfos .image_profile
 {
     /* Image sur la page info */
     width:130px;
