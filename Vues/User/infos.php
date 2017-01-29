@@ -5,6 +5,7 @@ require("../../Modele/fonctions.php");
 require("../../Modele/connexionBDD.php");
 //on vérifie si un utilisateur est connecté
 require("../../Controleur/verifconnexion.php");
+
 ?>
 <html>
 	<head>
@@ -33,9 +34,9 @@ require("../../Controleur/verifconnexion.php");
                             <b><p>Votre adresse postale :  <input id=forminfos_input class="info" type="text" name="adresse" required value="<?php echo $_SESSION['adresse'];?>"></p></b>
                             <b><p>Votre téléphone :  <input id=forminfos_input class="info" type="tel" name="tel" required value="<?php echo $_SESSION['tel'];?>"></p></b>
                             <b><p>Renseignez votre mot de passe actuel :  <input id=forminfos_input class="info" type="password" name="amdp" required placeholder="*******"></p></b>
-                            <b><p>Choisissez un nouveau mot de passe :  <input id=forminfos_input class="info"type="password" name="mdp" required placeholder="Ex : Motdepasse123"></p></b>
+                            <b><p>Choisissez un nouveau mot de passe :  <input id=forminfos_input class="info"type="password" name="mdp"  placeholder="Ex : Motdepasse123"></p></b>
                             
-                            <b><p>Confirmer votre nouveau mot de passe :  <input id=forminfos_input class="info"type="password" name="mdpc" required placeholder="Ex : Motdepasse123"></p></b>
+                            <b><p>Confirmer votre nouveau mot de passe :  <input id=forminfos_input class="info"type="password" name="mdpc" <?php if (isset($_POST['mdp'])){echo("required");} ?> placeholder="Ex : Motdepasse123"></p></b>
                         <input id="boutons_modifier" type="submit" name="bouton_modifier" value="Modifier"/>
 				    </form>
                 </div>

@@ -31,7 +31,7 @@ require("../../Controleur/verifconnexionadmin.php");
             <div id=table_admin>
             <table>
                 <tr>
-                    <th>Id BDD</th>
+                    <th>Sélectionner</th>
                     <th>Qui?</th>
                     <th>Objet de la demande</th>
                     <th>Demande</th>
@@ -41,10 +41,10 @@ require("../../Controleur/verifconnexionadmin.php");
             {
             ?>
                 <tr>
-                    <td><input type=radio name=box value=<?php echo $donnees2['id'];?>><?php echo $donnees2['id'];?></td>
+                    <td><input type=radio name=box value=<?php echo $donnees2['id'];?>></td>
                     <td><?php echo $donnees2['mail'];?></td>
                     <td><?php echo $donnees2['objet'];?></td>
-                    <td><?php $donnees2['demande'] ?></td>
+                    <td><?php echo $donnees2['demande'] ?></td>
                 </tr>
             <?php
             } //fin de la boucle, le tableau contient toute la BDD

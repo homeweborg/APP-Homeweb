@@ -27,7 +27,7 @@ require("../../Controleur/verifconnexionadmin.php");
             <div id=table_admin>
             <table>
                 <tr>
-                    <th>Id BDD</th>
+                    <th>Sélectionner</th>
                     <th>Mail Utilisateur</th>
                     <th>Capteurs concernés</th>
                     <th>Problèmes signalés</th>
@@ -37,7 +37,7 @@ require("../../Controleur/verifconnexionadmin.php");
             {
             ?>
                 <tr>
-                    <td><input type=radio name=box value=<?php echo $donnees['id'];?>><?php echo $donnees['id'];?></td>
+                    <td><input type=radio name=box value=<?php echo $donnees['id'];?>></td>
                     <td><?php $reponse2 = $db->query('SELECT mail FROM utilisateurs WHERE id="'.$donnees['id_user'].'"'); $donnees2=$reponse2->fetch();echo $donnees2['mail'];?></td>
                     <td><?php echo $donnees['capteur'];?></td>
                     <td><?php echo $donnees['probleme'];?></td>
