@@ -385,13 +385,21 @@ form p
     margin-right:10px;
 }
 
+.clickable{
+    
+}
+
+
 #capteurs ul li ul li{
     font-size: 15px;
     padding-top:3px;
     padding-bottom:3px;
-    display:flex;
     justify-content:space-between;
-    
+    display:none;
+}
+
+.current li a{
+    display: flex !important;
 }
 
 #capteurs ul li ul li:hover
