@@ -11,6 +11,7 @@ require("../../Modele/fonctions.php");
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
+        <script src="../../js/jquery-3.1.1.js"></script>
 	</head>
 	<body>
         <div id="page">
@@ -22,13 +23,13 @@ require("../../Modele/fonctions.php");
             </header>
             <div id=capteurs>
                 <ul>
-                    <li><a href="#">Température</a>
+                    <li><a class="clickable" href="#">Température</a>
                         <?php cascade_temp($_SESSION['id'],$db) ?> 
                     </li>                 
-                    <li><a href="#">Lumière</a>
+                    <li><a class="clickable" href="#">Lumière</a>
                         <?php cascade_lum($_SESSION['id'],$db) ?>
                     </li>             
-                    <li><a href="#">Consommation</a>
+                    <li><a class="clickable" href="#">Consommation</a>
                         <ul>
                             <li><a href="eau.php">Eau</a> <span> <?php pastille_etat_eau($_SESSION['id'],$db) ?></span></li>
                             <li><a href="gaz.php">Gaz</a> <span> <?php pastille_etat_gaz($_SESSION['id'],$db) ?></span></li>
@@ -79,5 +80,6 @@ require("../../Modele/fonctions.php");
             </div>
             <?php include ("footer_user.php");?> 
         </div>
+            <script src="../../JS/myjs.js"></script>
 	</body>
 </html>

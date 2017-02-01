@@ -227,7 +227,7 @@ function cascade_temp($id,$db)
     $reponse = $db->prepare('SELECT Nom, etat_temp FROM Pieces WHERE id_Utilisateur = ? AND presence_temp = 1');
     $reponse->execute(array($id));
     
-    echo "<ul>";
+    echo "<ul class=\"current\">";
     while ($donnees = $reponse->fetch())
     {
         

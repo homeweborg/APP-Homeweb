@@ -11,7 +11,7 @@ require("../../Controleur/verifconnexion.php");
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
-        <script src="../../js/jquery-3.1.1.min.js"></script>
+        <script src="../../js/jquery-3.1.1.js"></script>
 	</head>
 	<body>
 		<div id="page">
@@ -87,6 +87,7 @@ function FunctionTemp() {
                     <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
                     </form>
                 </div>
-                 <?php include ("footer_user.php");?> 
+                    <?php include ("footer_user.php");?> 
+            <script src="../../JS/myjs.js"></script>
         </body>
 </html>
