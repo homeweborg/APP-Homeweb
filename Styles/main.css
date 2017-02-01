@@ -398,7 +398,7 @@ form p
     display:none;
 }
 
-.current li a{
+.current li{
     display: flex !important;
 }
 

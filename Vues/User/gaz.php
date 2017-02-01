@@ -10,6 +10,7 @@ require("../../Controleur/verifconnexion.php");
 		<title>HomeWeb</title>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../../Styles/main.css" />
+        <script src="../../js/jquery-3.1.1.js"></script>
 	</head>
 	<body>
 		<div id="page">
@@ -69,7 +70,7 @@ require("../../Controleur/verifconnexion.php");
                     </form>
                 </div>
             <?php include ("footer_user.php");?> 
-        </div>
-                
+        </div> 
+            <script src="../../JS/myjs.js"></script>
         </body>
 </html>
