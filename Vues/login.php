@@ -34,7 +34,7 @@ require("../Modele/connexionBDD.php");
                         </div>
                         <div>
                             <input class="boutons_id" type="submit" value="Login">
-                            <input class="boutons_id" type="submit" value="Signup" onClick="window.location.href='signup.php'">
+                            <input class="boutons_id" type="submit" value="Sign Up" onClick="window.location.href='signup.php'">
                         </div>                             
                     </form>
                 </div>

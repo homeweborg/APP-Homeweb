@@ -19,7 +19,7 @@ $tel = $_POST['tel'];
 
 if (md5($amdp) == $_SESSION['pwd']){
     
-    if ($mdp!='' and $mdp == $mdpc){ //ON VERIFIE QUE LE MDP ET SA CONFIRMATION SONT SEMBLABLES 
+    if ($mdp == $mdpc){ //ON VERIFIE QUE LE MDP ET SA CONFIRMATION SONT SEMBLABLES 
 
         $modif = $db -> prepare('UPDATE utilisateurs SET mail =:mail, mdp = :mdp, nom = :nom, prenom = :prenom, adresse = :adresse, tel =:tel WHERE mail="'.$mail.'"');
 
@@ -31,7 +31,15 @@ if (md5($amdp) == $_SESSION['pwd']){
         'adresse' => $adresse,
         'tel' => $tel
         ));
-
+        
+        if ($mdp!=''){
+            $modif2 = $db -> prepare('UPDATE utilisateurs SET mdp = :mdp');
+            
+            $modif2->execute(array(
+            'mdp' => md5($mdp),
+        ));
+        }
+            
         //on redirige vers le formulaire de connexion en se deconnectant
         header('Refresh:0 ; URL= logout.php');
 
@@ -39,7 +47,7 @@ if (md5($amdp) == $_SESSION['pwd']){
         echo "<script>window.alert('Modification(s) réussie(s), veuillez vous reconnecter')</script>" ;
     }
 
-    else if ($mdp!='' and $mdp != $mdpc) {
+    else {
         
         //on revient vers la page de modification
         header('Refresh:0 ; URL= ../Vues/User/infos.php');
@@ -48,24 +56,6 @@ if (md5($amdp) == $_SESSION['pwd']){
          echo "<script>window.alert('Mots de passe non identiques')</script>" ;
     }
     
-    else {
-        $modif = $db -> prepare('UPDATE utilisateurs SET mail =:mail, nom = :nom, prenom = :prenom, adresse = :adresse, tel =:tel WHERE mail="'.$mail.'"');
-
-        $modif->execute(array(
-        'mail' => $mail,
-        'nom' => $nom,
-        'prenom' => $prenom,
-        'adresse' => $adresse,
-        'tel' => $tel
-        ));
-        
-        //on redirige vers le formulaire de connexion en se deconnectant
-        header('Refresh:0 ; URL= logout.php');
-
-         //on le signale sur la page 
-        echo "<script>window.alert('Modification(s) réussie(s), veuillez vous reconnecter')</script>" ;
-    }
-
 }
 else {
     //on revient vers la page de modification
