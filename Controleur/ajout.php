@@ -56,6 +56,6 @@ dans cette pièce */
     }
 
 }
-header('Refresh:0 ; URL= ../Vues/User/etat.php');
+header('Refresh:0 ; URL= ../Vues/User/etat.php?message=La pièce a %C3%A9t%C3%A9 ajout%C3%A9e.');
 
 ?>

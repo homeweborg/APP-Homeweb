@@ -385,8 +385,8 @@ form p
     margin-right:10px;
 }
 
-.clickable{
-    
+#capteurs ul li:hover{
+    background:white;
 }
 
 

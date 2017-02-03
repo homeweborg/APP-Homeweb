@@ -24,6 +24,6 @@ $modif->execute(array(
 ));
 
 //on redirige vers le formulaire de connexion en se deconnectant
-header('Refresh:0 ; URL= ../Vues/Admin/infos_domisep.php?message=Modification(s) reussie(s)');
+header('Refresh:0 ; URL= ../Vues/Admin/infos_domisep.php?message=Modification(s) r%C3%A9ussie(s)');
 
 ?>

@@ -14,7 +14,7 @@ if (isset($_POST['box'])){
 
     $suppr->execute(array($id));
 
-    header('Refresh:0 ; URL= ../Vues/Admin/messagerie.php?message=Message(s) supprime(s)');
+    header('Refresh:0 ; URL= ../Vues/Admin/messagerie.php?message=Message(s) supprim%C3%A9(s)');
 }
 
 else {

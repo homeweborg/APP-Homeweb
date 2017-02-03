@@ -42,25 +42,16 @@ if (md5($amdp) == $_SESSION['pwd']){
             
         //on redirige vers le formulaire de connexion en se deconnectant
         header('Refresh:0 ; URL= logout.php');
-
-         //on le signale sur la page 
-        echo "<script>window.alert('Modification(s) réussie(s), veuillez vous reconnecter')</script>" ;
     }
 
     else {
         
         //on revient vers la page de modification
-        header('Refresh:0 ; URL= ../Vues/User/infos.php');
-
-         //on le signale sur la page 
-         echo "<script>window.alert('Mots de passe non identiques')</script>" ;
+        header('Refresh:0 ; URL= ../Vues/User/infos.php?message=Mots de passe non identiques');
     }
     
 }
 else {
     //on revient vers la page de modification
-    header('Refresh:0 ; URL= ../Vues/User/infos.php');
-
-    //on le signale sur la page 
-    echo "<script>window.alert('Mot de passe incorrect')</script>" ;
+    header('Refresh:0 ; URL= ../Vues/User/infos?message=Mot de passe incorrect.php');
 }

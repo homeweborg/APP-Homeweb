@@ -37,6 +37,7 @@ require("../../Controleur/verifconnexion.php");
                             <b><p>Choisissez un nouveau mot de passe :  <input id=forminfos_input class="info"type="password" name="mdp"  placeholder="Ex : Motdepasse123"></p></b>
                             
                             <b><p>Confirmer votre nouveau mot de passe :  <input id=forminfos_input class="info"type="password" name="mdpc" <?php if (isset($_POST['mdp'])){echo("required");} ?> placeholder="Ex : Motdepasse123"></p></b>
+                        <?php if (isset($_GET["message"])){$message = $_GET["message"];echo("<I class=\"erreur\">$message</I>");}?>
                         <input id="boutons_modifier" type="submit" name="bouton_modifier" value="Modifier"/>
 				    </form>
                 </div>

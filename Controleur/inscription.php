@@ -58,7 +58,7 @@ if ($mdp == $mdpc){
                     $porte = $db->exec('INSERT INTO porte(id,etat) VALUES ("'.$reponseid[0].'",0)');
     
                     //on redirige vers le formulaire de connexion
-                    header('Refresh:0 ; URL= ../Vues/login.php');
+                    header('Refresh:0 ; URL= ../Vues/login.php?erreur="Inscription r%C3%A9ussie');
 
                     //on le signale sur la page 
                     echo "<script>window.alert('Inscription réussie ')</script>" ;
@@ -68,10 +68,7 @@ if ($mdp == $mdpc){
                 else {
 
                 //on redirige vers le formulaire d'inscription
-                header('Refresh:0 ; URL= ../Vues/signup.php'); //NE MARCHE PAS
-
-                //on le signale sur la page 
-                echo "<script>window.alert('Ce numéro de capteur est déjà utilisé)</script>" ;
+                header('Refresh:0 ; URL= ../Vues/signup.php?erreur=Ce numéro de capteur est déjà utilis%C3%A9'); //NE MARCHE PAS
                 }
                    
             }
@@ -90,10 +87,7 @@ if ($mdp == $mdpc){
                     ));
 
                     //on redirige vers le formulaire de connexion
-                    header('Refresh:0 ; URL= ../Vues/login.php');
-
-                    //on le signale sur la page  // AA VERIIIFIIIIIERRRR
-                    echo "<script>window.alert('Inscription réussie ')</script>" ;
+                    header('Refresh:0 ; URL= ../Vues/login.php?erreur=Inscription r%C3%A9ussie');
                     
                 }
                     
@@ -101,10 +95,7 @@ if ($mdp == $mdpc){
                 else {
 
                 //on redirige vers le formulaire d'inscription
-                header('Refresh:0 ; URL= ../Vues/signup.php'); //NE MARCHE PAS
-
-                //on le signale sur la page 
-                echo "<script>window.alert('Ce numéro est déjà utilisé)</script>" ;
+                header('Refresh:0 ; URL= ../Vues/signup.php?erreur=Ce num%C3%A9ro est d%C3%A9j%C3%A0 utilis%C3%A9.');
                 }
                   
             }
@@ -115,10 +106,8 @@ if ($mdp == $mdpc){
         else{
 
             //on redirige vers le formulaire d'inscription
-            header('Refresh:0 ; URL= ../Vues/signup.php');
+            header("Refresh:0 ; URL= ../Vues/signup.php?erreur=Ce num%C3%A9ro de capteur n'existe pas");
 
-            //on le signale sur la page  NAFFFICHHEEE PASSSS
-            echo "<script>window.alert('Ce numéro de capteur n'existe pas')</script>" ;
             die();
 } 
 
@@ -128,10 +117,8 @@ if ($mdp == $mdpc){
     else {
 
     //on redirige vers le formulaire d'inscription
-    header('Refresh:0 ; URL= ../Vues/signup.php');
+    header('Refresh:0 ; URL= ../Vues/signup.php?erreur=Cette adresse mail est d%C3%A9j%C3%A0 utilis%C3%A9e.');
 
-    //on le signale sur la page 
-    echo "<script>window.alert('Adresse mail déjà utilisée')</script>" ;
 } 
 
 }
@@ -140,10 +127,7 @@ if ($mdp == $mdpc){
 else {
 
     //on redirige vers le formulaire d'inscription
-    header('Refresh:0 ; URL= ../Vues/signup.php');
-
-    //on le signale sur la page 
-    echo "<script>window.alert('Mots de passe non identiques')</script>" ;
+    header('Refresh:0 ; URL= ../Vues/signup.php?erreur=Mots de passe non identiques.');
 } 
 
 ?>

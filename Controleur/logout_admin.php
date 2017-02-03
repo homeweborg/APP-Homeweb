@@ -8,6 +8,6 @@ unset ($_SESSION['mailadmin']);
 unset ($_SESSION['pwdadmin']);
 
 //et on redirige vers la page d'accueil
-header('Refresh:0 ; URL= ../Vues/login.php?erreur=Vous etes maintenant deconnecte');
+header('Refresh:0 ; URL= ../Vues/login.php?erreur=Vous %C3%AAtes maintenant d%C3%A9connect%C3%A9');
 
 ?>
