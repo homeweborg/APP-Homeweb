@@ -33,20 +33,22 @@ require("../../Modele/connexionBDD.php");
                             
                             <p> <b>Référence du capteur défaillant </b><I style="font-size : 12px">(Si le problème concerne un capteur)</I></p>
                             
-                            <input type="text" name="capteurD" required value="<?php if(isset($_GET['num_capteur'])){ echo($_GET['num_capteur']); } ?>">
+                            <input type="text" name="capteurD" value="<?php if(isset($_GET['num_capteur'])){ echo($_GET['num_capteur']); } ?>">
                             <p> <b>Objet de votre demande</b><span class="champoblig"> * </span></p>
                             
-                            <select type="text" name="objet" required>
+                            <p><select type="text" name="objet" required>
                                 <option>Un problème inexistant est signalé
                                 <option>Les infos reçues sont fausses
                                 <option>Je n'arrive pas à envoyer d'ordre
                                 <option>Autres (précisez votre problème ci-dessous)
-                            </select>
-                            
+                                </select></p>
+                                
                             <p><b>Décrivez la nature du problème</b><span class="champoblig"> * </span>
                             </p>
                             
+                            <p>
                             <textarea type="text" class="description" name="probleme"></textarea>
+                            </p>
                             
                             <input class="boutons_piece" type="submit" value="Signaler" onClick="window.location.href='#'">
                             

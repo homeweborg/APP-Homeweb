@@ -31,6 +31,7 @@ require("../Modele/connexionBDD.php");
                             <?php if (isset($_GET["erreur"])){
                                         $erreur = $_GET["erreur"];
                                         echo("<br/><br><I class=\"erreur\">$erreur</I>");}?>
+                            <p><a href="contact.php">Mot de passe oublié?</a></p>
                         </div>
                         <div>
                             <input class="boutons_id" type="submit" value="Login">
