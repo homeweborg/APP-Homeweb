@@ -580,6 +580,9 @@ input:checked + .slider:hover
     background-color: grey;
 }
 
+.erreur{
+    color:darkred;
+}
 
 
 #logodeco{

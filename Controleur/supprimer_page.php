@@ -28,6 +28,6 @@ while ($donnees = $reponse->fetch())
 
 }
 
-header('Refresh:0 ; URL= ../Vues/User/etat.php');
+header('Refresh:0 ; URL= ../Vues/User/etat.php?message=La piece a bien ete supprimee.');
 
 ?>
