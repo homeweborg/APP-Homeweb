@@ -3,7 +3,7 @@
                     <ul>
                         <li><a class="contact_footer">Mail : '); $reponse = $db -> query('SELECT contenu FROM domisep_infos WHERE nom="mail"');$mail=$reponse->fetch();echo "$mail[0]"; echo('</a></li>
                         <li>|</li>
-                        <li><a href="../mentionlegal.php">Mentions légales</a></li>
+                        <li><a href="mentionlegal.php">Mentions légales</a></li>
                         <li>|</li>
                         <li><a>Téléphone : '); $reponse2 = $db -> query('SELECT contenu FROM domisep_infos WHERE nom="tel"');$tel=$reponse2->fetch();echo "$tel[0]"; echo('</a></li>                        
                     <div id=social>

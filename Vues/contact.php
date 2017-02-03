@@ -22,7 +22,7 @@ require("../Modele/connexionBDD.php");
                         <div id="signupinput">
                             <p> <b>Votre adresse mail:</b><span class="champoblig"> * </span></p>
                             <input type="text" name="nom" required placeholder="Ex : noe.faure@isep.fr">
-                            <p><br> <b>Objet de votre demande</b><span class="champoblig"> * </span></p>
+                            <p><b>Objet de votre demande</b><span class="champoblig"> * </span></p>
                             
                             <select type="text" name="objet" required>
                                 <option>Mot de passe oublié
@@ -31,7 +31,7 @@ require("../Modele/connexionBDD.php");
                                         <option>Mon numéro de capteur n'existe pas
                                             <option>Autres (précisez dans votre demande)
                             </select>
-                            <p><br><b>Exprimez-vous</b><span class="champoblig"> * </span></p>
+                            <p><b>Exprimez-vous</b><span class="champoblig"> * </span></p>
                             
                             <textarea type="text" class="description" name="demande"></textarea>
                             

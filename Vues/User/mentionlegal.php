@@ -1,10 +1,15 @@
 <!DOCTYPE HTML>
-<?php require("../../Modele/fonctions.php");
-//Se connecte à la base de données
-require("../../Modele/connexionBDD.php");
+
+<?php 
 //on vérifie si un utilisateur est connecté
 require("../../Controleur/verifconnexion.php");
+
+require("../../Modele/fonctions.php");
+
+//Se connecte à la base de données
+require("../../Modele/connexionBDD.php");
 ?>
+
 <html>
     
 	<head>
