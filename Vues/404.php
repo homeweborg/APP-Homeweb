@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 
-<?php require("../Modele/fonctions.php");
-//Se connecte à la base de données
+<?php
 require("../Modele/connexionBDD.php");
 ?>
 
@@ -22,21 +21,12 @@ require("../Modele/connexionBDD.php");
 		<!-- Body -->
 			<section class="loginform cf"> <!--formulaire d'identification-->
                 <div id=formmention>
-                    <?php
+                    <h1 class="erreur_404">Erreur 404</h1>
+                    <h2>La page que vous avez demandé est introuvable.</h2>
+                    <p>La page n'existe pas ou peut être plus.<br>
+                    Merci de vérifier que vous avez bien saisi une adresse valide.<br>
+                    Retour à la d'accueil : <a href="User/etat.php">en cliquant ici</a></p>
                     
-                    $mention ="";
-
-                    $reponse = $db->prepare('SELECT contenu FROM domisep_infos WHERE nom= ?');
-                    $reponse->execute(array("mentions"));
-
-                        while ($donnees = $reponse->fetch())
-                        {
-                           $mention = $donnees['contenu'];
-                        }
-
-                        echo($mention);
-                    
-                    ?>
                 </div>
 			</section>
                 <?php include ("footer.php");?>   

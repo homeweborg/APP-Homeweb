@@ -44,7 +44,7 @@ require("../../Modele/fonctions.php");
                 </ul>
 	       	</div>
             <div id=boite>
-                <form name="login" action="../Controleur/valid_etat.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
+                <form name="login" action="../../Controleur/valid_etat.php?piece=<?php echo($_GET['piece']); ?>" method="post" accept-charset="utf-8">
                 <ul>
                     <li>Température moyenne <span><?php echo temp_moyenne($_SESSION['id'],$db) ?> °C</span></li>
                     <li>Etat général des capteurs <?php etat_general_capteur($_SESSION['id'],$db) ?></li>                
