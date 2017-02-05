@@ -23,14 +23,14 @@ require("../../Modele/connexionBDD.php");
             </header>
             <div id=capteurs>
             <ul>
-                <li><a href="#">Température</a>
+                <li><a class="clickable" href="#">Température</a>
                         <?php cascade_temp($_SESSION['id'],$db) ?>
                     </li>
                     
-                    <li><a href="#">Lumière</a>
+                    <li><a class="clickable" href="#">Lumière</a>
                         <?php cascade_lum($_SESSION['id'],$db) ?>
                     </li>
-                <li><a href="#">Consommation</a>
+                <li><a class="clickable" href="#">Consommation</a>
                     <ul>
                         <li><a href="eau.php">Eau</a> <span> <?php pastille_etat_eau($_SESSION['id'],$db) ?></span></li>
                         <li><a href="gaz.php">Gaz</a> <span> <?php pastille_etat_gaz($_SESSION['id'],$db) ?></span></li>
