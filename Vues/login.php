@@ -28,10 +28,10 @@ require("../Modele/connexionBDD.php");
                             <input type="username" name="username" required>
                             <p>Mot de passe</p>
                             <input type="password" name="password" required>
-                            <?php if (isset($_GET["erreur"])){
+                            <p><a href="contact.php"><span class="mdp_forget">Mot de passe oublié ?</span></a></p>
+                            <p><?php if (isset($_GET["erreur"])){
                                         $erreur = $_GET["erreur"];
-                                        echo("<br/><br><I class=\"erreur\">$erreur</I>");}?>
-                            <p><a href="contact.php">Mot de passe oublié?</a></p>
+                                        echo("<br><I class=\"erreur\">$erreur</I>");}?></p>
                         </div>
                         <div>
                             <input class="boutons_id" type="submit" value="Login">

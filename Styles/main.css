@@ -783,6 +783,7 @@ input:checked + .slider:hover
 /* CSS pour colorier les liens*/
 a{
     color: darkcyan;
+    text-decoration: none;
 }
 
 #boitetable{
@@ -907,7 +908,35 @@ a{
 {
     /* Image sur la page info */
     width:130px;
-    margin-left: 400px;
-    margin-top: -50px;
-    position:absolute;
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 70px;
+    
+}
+
+#idinput .mdp_forget
+{
+    /* Concerne l'affichage du mot de passe oublié */
+    
+    font-size: 13px;
+    text-decoration: none;
+}
+
+#idinput .mdp_forget:hover
+{
+    text-decoration: underline;
+}
+
+#forminfos .mes_infos
+{
+    /* CSS du tableau dans mes infos */
+    
+    text-align: right;
+}
+
+#forminfos .info_champs
+{
+    /* Concerne les champs des infos */
+    
+    width: 310px;
 }
