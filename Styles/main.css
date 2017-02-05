@@ -387,6 +387,7 @@ form p
 
 #capteurs ul li:hover{
     background:white;
+    transition: .5s;
 }
 
 
