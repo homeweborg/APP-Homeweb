@@ -25,9 +25,9 @@ require("../Modele/connexionBDD.php");
 					   <h1> IDENTIFICATION </h1>
                         <div id="idinput">
                             <p>Adresse mail</p>
-                            <input type="username" name="username" required>
+                            <input type="username" name="username" required autocomplete="off">
                             <p>Mot de passe</p>
-                            <input type="password" name="password" required>
+                            <input type="password" name="password" required autocomplete="off">
                             <p><a href="contact.php"><span class="mdp_forget">Mot de passe oublié ?</span></a></p>
                             <p><?php if (isset($_GET["erreur"])){
                                         $erreur = $_GET["erreur"];

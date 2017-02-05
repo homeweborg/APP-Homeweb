@@ -3,6 +3,8 @@
     /* Gère l'ajout de pièce */
 session_start();
 require("../Modele/connexionBDD.php");
+// On charge toutes les fonctions nécessaires
+require("../Modele/fonctions.php");
     
 $nom_piece = $_POST['nom_piece'];
 $ref_lum = $_POST['ref_lum'];
@@ -26,7 +28,7 @@ foreach($_POST['box'] as $valeur)
 /* On vérifie si l'utilisateur à annoncé un capteur de température
 dans cette pièce */
 
-    if ($valeur == "temp")
+    if ($valeur == "temp" && verif_existance_capt($ref_temp,$id_Utilisateur,$db) == 1)
     {
     // Si c'est le cas on ajoute le capteur dans la pièce
 
@@ -42,7 +44,7 @@ dans cette pièce */
     /* On vérifie si l'utilisateur à annoncé un capteur de lumière
     dans cette pièce */
 
-    if ($valeur == "lum")
+    if ($valeur == "lum" && verif_existance_capt($ref_lum,$id_Utilisateur,$db) == 1)
     {
     // Si c'est le cas on ajoute le capteur dans la pièce
 

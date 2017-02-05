@@ -891,4 +891,21 @@ function detail_piece($id,$db)
     }
 }
 
+function verif_existance_capt($num,$id,$db)
+{
+    $reponse = $db->prepare('SELECT numero_capteur FROM capteur');
+    $reponse->execute(array($id));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $num_capt = $donnees['numero_capteur'];
+        
+        if ($num == $num_capt)
+        {
+            return(1);
+        }
+    }
+    
+    return(0);
+}
 ?>

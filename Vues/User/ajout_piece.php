@@ -23,16 +23,16 @@ require("../../Controleur/verifconnexion.php");
                         <div id="signupinput">
                             <p> <b>Nom de la pièce à ajouter</b></p>
                             
-                            <input type="text" name="nom_piece" required placeholder="Ex : Salle à manger">
+                            <input type="text" name="nom_piece" required placeholder="Ex : Salle à manger" autocomplete="off">
                             
                             <p><br><b>Capteur(s) présent(s) dans la pièce</b></p>
                             <ul>
                                 <li>Température  
                             <input type="checkbox" name="box[]" value="temp"><br>
-                                Reférence du capteur <span class="champoblig">* </span><input type="text" name="ref_temp" placeholder="Ex : 123456789" > 
+                                Reférence du capteur <span class="champoblig">* </span><input type="text" name="ref_temp" placeholder="Ex : 123456789" autocomplete="off"> 
                                 </li> 
                                 <br><li>Lumière
-                            <input type="checkbox" name="box[]" value="lum"><br>Reférence du capteur <span class="champoblig">* </span><input type="text" placeholder="Ex : 123456789" name="ref_lum"></li>
+                            <input type="checkbox" name="box[]" value="lum"><br>Reférence du capteur <span class="champoblig">* </span><input type="text" placeholder="Ex : 123456789" name="ref_lum" autocomplete="off"></li>
                                 
                             </ul>
                             
@@ -42,7 +42,7 @@ require("../../Controleur/verifconnexion.php");
                     </form>
                 </div>
 			</section>
-        <?php include ("footer_user.php");?> 
+                <?php include ("footer_user.php");?>
 		</div>
 	</body>
 </html>

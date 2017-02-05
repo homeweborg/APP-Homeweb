@@ -4,6 +4,8 @@
 
 session_start();
 require("../Modele/connexionBDD.php");
+// On charge toutes les fonctions nécessaires
+require("../Modele/fonctions.php");
 
 $id_Utilisateur = $_SESSION['id'];
 
@@ -111,7 +113,7 @@ $reponse->execute(array($id_Utilisateur));
     {
         $nom_piece = $donnees['Nom'];
         
-        if ($tableau_numero_l[$n] != "")
+        if ($tableau_numero_l[$n] != "" && verif_existance_capt($tableau_numero_l[$n],$id_Utilisateur,$db) == 1)
         {
         $req = $db->prepare('UPDATE pieces SET numero_capteur_l = :consigne WHERE id_Utilisateur = :id AND Nom=:Nom_piece');
         $req->execute(array(
@@ -143,7 +145,7 @@ $reponse->execute(array($id_Utilisateur));
     {
         $nom_piece = $donnees['Nom'];
         
-        if ($tableau_numero_t[$n] != "")
+        if ($tableau_numero_t[$n] != "" && verif_existance_capt($tableau_numero_t[$n],$id_Utilisateur,$db) == 1)
         {
         $req = $db->prepare('UPDATE pieces SET numero_capteur_t = :consigne WHERE id_Utilisateur = :id AND Nom=:Nom_piece');
         $req->execute(array(
