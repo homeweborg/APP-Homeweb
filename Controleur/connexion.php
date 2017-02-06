@@ -50,8 +50,18 @@ else if ($reponse -> rowcount()!=0){
         $_SESSION['mail'] = $reponsemail[0];
 		$_SESSION['pwd'] = $reponsepwd[0];
         
-        //et on redirige vers la page d'accueil
-        header('Refresh:0 ; URL= ../Vues/User/etat.php'); 
+        $reponse10 = $db -> query('SELECT numero_effecteur FROM eau WHERE id="'.$_SESSION['id'].'"');
+        $reponse10->fetch();
+        
+        if($reponse10 -> rowcount()==0 ){
+            //et on redirige vers la page d'accueil
+            header('Refresh:0 ; URL= ../Vues/User/premiereco.php');
+        }
+        
+        else{
+            //et on redirige vers la page d'accueil
+            header('Refresh:0 ; URL= ../Vues/User/etat.php'); 
+        }
     }
         
 }
