@@ -5,10 +5,7 @@ session_start();
 if (isset ($_SESSION['idadmin']) == False or empty($_SESSION['idadmin'])) {
     
     //si personne n'est connecté on le redirige vers la page de connexion
-    header('Refresh:0 ; URL= ../login.php'); 
-    
-    //on le signale sur la page ////ERREUR NE MARCHE PASSSSSS
-    echo "<script>window.alert('Vous n'êtes pas connecté ')</script>" ;
+    header('Refresh:0 ; URL= ../login.php?erreur=Vous devez C3%AAtre connect%C3%A9');
     
     die();
 }

@@ -35,7 +35,8 @@ require("../../Controleur/verifconnexionadmin.php");
                             <p>Mentions légales :</p>
                             <textarea name="mentions" rows="5" cols="78"><?php $reponse4 = $db -> query('SELECT contenu FROM domisep_infos WHERE nom="mentions"');$cgu=$reponse4->fetch();echo "$cgu[0]"; ?></textarea>
                         </div>
-                        <?php if (isset($_GET["message"])){$message = $_GET["message"];echo("<I class=\"erreur\">$message </I>");}?>
+                        <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<I class=\"msg\">$msg </I>");}?>
+                        <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<I class=\"erreur\">$erreur </I>");}?>
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="Modifier"/>
 				    </form>
                 </div>

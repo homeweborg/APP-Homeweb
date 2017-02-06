@@ -585,6 +585,10 @@ input:checked + .slider:hover
     color:darkred;
 }
 
+.msg{
+    color:darkgreen;
+}
+
 
 #logodeco{
     height:25px;

@@ -58,17 +58,16 @@ if ($mdp == $mdpc){
                     $porte = $db->exec('INSERT INTO porte(id,etat) VALUES ("'.$reponseid[0].'",0)');
     
                     //on redirige vers le formulaire de connexion
-                    header('Refresh:0 ; URL= ../Vues/login.php?erreur="Inscription r%C3%A9ussie');
+                    header('Refresh:0 ; URL= ../Vues/login.php?msg=Inscription r%C3%A9ussie');
 
-                    //on le signale sur la page 
-                    echo "<script>window.alert('Inscription réussie ')</script>" ;
+                    //on le signale sur la page
                 }
                     
                 //SI LE NUMERO EST DEJA UTILISE
                 else {
 
                 //on redirige vers le formulaire d'inscription
-                header('Refresh:0 ; URL= ../Vues/signup.php?erreur=Ce numéro de capteur est déjà utilis%C3%A9'); //NE MARCHE PAS
+                header('Refresh:0 ; URL= ../Vues/signup.php?erreur=Ce num%C3%A9ro de capteur est d%C3%A9j%C3%A0 utilis%C3%A9'); //NE MARCHE PAS
                 }
                    
             }
@@ -87,7 +86,7 @@ if ($mdp == $mdpc){
                     ));
 
                     //on redirige vers le formulaire de connexion
-                    header('Refresh:0 ; URL= ../Vues/login.php?erreur=Inscription r%C3%A9ussie');
+                    header('Refresh:0 ; URL= ../Vues/login.php?msg=Inscription r%C3%A9ussie');
                     
                 }
                     
@@ -95,7 +94,7 @@ if ($mdp == $mdpc){
                 else {
 
                 //on redirige vers le formulaire d'inscription
-                header('Refresh:0 ; URL= ../Vues/signup.php?erreur=Ce num%C3%A9ro est d%C3%A9j%C3%A0 utilis%C3%A9.');
+                header('Refresh:0 ; URL= ../Vues/signup.php?erreur=Ce num%C3%A9ro est d%C3%A9j%C3%A0 utilis%C3%A9');
                 }
                   
             }

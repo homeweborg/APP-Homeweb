@@ -58,6 +58,6 @@ dans cette pièce */
     }
 
 }
-header('Refresh:0 ; URL= ../Vues/User/etat.php?message=La pi%C3%A8ce a %C3%A9t%C3%A9 ajout%C3%A9e.');
+header('Refresh:0 ; URL= ../Vues/User/etat.php?msg=La pi%C3%A8ce a %C3%A9t%C3%A9 ajout%C3%A9e.');
 
 ?>
