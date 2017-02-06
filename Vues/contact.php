@@ -34,7 +34,7 @@ require("../Modele/connexionBDD.php");
                             <p><b>Exprimez-vous</b><span class="champoblig"> * </span></p>
                             
                             <textarea type="text" class="description" name="demande"></textarea>
-                                    <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<br/><br><I class=\"mdg\">$msg </I>");}?>
+                                    <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<br/><br><I class=\"msg\">$msg </I>");}?>
                                     <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<br/><br><I class=\"erreur\">$erreur </I>");}?>
                             <input class="boutons_contact_envoyer" type="submit" value="Envoyer">
                             

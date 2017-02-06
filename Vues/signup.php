@@ -31,7 +31,7 @@ require("../Modele/connexionBDD.php");
                             <p>Numéro du capteur acheté :</p>
                             <input type="string" name="numero_capteur" required placeholder="Ex : A7TB0Y6TE86F">
                         </div>
-                        <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<br/><br><I class=\"mdg\">$msg </I>");}?>
+                        <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<br/><br><I class=\"msg\">$msg </I>");}?>
                         <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<br/><br><I class=\"erreur\">$erreur </I>");}?>
                     </br><input type="checkbox" name="cgu" required><a href="mentionlegal.php">Je confirme avoir lu les mentions légales</a></p>
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
