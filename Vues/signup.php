@@ -23,13 +23,13 @@ require("../Modele/connexionBDD.php");
                         <h1> Bienvenue sur HomeWeb </h1>
                         <div id="signupinput">
                             <p>Adresse mail :</p>
-                            <input type="mail" name="mail" required placeholder="Ex : domisep@isep.fr">
+                            <input type="mail" name="mail" required placeholder="Ex : domisep@isep.fr" autocomplete="off">
                             <p>Choisissez un mot de passe :</p>
-                            <input type="password" name="mdp" required placeholder="Ex : Motdepasse123">
+                            <input type="password" name="mdp" required placeholder="Ex : Motdepasse123" autocomplete="off">
                             <p>Confirmer votre mot de passe :</p>
-                            <input type="password" name="mdpc" required placeholder="Ex : Motdepasse123">
+                            <input type="password" name="mdpc" required placeholder="Ex : Motdepasse123" autocomplete="off">
                             <p>Numéro du capteur acheté :</p>
-                            <input type="string" name="numero_capteur" required placeholder="Ex : A7TB0Y6TE86F">
+                            <input type="string" name="numero_capteur" required placeholder="Ex : A7TB0Y6TE86F" autocomplete="off">
                         </div>
 
                         <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<br/><br><Iclass=\"erreur\">$erreur</I>");}?>
