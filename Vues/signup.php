@@ -31,14 +31,12 @@ require("../Modele/connexionBDD.php");
                             <p>Numéro du capteur acheté :</p>
                             <input type="string" name="numero_capteur" required placeholder="Ex : A7TB0Y6TE86F">
                         </div>
-<<<<<<< HEAD
-                        <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<br/><br><I class=\"erreur\">$erreur</I>");}?>
-                    </br><input type="checkbox" name="cgu" required><a href="mentionlegal.php" target=_blank>Je confirme avoir lu les mentions légales</a></p>
-=======
+
+                        <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<br/><br><Iclass=\"erreur\">$erreur</I>");}?>
+                            
                         <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<br/><br><I class=\"msg\">$msg </I>");}?>
-                        <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<br/><br><I class=\"erreur\">$erreur </I>");}?>
                     </br><input type="checkbox" name="cgu" required><a href="mentionlegal.php">Je confirme avoir lu les mentions légales</a></p>
->>>>>>> origin/master
+
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
 				    </form>
                 <h2 class="infos_confidentialite">Tous les champs sont obligatoires. <br><br>Le Numéro du capteur Domisep acheté peut être trouvé sur le capteur.<br><br></h2>
