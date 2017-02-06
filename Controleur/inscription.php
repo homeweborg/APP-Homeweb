@@ -58,7 +58,7 @@ if ($mdp == $mdpc){
                     $porte = $db->exec('INSERT INTO porte(id,etat) VALUES ("'.$reponseid[0].'",0)');
     
                     //on redirige vers le formulaire de connexion
-                    header('Refresh:0 ; URL= ../Vues/login.php?msg=Inscription r%C3%A9ussie');
+                    header('Refresh:0 ; URL= ../Vues/User/premiereco.php?msg=Inscription r%C3%A9ussie');
 
                     //on le signale sur la page
                 }
@@ -86,7 +86,7 @@ if ($mdp == $mdpc){
                     ));
 
                     //on redirige vers le formulaire de connexion
-                    header('Refresh:0 ; URL= ../Vues/login.php?msg=Inscription r%C3%A9ussie');
+                    header('Refresh:0 ; URL= ../Vues/signup.php?msg=Inscription r%C3%A9ussie');
                     
                 }
                     

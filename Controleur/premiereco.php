@@ -36,4 +36,4 @@ $modif->execute(array(
 ));
 
 //on redirige vers la page d'accueil
-header('Refresh:0 ; URL= ../Vues/User/etat.php);
+header('Refresh:0 ; URL= ../Vues/User/etat.php');

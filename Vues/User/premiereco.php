@@ -34,33 +34,34 @@ require("../../Controleur/verifconnexion.php");
                             
                         <tr><b><p>
                             
-                            <td>Votre effecteur d'eau :  </td>
+                            <td>Numéro de votre effecteur d'eau :  </td>
                             <td><input class="info_champs" id=forminfos_input class="info" type="text" name="eau" required></td>
                             
                         </p></b></tr>
                             
                         <tr><b><p>
                             
-                            <td>Votre effecteur d'électricité :  </td>
+                            <td>Numéro de votre effecteur d'électricité :  </td>
                             <td><input class="info_champs" id=forminfos_input class="info" type="text" name="elec" required></td>
                             
                         </p></b></tr>
                             
                         <tr><b><p>
                             
-                            <td>Votre effecteur de gaz :  </td>
-                            <td><input class="info_champs" id=forminfos_input class="info" type="text" name="gaz"></td>
+                            <td>Numéro de votre effecteur de gaz :  </td>
+                            <td><input class="info_champs" id=forminfos_input class="info" type="text" name="gaz" required></td>
                             
                         </p></b></tr>
                             
                         <tr><b><p>
                             
-                            <td>Votre effecteur de porte :  </td>
-                            <td><input class="info_champs" id=forminfos_input class="info" type="text" name="adresse" required></td>
+                            <td>Numéro de votre effecteur de porte :  </td>
+                            <td><input class="info_champs" id=forminfos_input class="info" type="text" name="porte" required></td>
                             
                         </p></b></tr>
                             
                         </table>
+                        <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<I class=\"msg\">$msg</I>");}?><?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<I class=\"erreur\">$erreur</I>");}?>
                         <input id="boutons_modifier" type="submit" name="bouton_modifier" value="Enregistrer"/>
 				    </form>
                 </div>
