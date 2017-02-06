@@ -89,7 +89,8 @@ require("../../Controleur/verifconnexion.php");
                             
                             </p></b></tr>
                             
-                        <?php if (isset($_GET["message"])){$message = $_GET["message"];echo("<I class=\"erreur\">$message</I>");}?>
+                <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<I class=\"mdg\">$msg </I>");}?>
+                <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<I class=\"erreur\">$erreur </I>");}?>
                             
                         </table>
                         <input id="boutons_modifier" type="submit" name="bouton_modifier" value="Modifier"/>

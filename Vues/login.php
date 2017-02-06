@@ -29,9 +29,9 @@ require("../Modele/connexionBDD.php");
                             <p>Mot de passe</p>
                             <input type="password" name="password" required autocomplete="off">
                             <p><a href="contact.php"><span class="mdp_forget">Mot de passe oublié ?</span></a></p>
-                            <p><?php if (isset($_GET["erreur"])){
-                                        $erreur = $_GET["erreur"];
-                                        echo("<br><I class=\"erreur\">$erreur</I>");}?></p>
+                            <p><?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<br/><br><I class=\"erreur\">$erreur</I>");}?></p>
+                            <p><?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<br/><br><I class=\"msg\">$msg</I>");}?></p>
+                            
                         </div>
                         <div>
                             <input class="boutons_id" type="submit" value="Login">

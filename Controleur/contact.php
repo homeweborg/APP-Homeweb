@@ -10,7 +10,7 @@ $demande = $_POST['demande'];
     
 $ajout = $db->exec('INSERT INTO domisep_messagerie (mail,objet,demande) VALUES ("'.$nom.'","'.$objet.'","'.$demande.'")');
 
-header('Refresh:0 ; URL= ../Vues/login.php?message=Demande envoy%C3%A9e');
+header('Refresh:0 ; URL= ../Vues/login.php?msg=Demande envoy%C3%A9e');
 
 
 

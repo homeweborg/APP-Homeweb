@@ -15,7 +15,7 @@ $id = $_POST['box'];
 
     $suppr->execute(array($id));
 
-    header('Refresh:0 ; URL= ../Vues/Admin/probleme.php?message=Probl%C3%A8me(s) supprim%C3%A9(s)');
+    header('Refresh:0 ; URL= ../Vues/Admin/probleme.php?msg=Probl%C3%A8me(s) supprim%C3%A9(s)');
 }
     
     
