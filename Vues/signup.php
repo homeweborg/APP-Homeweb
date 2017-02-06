@@ -35,7 +35,7 @@ require("../Modele/connexionBDD.php");
                         <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<br/><br><Iclass=\"erreur\">$erreur</I>");}?>
                             
                         <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<br/><br><I class=\"msg\">$msg </I>");}?>
-                    </br><input type="checkbox" name="cgu" required><a href="mentionlegal.php">Je confirme avoir lu les mentions légales</a></p>
+                    </br><input type="checkbox" name="cgu" required><a href="mentionlegal.php" target=_blank>Je confirme avoir lu les mentions légales</a></p>
 
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
 				    </form>
