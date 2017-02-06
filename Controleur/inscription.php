@@ -41,7 +41,7 @@ if ($mdp == $mdpc){
                 //ON VERIFIE SI LE NUMERO EST ASSOCIE A UN CLIENT
                 if ($reponsecapteur['id_client']==NULL){  
                     
-                    $ajout = $db->exec('INSERT INTO Utilisateurs(mail,mdp,etat_general) VALUES ("'.$mail.'","'.md5($mdp).'",0)');
+                    $ajout = $db->exec('INSERT INTO Utilisateurs(mail,mdp) VALUES ("'.$mail.'","'.md5($mdp).'")');
                     
                     $reponse3 = $db->query('SELECT id FROM Utilisateurs WHERE mail="'.$mail.'"');
                     $reponseid = $reponse3->fetch();
