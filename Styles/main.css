@@ -705,7 +705,6 @@ input:checked + .slider:hover
 {
     /* Concerne le bouton retour des pages capteurs 
     */
-    
     border-style: solid;
     background-color: #575757;
     border-color: #575757;
@@ -714,6 +713,8 @@ input:checked + .slider:hover
     padding:10px;
     font-size:20px;
 }
+
+
 
 .boutons_retour:hover, #boutons_valider:hover
 {
@@ -801,7 +802,17 @@ a{
     position: fixed;
     height:70%;
     overflow:auto;
-    
+}
+
+#boitetable .boutons_retour{
+    padding:13px;
+    padding-top:12px;
+    margin:10px;
+    font-size:16px;
+}
+
+#boitetable #boutons_valider{
+    padding:15px;   
 }
 
 #tableau_detail table{

@@ -75,7 +75,7 @@ require("../../Modele/fonctions.php");
                 </ul>
                     <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
                     <span class="bouton_rafraichir"><a class="texte" href="etat.php"><img class="image" src="../../Styles/image/refresh.png"> Rafraîchir</a></span>
-                    <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<br/><br><I class=\"mdg\">$msg </I>");}?>
+                    <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<br/><br><I class=\"msg\">$msg </I>");}?>
                     <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<I class=\"erreur\">$erreur </I>");}?>
                 </form>
             </div>

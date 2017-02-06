@@ -45,7 +45,6 @@ session_start();
                 <form action="../../Controleur/valid_details.php" method="post" accept-charset="utf-8">
                     <div id=tableau_detail>
                     <table>
-
                         <tr>
                             <th>Nom de la pièce</th>
                             <th>Type du capteur</th>
@@ -54,8 +53,8 @@ session_start();
 
                         <?php detail_piece($_SESSION['id'],$db); ?>
                     </table>
-                        
-                        <div id=boutonvalider><input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/></div>
+                        <a class="boutons_retour" href="etat.php">Retour</a>
+                        <input id="boutons_valider" type="submit" name="bouton_submit" value="Valider"/>
                     </div>
                 </form>
             </div>
