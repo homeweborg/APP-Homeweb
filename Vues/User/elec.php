@@ -37,11 +37,9 @@ require("../../Controleur/verifconnexion.php");
                         <li><a href="elec.php">Electricité</a> <span> <?php pastille_etat_elec($_SESSION['id'],$db) ?></span></li>
                     </ul>
                 </li>
-                <li>
-                        <a class="bouton_type" href="ajout_piece.php">+  AJOUTER une pièce</a>
-                        <a class="bouton_type" href="suppr.php">- SUPPRIMER une pièce</a>
-                        <a class="bouton_type" href="detailpiece.php">= DÉTAILS des pièces</a>
-                    </li>
+                    <li><a class="bouton_type" href="ajout_piece.php">+  AJOUTER une pièce</a></li>
+                    <li><a class="bouton_type" href="suppr.php">- SUPPRIMER une pièce</a></li>
+                    <li><a class="bouton_type" href="detailpiece.php">= DÉTAILS des pièces</a></li>
             </ul>
 	       	</div>
                 <div id=boite>

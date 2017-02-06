@@ -236,22 +236,22 @@ function cascade_temp($id,$db)
         
         if ($etat == 0)
         {
-        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Éteint\"></span></li>");
+        echo ("<li class=\"transit\"><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Éteint\"></span></li>");
         }
             
         if ($etat == 1)
         {
-        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Marche\"></span></li>");
+        echo ("<li class=\"transit\"><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Marche\"></span></li>");
         }
         
         if ($etat == 2)
         {
-        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
+        echo ("<li class=\"transit\"><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
         }
         
         if ($etat == 3)
         {
-        echo ("<li><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En Panne\"></span></li>");
+        echo ("<li class=\"transit\"><a href=\"temperature.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En Panne\"></span></li>");
         }
         
     }
@@ -281,22 +281,22 @@ function cascade_lum($id,$db)
         
         if ($etat == 0)
         {
-        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Eteint\"></span></li>");
+        echo ("<li class=\"transit\"><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_noire.png\" title=\"Eteint\"></span></li>");
         }
             
         if ($etat == 1)
         {
-        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Allumé\"></span></li>");
+        echo ("<li class=\"transit\"><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_verte.png\" title=\"Allumé\"></span></li>");
         }
         
         if ($etat == 2)
         {
-        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
+        echo ("<li class=\"transit\"><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_orange.png\" title=\"En cours de régulation\"></span></li>");
         }
         
         if ($etat == 3)
         {
-        echo ("<li><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En panne\"></span></li>");
+        echo ("<li class=\"transit\"><a href=\"lumiere.php?piece=$nom_piece\">" . $nom_piece . "</a> <span><img src=\"../../Styles/image/Pastille_rouge.png\" title=\"En panne\"></span></li>");
         }
         
     }
