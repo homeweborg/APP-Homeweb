@@ -78,14 +78,14 @@ require("../../Controleur/verifconnexion.php");
                         <tr><b><p>
                             
                             <td>Choisissez un nouveau mot de passe :  </td>
-                            <td><input class="info_champs" id=forminfos_input class="info"type="password" name="mdp"  placeholder="Ex : Motdepasse123"></td>
+                            <td><input class="info_champs" id=forminfos_input class="info" type="password" name="mdp"  placeholder="Ex : Motdepasse123"></td>
                         
                         </p></b></tr>
                             
                         <tr><b><p>
                             
                             <td>Confirmer votre nouveau mot de passe :  </td>
-                            <td><input class="info_champs" id=forminfos_input class="info"type="password" name="mdpc" <?php if (isset($_POST['mdp'])){echo("required");} ?> placeholder="Ex : Motdepasse123"></td>
+                            <td><input class="info_champs" id=forminfos_input class="info" type="password" name="mdpc" <?php if (isset($_POST['mdp'])){echo("required");} ?> placeholder="Ex : Motdepasse123"></td>
                             
                             </p></b></tr>
                             
