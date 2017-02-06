@@ -39,7 +39,7 @@ require("../Modele/connexionBDD.php");
 
                         <input id="boutons_signup" type="submit" name="bouton_submit" value="SIGN UP"/>
 				    </form>
-                <h2 class="infos_confidentialite">Tous les champs sont obligatoires. <br><br>Le Numéro du capteur Domisep acheté peut être trouvé sur le capteur.<br><br></h2>
+                <h2 class="infos_confidentialite">Tous les champs sont obligatoires. <br><br>Le Numéro du capteur Domisep acheté peut être trouvé sur le capteur.<br><br>Suite à votre inscription, vos numéros d'effecteurs primaires vont vous être demandés, veuillez préparer ces numéros.</h2>
                 </div>
 			</section>
            

@@ -172,7 +172,7 @@ footer nav ul li a{
     text-align: left;
     width : 220px;
     position : absolute;
-    top : 40%;
+    top : 35%;
     left : 50%;
     
     
@@ -926,7 +926,7 @@ a{
     /* Image sur la page info */
     width:130px;
     position: absolute;
-    margin-left: 800px;
+    margin-left: 65%;
     margin-top: 70px;
     
 }
