@@ -48,7 +48,10 @@ require("../../Controleur/verifconnexionadmin.php");
                 } //fin de la boucle, le tableau contient toute la BDD
                 ?>
                 </table>
-                    <div id=boutonacceder><?php if (isset($_GET["message"])){$message = $_GET["message"];echo("<I class=\"erreur\">$message </I>");}?><input id="boutons_valider" type="submit" name="bouton_submit" value="Visualiser ce compte"/>
+                    <div id=boutonacceder>
+                        <?php if (isset($_GET["msg"])){$msg = $_GET["msg"];echo("<I class=\"msg\">$msg </I>");}?>
+                        <?php if (isset($_GET["erreur"])){$erreur = $_GET["erreur"];echo("<I class=\"erreur\">$erreur </I>");}?>
+                        <input id="boutons_valider" type="submit" name="bouton_submit" value="Visualiser ce compte"/>
                     </div>
                     
                 </div>
