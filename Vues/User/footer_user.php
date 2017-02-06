@@ -1,4 +1,8 @@
-<?php echo(' <footer>
+<?php 
+//Se connecte à la base de données
+require("../../Modele/connexionBDD.php");
+
+echo(' <footer>
                 <nav>
                     <ul>
                         <li><a class="contact_footer">Mail : '); $reponse = $db -> query('SELECT contenu FROM domisep_infos WHERE nom="mail"');$mail=$reponse->fetch();echo "$mail[0]"; echo('</a></li>
