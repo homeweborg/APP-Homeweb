@@ -27,7 +27,6 @@ require("../../Controleur/verifconnexionadmin.php");
             <?php
             $reponse = $db->query('SELECT * FROM utilisateurs'); //On récupère tous les comptes utilisateurs
             ?>
-            <form name="admin" action="compte.php" method="post" target=_blank accept-charset="utf-8">
                 <div id = table_admin>
                 <table>
                     <tr>
