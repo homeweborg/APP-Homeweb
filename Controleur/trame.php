@@ -17,7 +17,26 @@ echo("$data");
 //on decoupe $data en portion de 33 caracteres dans un tableau
 $data_tab = str_split($data,33);
 echo "<br><br><br>Tabular Data:";
-for($i=0, $size=count($data_tab); $i<$size; $i++){
+
+$reponse20 = $db->query('SELECT MAX(id) FROM data');
+$id=$reponse20->fetch();
+
+
+if($id[0] ==null){
+    $seuil=0;
+    echo "<br><br>hahahahahaha";
+}
+
+else{
+    
+    $seuil = $id[0];
+    echo "<br><br>hihihihi";
+
+}
+    
+echo "<br><br>Seuil: $seuil";
+
+for($i=$seuil, $size=count($data_tab); $i<$size; $i++){
     echo "<br><br>Trame $i: $data_tab[$i]<br />";
     
     $trame = $data_tab[1];
@@ -43,8 +62,9 @@ for($i=0, $size=count($data_tab); $i<$size; $i++){
     $req->bindParam(':date_recep',$date_recep);
     $req->execute();
     echo "<br><br>Opération effectuée";
-
+        
     print("<br>type de trame=" .$t. " val objet=" .$o." requete=" .$r. " type de capteurs=".$c. " numero du capteur=" .$n. " valeur capteur=" .$v. " TIM=".$a. " chk=".$x." date_recep=" .$date_recep. "\n");
 }
+
 			
 ?>
