@@ -908,4 +908,19 @@ function verif_existance_capt($num,$id,$db)
     
     return(0);
 }
+
+// FONCTION SERVANT A ENVOYER UNE COMMANDE (TRAM) DE L'ORDINATEUR À LA CARTE
+function envoie_commande($id,$db)
+{
+    //envoi d'une requete
+    $ch = curl_init();
+    curl_setopt(
+    $ch,
+    CURLOPT_URL,
+    "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=004C&TRAME=XXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    curl_setopt($ch, CURLOPT_HEADER, FALSE);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    $data = curl_exec($ch);
+    curl_close($ch);
+}
 ?>
