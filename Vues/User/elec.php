@@ -54,7 +54,7 @@ require("../../Controleur/verifconnexion.php");
                         <li>Prix du kWh : <span><input type="text" class="Prix_entree" name="Prix_elec" value=<?php echo(affiche_prix_elec($_SESSION['id'],$db)) ?> placeholder="en €"></span></li>
                         <li>
                             <label class="switch">
-                                <input type="checkbox" value=1 name="box" <?php if (Etat_elec(1,$db) == 1) { envoie_commande($id,$db) ?> checked <?php } ?>>
+                                <input type="checkbox" value=1 name="box" <?php if (Etat_elec(1,$db) == 1) { envoie_commande($_SESSION['id'],$db) ?> checked <?php } ?>>
                                 <div class="slider"></div>
                             </label>
                         

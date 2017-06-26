@@ -5,6 +5,7 @@ require("../../Controleur/verifconnexion.php");
 require("../../Modele/fonctions.php");
 //Se connecte à la base de données
 require("../../Modele/connexionBDD.php");
+interprete_tram($_SESSION['id'],$db);
 ?>
 <html>
 	<head>

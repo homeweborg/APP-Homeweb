@@ -914,13 +914,41 @@ function envoie_commande($id,$db)
 {
     //envoi d'une requete
     $ch = curl_init();
-    curl_setopt(
-    $ch,
-    CURLOPT_URL,
-    "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=004C&TRAME=XXXXXXXXXXXXXXXXXXXXXXXXXXX");
-    curl_setopt($ch, CURLOPT_HEADER, FALSE);
+    curl_setopt($ch, CURLOPT_URL,"http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=004A&TRAME=1004C1A01201402556C");
+	curl_setopt($ch, CURLOPT_HEADER, FALSE);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
     $data = curl_exec($ch);
     curl_close($ch);
 }
+
+//FONCTION TRAME ALLUME LA LUMIÈRE
+function change_lum_tram_salon($id,$db,$valeur){
+    
+    $req = $db->prepare('UPDATE pieces SET lumiere = :consigne WHERE id_Utilisateur = :id AND Nom = :Nom_piece');
+            $req->execute(array(
+            'consigne' => $valeur,
+            'id' => $id,
+            'Nom_piece' => "Salon"
+	       ));
+}
+
+function interprete_tram($id,$db){
+    
+    $reponse = $db->prepare('SELECT numero_capteur FROM data ORDER BY id DESC LIMIT 1');
+    $reponse->execute(array($id));
+    
+    while ($donnees = $reponse->fetch())
+    {
+        $lum = $donnees['numero_capteur'];
+        
+        if($lum == 00){
+            change_lum_tram_salon($id,$db,0);
+        }
+        else if($lum == 01){
+            change_lum_tram_salon($id,$db,1);
+        }
+    }
+    
+}
+
 ?>
